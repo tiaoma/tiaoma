@@ -1,0 +1,39 @@
+<div class="header">
+	 <div class="container">
+	   <div class="row top">
+	      <div class="col-xs-8 col-sm-10 text-right">	      	   
+	      	 <a href="tel:4006-128-119">报名热线：13660333158</a>  
+	      	 <a target="_blank" href="{:U('Home/Ask/index')}">咨询</a> 	      	   
+	      </div>
+	      <div class="col-xs-4 col-sm-2 text-right">	
+	           <if condition=" $www_username" >   
+		           <a href="{:U('Usercenter/Index/index')}">{$www_username}</a>&nbsp;
+		           <a href="{:U('Home/Login/loginout')}">安全退出</a> &nbsp;&nbsp;&nbsp;&nbsp;
+               <else/>   	   
+		      	   <a   href="javascript:void(0);" data-href="{:U('Home/Login/index')}" class="comLogin com-mgr">登录</a>&nbsp;
+		      	   <a class="comRegister" href="javascript:void(0);" data-href="{:U('Home/Login/register')}">注册</a>&nbsp;&nbsp;&nbsp;&nbsp;	 
+               </if> 
+               
+	      </div>	
+	      <div class="logo">
+	      	   <a href="{:U('Home/Index/index')}"><img src="__PUBLIC__/Data/logo.png?versionId={$Think.config.WWW_VERSION}" alt="{$Think.config.APP_NAME}"></a>
+	      </div>           
+	   </div>  
+	   <div class="row">
+	      <div class="col-lg-10 col-lg-offset-2 maxNav">
+	           <ul>	   
+	           		<li><a target="_blank" href="{:U('Home/Index/index')}">网站首页</a></li>	  
+	      	       <!--  <li><a  target="_blank" href="{:U('Onlinecourse/index')}">在线课程</a></li> -->
+	      	       <li><a target="_blank" href="{:U('Home/Train/index')}">报班学习</a></li>
+	      	        <li><a target="_blank" href="{:U('Home/Freetrial/index')}">免费试听</a></li>
+	      	        <li><a target="_blank" href="{:U('Home/Expert/index')}">师资力量</a></li>
+	      	        <li><a target="_blank" href="{:U('Home/Exam/index')}">模拟考试</a></li>
+	      	        <li><a target="_blank" href="{:U('Home/News/index')}">消防动态</a></li>
+	      	        <li><a target="_blank" href="{:U('Home/Careerprospects/index')}">就业前景</a></li>
+	      	        <li><a target="_blank" href="{:U('Home/Downloadfile/index')}">资料下载</a></li>	
+	      	        <li><a  target="_blank" href="{:U('Resultsshow/index')}">成绩喜报</a></li>      	   
+	      	   </ul>
+	      </div>	           
+	   </div>    
+    </div>
+</div>

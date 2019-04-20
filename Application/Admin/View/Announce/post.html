@@ -1,0 +1,104 @@
+<nav class="breadcrumb"><i class="iconfont">&#xf012b;</i> 首页 <span class="c-gray en">&gt;</span> 公告管理 <span class="c-gray en">&gt;</span> <if condition="$info">编辑<else/>添加</if>公告 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="icon-refresh"></i></a></nav>
+<div class="pd-20 text-c">
+<form class="Huiform" action="" method="post" enctype="multipart/form-data">
+        <input type="hidden" value="{$info[id]}" name="id">
+        <input type="hidden" value="" name="delgids" />
+        <table class="table">
+    <tr>
+        <th width="100">排序:</th>
+        <td><input placeholder="填写的数字越大越靠前"  value="{$info['displayorder']}" maxlength="64" class="input-text"  style="width:250px" name="displayorder"></td>
+    </tr>
+    <tr>
+        <th width="100">公告标题:</th>
+        <td><input type="text" value="{$info['title']}" maxlength="64" class="form-control" name="title"></td>
+    </tr>
+    <tr>
+        <th width="100">公告图片(200*150):</th>
+        <td  style="position: relative;">
+         <button type="button" class="file-btn">选择图片</button>
+         <text class="file-tip">{$info['thumb']}</text>
+          <input type="file" value="" id="fimage" style="width:100px !important;height: 40px !important;opacity: 0;" maxlength="64" class="form-control file-hidden" name="thumb">
+        <if condition="$info['thumb']">
+        <div>
+          <img src="__PUBLIC__/Data/others{$info['thumb']}">
+        </div>
+        </if>
+        </td>
+    </tr>
+    <tr>
+        <th width="100">描述:</th>
+        <td><textarea cols="50" rows="10"  style="display:none;"  name="detail"   class="des ">{$info[detail]}</textarea>
+        <script id="editor" type="text/plain" style="width:100%;height:300px;"></script>
+        </td>
+    </tr>
+    <tr>
+        <th width="100">状态:</th>
+        <td>
+          <label class="radio-inline" >
+              <input type="radio" id="inline-radio2"  name="status" value="1" <if condition=" $info[status]==1" > checked="" </if>> 发布
+          </label>
+          <label class="radio-inline" >
+              <input type="radio" id="inline-radio2"  name="status" value="0" <if condition=" $info[status]==0" > checked="" </if>> 不发布
+          </label> 
+          
+        </td>
+    </tr>
+    <tr>
+        <th width="100">公告类型:</th>
+        <td>
+          <label class="radio-inline" >
+              <input type="radio" id="inline-radio2"  name="ntype" value="0" <if condition=" $info[ntype]==0" > checked="" </if>> 公告
+          </label>
+          <label class="radio-inline" >
+              <input type="radio" id="inline-radio2"  name="ntype" value="1" <if condition=" $info[ntype]==1" > checked="" </if>> 规则
+          </label> 
+          <label class="radio-inline" >
+              <input type="radio" id="inline-radio2"  name="ntype" value="2" <if condition=" $info[ntype]==2" > checked="" </if>> 活动
+          </label> 
+        </td>
+    </tr>
+
+</table>
+<div class="text-c mt-20">
+      <button type="button" class="btn btn-success radius" id="" name="" onClick="class_save();"><i class="icon-save"></i> 保存</button>
+</div> 
+</form>
+</div>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/ueditor.all.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/lang/zh-cn/zh-cn.js"></script>
+  <script type="text/javascript">
+  var ue = UE.getEditor('editor');
+   ue.ready(function(){
+    ue.setContent($(".des").val());
+   });
+  function class_save(){
+     var title = $("input[name='title']").val().trim();
+     var coverfile = $("input[name='thumb']").val().trim();
+     if(title.length<1){
+        layer.msg('公告标题不准为空!',1);
+        return;
+     } 
+     if(coverfile.length<1){
+         $("input[name='thumb']").remove();
+     }else{
+       var fimage = document.getElementById("fimage").files;
+       var arrpictype = ['jpg','jpeg','png'];
+       var arr= new Array();
+
+       arr =fimage[0].name.split(".");
+       var m = $.inArray(arr[1], arrpictype);
+       if(m == "-1"){
+        layer.msg('图片格式不对!',1);
+          return;
+       }
+       if(fimage[0].size>3145728){
+        layer.msg('图片大小不对!',1);
+          return;
+       }
+     }
+     $(".des").val(ue.getContent());
+     $(".Huiform").submit();
+  }
+
+</script>

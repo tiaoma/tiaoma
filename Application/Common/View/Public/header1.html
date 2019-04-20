@@ -1,0 +1,43 @@
+
+<div class="top">
+        <div class="t-head">
+            <div class="container">
+                <div class="t-head-l">
+                    <a href="{:U('Home/Index/index')}">
+                        <img src="__PUBLIC__/Data/logo.png" alt="{$Think.config.APP_NAME}" height="100">
+                    </a> 
+                    <if condition=" $www_username" > 
+                    <a href="{:U('Usercenter/Index/index')}">{$www_username}</a>
+                    |
+                    <a href="{:U('Home/Login/loginout')}">安全退出</a> 
+                    <else/>
+                    <a href="{:U('Home/Login/index')}">登录</a>
+                    |
+                    <a href="{:U('Home/Login/register')}">注册</a>
+                    </if>
+                </div> 
+                <div class="t-head-r">
+                    <ul>
+                        <li>
+                            <a href="{:U('Usercenter/Msg/index')}">
+                                <img src="__PUBLIC__/Home/images/icons/clover.png" class="clover-icon" alt="" />
+                                我的消息（<span class="my-news-num">0</span>） &nbsp;&nbsp;&nbsp;
+                            </a>
+                        </li>                       
+                
+                    </ul>
+
+                </div>
+            </div>    
+        </div>
+        <!-- <div class="t-logo">
+            <div class="container">
+                <a href="{:U('Home/Index/index')}" class="t-l-box">
+                    <img src="__PUBLIC__/Data/logo.png" alt="{$Think.config.APP_NAME}" height="80">
+                </a>   
+                   
+            </div>
+        </div> -->
+        
+    </div>
+     

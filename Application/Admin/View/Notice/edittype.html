@@ -1,0 +1,34 @@
+<nav class="breadcrumb"><i class="iconfont">&#xf012b;</i> 首页 <span class="c-gray en">&gt;</span> 通知管理 <span class="c-gray en">&gt;</span> 编辑分类 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="icon-refresh"></i></a></nav>
+<div class="pd-20 text-c">
+  <form class="Huiform" action="{:U('Notice/edittype')}" method="post">
+    <input type="hidden" name="type_id" value="{$info['type_id']}">
+    
+    
+ <table class="table">
+    <tr>
+        <th width="100">类型名称:</th>
+        <td><input class="input-text" name="type_name" style="width:250px" type="text" value="{$info['type_name']}" placeholder="输入分类" id="article-class-val"></td>
+    </tr>
+    <tr style="display: none;">
+        <th width="100">类型排序:</th>
+        <td><input   value="{$info['type_order']}" maxlength="64" class="input-text"  style="width:250px" name="type_order"></td>
+    </tr>
+    
+     
+    
+</table>
+ <div class="text-c mt-20">
+      <button type="button" class="btn btn-success radius" id="" name="" onClick="class_save();"><i class="icon-save"></i> 保存</button>
+    </div>
+  </form>
+  </div>
+  <script type="text/javascript">
+  function class_save(){
+     var type_name = $("input[name='type_name']").val().trim();
+     if(type_name.length<1){
+        layer.msg('类型名称不能为空!',1);
+        return;
+     }
+     $(".Huiform").submit();
+  }
+</script>

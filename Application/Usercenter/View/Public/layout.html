@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/css/currency.css?versionId={$Think.config.WWW_VERSION}" />
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/uploadimage.css?versionId={$Think.config.WWW_VERSION}"/>
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/css/city-picker.css?versionId={$Think.config.WWW_VERSION}" />
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/css/p-center.css?versionId={$Think.config.WWW_VERSION}" />
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/css/com.css?versionId={$Think.config.WWW_VERSION}" />
+    <title>{$Think.config.APP_NAME}</title>
+    <script type="text/javascript" language="javascript" src="__PUBLIC__/Home/js/jquery-2.1.1.min.js"></script>
+    <!--[if lt IE 9]>  
+    <script src="__PUBLIC__/Home/js/html5shiv.min.js"></script>  
+    <script src="__PUBLIC__/Home/js/respond.min.js"></script> 
+    <![endif]--> 
+    <script type="text/javascript">
+    var GlobalUrl = '__PUBLIC__';
+    var GlobalAppName = '{$Think.config.APP_NAME}';
+    var GlobalSysCheck = "{:U('Cmodule/Sys/setsys')}";
+    </script> 
+</head>
+<body>
+{:W('Common/Public/header')} 
+<div class="center-head">
+        <div class="container">
+            <div class="ch-portrait  h_portrait">
+                <span class="img gb-hand"  data-toggle="modal" data-target="#selectHeadModal">
+                    <img src="__PUBLIC__/Data/{$www_member['head']}" />
+                </span>
+                <i></i>
+            </div>
+            <div class="ch-inf">
+                <p class="ch-i-title">
+                    HI!您好，尊敬的会员                    
+                </p>
+                <p class="ch-i-down">                    
+                    <span class="phone col-xs-4">  
+                        <i></i>
+                        <b>{$www_member['mobile_show']}</b>
+                    </span>
+                    <!-- <span class="mail col-xs-4">  
+                        <i></i>
+                        <b><empty name="www_member['email']">
+                           未绑定
+                        <else/>
+                           {$www_member['email_show']}
+                        </empty></b>
+                    </span> -->
+                </p>
+            </div>  
+           
+        </div>
+    </div>
+
+    
+<div class="center-box">
+        <div class="container">
+            <div class="cb-left">
+                <ul>
+                    <if condition="$www_member['user_type'] eq 0">
+                    <a href="{:U('Index/index')}">
+                        <li <if condition="in_array(CONTROLLER_NAME,array('Index'))"> class="ac" </if>>个人信息</li>
+                    </a>
+                    </if>
+                    <a href="{:U('Ask/index')}">
+                        <li <if condition="in_array(CONTROLLER_NAME,array('Ask'))"> class="ac" </if>>我的咨询</li>
+                    </a>
+                    
+                    <a href="{:U('Msg/index')}">
+                        <li <if condition="in_array(CONTROLLER_NAME,array('Msg'))"> class="ac" </if>>我的消息</li>
+                    </a>
+                    <a href="{:U('Course/index')}">
+                        <li <if condition="in_array(CONTROLLER_NAME,array('Course'))"> class="ac" </if>>我的课程</li>
+                    </a>
+                    <a href="{:U('Train/index')}">
+                        <li <if condition="in_array(CONTROLLER_NAME,array('Train'))"> class="ac" </if>>我报的班</li>
+                    </a>                 
+                    <a href="{:U('Account/index')}">
+                        <li <if condition="in_array(CONTROLLER_NAME,array('Account'))"> class="ac" </if>>账号安全</li>
+                    </a>
+                                    
+                </ul>
+            </div>
+
+            <div class="cb-right cb-r-tac">
+            
+            {__CONTENT__} 
+           
+            </div> 
+        </div>
+    </div>
+{:W('Common/Public/footer')}
+<include file="Public/headmodal" />
+    <script type="text/javascript" language="javascript" src="__PUBLIC__/Home/js/bootstrap.min.js"></script>
+    <script type="text/javascript" language="javascript" src="__PUBLIC__/Home/js/currency.js?versionId={$Think.config.WWW_VERSION}"></script>
+    <script type="text/javascript" language="javascript" src="__PUBLIC__/Home/js/effect.js?versionId={$Think.config.WWW_VERSION}"></script>
+    <script type="text/javascript" language="javascript" src="__PUBLIC__/Home/js/com.js?versionId={$Think.config.WWW_VERSION}"></script>
+    <script type="text/javascript" language="javascript" src="__PUBLIC__/Home/js/cropbox.js?versionId={$Think.config.WWW_VERSION}"></script>
+    <script type="text/javascript" src="__PUBLIC__/Home/js/city-picker.data.js?versionId={$Think.config.WWW_VERSION}"></script>
+    <script type="text/javascript" src="__PUBLIC__/Home/js/city-picker.js?versionId={$Think.config.WWW_VERSION}"></script>
+    <script type="text/javascript" language="javascript" src="__PUBLIC__/Home/js/com.js?versionId={$Think.config.WWW_VERSION}"></script>
+     <script type="text/javascript" language="javascript" src="__PUBLIC__/Home/js/p-center.js?versionId={$Think.config.WWW_VERSION}"></script>
+</body>
+</html>

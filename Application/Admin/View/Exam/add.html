@@ -1,0 +1,129 @@
+<nav class="breadcrumb"><i class="iconfont">&#xf012b;</i> 首页 <span class="c-gray en">&gt;</span> 试题管理 <span class="c-gray en">&gt;</span> <if condition="$info">修改<else/>添加</if>试题 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="icon-refresh"></i></a></nav>
+<div class="pd-20 text-c">
+<form class="Huiform" action="" method="post" enctype="multipart/form-data">
+        <input type="hidden" value="{$info[id]}" name="id">
+        <input type="hidden" value="" name="delgids" />
+        <table class="table table_prim">
+    <tr style="display:none;">
+    <th width="100">主办单位:</th>
+    <td><input type="text" value="{$info['vote_person']}" maxlength="64" class="form-control" name="vote_person"></td>
+    </tr>
+    <!-- <tr>
+        <th width="100">结束时间:</th>
+        <td><input id="datetimepicker" type="text" value="{$info['endtime']|date='Y-m-d',###}" maxlength="64" class="form-control" name="endtime" ></td>
+    </tr> -->
+     <tr>
+        <th width="100">试题类型:</th>
+        <td>
+          <select class="select" id="sel_Sub" name="ntype" onchange="SetSubID(this);">            
+            <volist name='examtypes' id='type' key="k">               
+               <option value="{$k}" <if condition="$k eq $info['ntype']"> selected="" </if>>{$type}</option>               
+            </volist>      
+          </select>
+        </td>
+      </tr> 
+    <tr>
+        <th width="100">考试时长（分钟）:</th>
+        <td><input type="text" value="{$info['examtime']}" maxlength="64" class="form-control" name="examtime"></td>
+        
+    </tr>
+    <tr>
+        <th width="100">试题名称:</th>
+        <td><input type="text" value="{$info['theme']}" maxlength="64" class="form-control" name="theme"></td>
+        <td><button type="button" class="btn btn-success" id="" name="" onClick="class_additem();"><i class="icon-plus"></i> 新增题目</button>  </td>
+        
+    </tr>
+    <!-- <tr>
+        <th width="100">类型:</th>
+        <td> 
+          <label class="radio-inline" >
+              <input type="radio" id="inline-radio2" <if condition=" $info[type]==1" > checked="" </if>  name="type" value="1"> 多选
+          </label>
+          <label class="radio-inline" >
+              <input type="radio" id="inline-radio2" <if condition=" $info[type]==0" > checked="" </if> name="type" value="0"> 单选
+          </label>
+        </td>
+    </tr> -->
+    <if condition="itemlist">
+    
+    <foreach  name="itemlist" item="vo">
+     <tr >
+       <th width="100">标题:</th>
+       <td><input type="text" value="{$vo['title']}" maxlength="64" class="form-control" name='items[][{$vo.id}]'></td>
+       <td><button type="button" class="btn btn-success" id="" name="" onClick="class_deltheme(this);"><i class="icon-trash"></i> </button>  <button type="button" class="btn btn-success items" id="" name="" onClick="class_additemop(this);"><i class="icon-plus "></i> 添加选项</button></td>
+        <foreach item="itemchrilds[$vo['id']]" name="itemop" key='k'>
+         <table class="table">
+            <tr>
+              <th width="100">选项:</th>
+              <td style="width:300px;" ><input type="text" value="{$itemop['name']}" maxlength="64" class="form-control" name="items[$k][itemop][]"></td>
+              <td style="width:300px;"><button type="button" class="btn btn-success" id="" name="" onClick="class_deltheme(this);"><i class="icon-trash"></i> </button></td>
+              
+            </tr>
+         </table>
+        </foreach> 
+    </tr> 
+    </foreach>
+   </if>
+  
+
+</table>
+<div class="text-c mt-20">
+      <button type="button" class="btn btn-success radius" id="" name="" onClick="class_save();"><i class="icon-save"></i> 保存</button>
+</div> 
+</form>
+</div>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/ueditor.all.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/lang/zh-cn/zh-cn.js"></script>
+  <script type="text/javascript">
+  function class_save(){
+     var title = $("input[name='theme']").val().trim();
+    
+     if(title.length<1){
+        layer.msg('名称不能为空!',1);
+        return;
+     }
+     $(".Huiform").submit();
+  }   
+  function class_additem(){
+   
+    var Html = '';
+    var tHtml = '<br/>类型:&nbsp;<select name="itemtypes[]"><option value="1">多选</option><option value="0">单选</option></select>'; 
+   
+tHtml += '<br/>答案：<input type="text" maxlength="50" class="form-control" name="results[]">';
+ tHtml += '<br/>解析：<textarea cols="50" rows="10"    name="analysiss[]" ></textarea>';
+    Html = "<tr> <th width='100'>问题:</th> <td><input type='name' name='items[][]' class='form-control'>"+tHtml+"</td> <td><button type='button' class='btn btn-success' id='' name='' onClick='class_deltheme(this);'><i class='icon-trash'></i> </button>  <button type='button' class='btn btn-success items' id='' name='' onClick='class_additemop(this);'><i class='icon-plus'></i> 添加选项</button></td></tr> "
+   $(".table_prim").append(Html);
+  }
+  function class_additemop(obj){
+    var Html = '';
+    var o_index = $(".items").index(obj);
+    console.log(o_index);
+    Html = "<table ><tr> <th width='100'>选项:</th> <td><input type='name' name='items["+o_index+"][itemop][]' class='form-control'></td> <td><button type='button' class='btn btn-success' id='' name='' onClick='class_deltheme(this);'><i class='icon-trash'></i> </button></td>  </tr></table>"
+   $(obj).closest("tr").append(Html);
+  }
+  function class_deltheme(obj){
+   $(obj).closest("tr").remove();
+  }
+
+  /*$(function(){
+    $.fn.datetimepicker.dates['zh'] = {  
+                days:       ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六","星期日"],  
+                daysShort:  ["日", "一", "二", "三", "四", "五", "六","日"],  
+                daysMin:    ["日", "一", "二", "三", "四", "五", "六","日"],  
+                months:     ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月","十二月"],  
+                monthsShort:  ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二"],  
+                meridiem:    ["上午", "下午"],  
+                //suffix:      ["st", "nd", "rd", "th"],  
+                today:       "今天"  
+        };
+    var date = new Date();
+    $('#datetimepicker').datetimepicker({
+      language:"zh", 
+      startDate: date,
+      todayHighlight:true,
+      todayBtn:true,
+      autoclose:true,
+    });
+  })*/
+</script>

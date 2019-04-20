@@ -1,0 +1,111 @@
+<style type="text/css">
+.page{
+   margin-left: 40%; 
+}
+.page ul li{
+  float: left !important;
+}
+</style>
+<a href="javascript:void(0)" onclick="javascript:history.go(-1)"><button type="button" class="btn btn-success" id="" name="" > 关闭</button></a>
+<form class="Huiform" action="{:U('Msg/edit')}" method="post" enctype="multipart/form-data">
+ <input name="uids" type="hidden">
+<button type="submit" class="btn btn-success" id="" name="" >确定</button>
+</form>
+
+<div class="pd-20 text-c">
+
+	<table class="table table-striped table-bordered bootstrap-datatable datatable table-sort">
+       <thead>
+            <tr>
+                <th><input type="checkbox" class="ckallbox" name="" value=""></th> 
+                
+                <th>会员信息</th>
+                 <th>积分/余额</th>
+                <th>类型</th>
+                <th>属性</th>
+                <th>锁定</th>
+                <th>是否认证</th>
+                <th>状态</th>             
+                <th></th>
+            </tr>
+        </thead>
+        <tbody> 
+          
+            <if condition=" $list">
+                <foreach name="list" item="info" >  
+                <tr>
+                 
+                    <td> <input type="checkbox" value="" name="user-Character-0" data-uid="{$info['id']}" class="user-Character-0 ckbox"></td>
+                   
+                    <td><a  href="{:U('Memberlist/edit',array('id'=>$info[id],'rand'=>rand(1,10000)))}"  data-name="{$info[title]}" data-id="{$info[id]}"><if condition="$info['head']"><img src="__PUBLIC__/Home/images{$info[head]}" alt="" width="50"></if>{$info[username]}/{$info[mobile]}</a></td>
+                     <td>{$info[credit1]}/{$info[credit2]}</td>
+                    <td>{$usertypeName[intval($info[user_type])]}</td>  
+                    <td>{$organizationName[$info[organization_id]]}</td> 
+                    <td>{$islockName[$info[islock]]}</td>
+                    <td><if condition="empty($info[auth_time])">未完成<else/>完成</if></td>
+                    <td>{$isblackName[$info[isblack]]}</td>                          
+                    <td  class="f-14">
+                        <!-- <a  href="{:U('Memberlist/edit',array('id'=>$info[id],'rand'=>rand(1,10000)))}"  data-name="{$info[title]}" data-id="{$info[id]}">
+                            <i class="icon-edit"></i>          
+                        </a>
+                        <a  onclick="class_del(this)" class="ml-5" data-url="{:U('Memberlist/del',array('id'=>$info[id],'rand'=>rand(1,10000)))}" href="###">
+                            <i class="icon-trash"></i>
+                        </a> -->
+                    </td>
+                </tr>
+                </foreach>
+                <else />
+                <tr>
+                    <td colspan="6">暂无数据</td>
+                </tr>  
+            </if>                       
+        </tbody>
+    </table>  
+   <div class="page">
+    {$page}
+    </div>
+</div>
+
+<script type="text/javascript" src="__PUBLIC__/Huiadmin/lib/My97DatePicker/WdatePicker.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Huiadmin/lib/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Huiadmin/lib/laypage/laypage.js"></script>
+<script type="text/javascript">
+$('.table-sort').dataTable({
+	"aaSorting": [[ 1, "desc" ]],//默认第几个排序
+	"bStateSave": true,//状态保存
+	"pading":false,
+	"aoColumnDefs": [
+	  //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+	  {"orderable":false,"aTargets":[0,8]}// 不参与排序的列
+	]
+});
+ $(function(){
+ 	$(".ckbox").click(function(){
+ 		var uids='';
+ 		$("input[name='uids']").val(uids);
+ 		$('.table tbody').find(':checkbox').each(function(){
+		  if ($(this).is(":checked")) {
+		    uids+=$(this).attr("data-uid")+',';
+		  }
+		});
+    $("input[name='uids']").val(uids);
+		console.log(uids);
+ 	})
+    var allcheck = 0;
+ 	$(".ckallbox").click(function(){
+ 		var uids='';
+ 		if(!allcheck){
+ 			$('.table tbody').find(':checkbox').each(function(){
+		    uids+=$(this).attr("data-uid")+',';
+			});
+			$("input[name='uids']").val(uids);
+			allcheck = 1;
+ 		}else{
+ 			allcheck = 0;
+ 			$("input[name='uids']").val(uids);
+ 		}
+
+ 		
+ 	})
+ })
+</script>

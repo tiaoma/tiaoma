@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+body{	 
+	background: url(../images/5bebf71ec2b0e.jpg) no-repeat;
+	background-size:cover;
+}
+.hand{
+	cursor: pointer;
+}
+.mg-t-150{
+	margin-top: 150px;
+}
+.mg-b-10{
+	margin-bottom: 10px;
+}
+.ft-size-24{
+	font-size: 24px;
+}
+.form-horizontal .form-label{
+	margin-top: 0;
+}
+.text-center{
+	text-align: center;
+}
+.lgbg{
+	/*background:#c6c6c6;*/
+	overflow: hidden;
+
+}
+.logo{
+	width: 120px;
+}
+.lgbg .panel{
+   max-width: 670px;
+   margin: 0 auto;
+}

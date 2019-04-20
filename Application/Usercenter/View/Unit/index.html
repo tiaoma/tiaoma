@@ -1,0 +1,120 @@
+
+<style type="text/css">
+    /*.birthdaybox{
+        width: 350px;
+        overflow: hidden;
+        height: 36px;
+        float: left;
+    }
+    .birthdaybox .sleect{
+        line-height: 18px;
+        border: 1px solid #bdbdbd;
+        padding: 5px;
+        float: none;
+        font-family: "Microsoft YaHei";
+        font-size: 14px;
+        width: 70px;
+    }
+    .birthdaybox label{
+        margin:0 5px;
+        color: #666;
+        font-weight: normal;
+    }
+    .information_box form li input[type=text].mobile{
+        border-color: #fff;   
+    }*/
+    .city-picker-span{
+        position: absolute !important;
+        display: inline;
+        border:1px solid #bdbdbd;
+        padding: 0 5px;
+    }
+
+</style>
+<div class="cb-r-inf">
+                    <form action="" method="post">                    
+                        <li>
+                            <div class="text">单位名称：</div>
+                            <input type="text" name="title" value="{$info['title']}"/>
+                        </li>
+                        <div class="prompt-box"></div>                       
+                        <li  class="cb-r-sex">
+                            <div class="text">单位性质：</div>
+                            <span <if condition="$info['unit_property'] eq 0"> class="ac" </if>>
+                                <input type="radio" value="0" name="unit_property" <if condition="$info['unit_property'] eq 0"> checked="" </if>  />
+                            </span>  国有&nbsp;&nbsp;                            
+                            <span <if condition="$info['unit_property'] eq 1"> class="ac" </if>>
+                                <input type="radio" value="1" name="unit_property" <if condition="$info['unit_property'] eq 1"> checked="" </if>  />
+                            </span>  合资&nbsp;&nbsp;&nbsp;                            
+                            <span <if condition="$info['unit_property'] eq 2"> class="ac" </if>>
+                                <input type="radio" value="2" name="unit_property" <if condition="$info['unit_property'] eq 2"> checked="" </if>  />
+                            </span>  私营&nbsp;&nbsp;&nbsp;
+                            <span <if condition="$info['unit_property'] eq 3"> class="ac" </if>>
+                                <input type="radio" value="3" name="unit_property" <if condition="$info['unit_property'] eq 3"> checked="" </if>  />
+                            </span>  外资&nbsp;&nbsp;&nbsp; 
+                            <span <if condition="$info['unit_property'] eq 4"> class="ac" </if>>
+                                <input type="radio" value="4" name="unit_property" <if condition="$info['unit_property'] eq 4"> checked="" </if>  />
+                            </span>  独资&nbsp;&nbsp;&nbsp; 
+                            <span <if condition="$info['unit_property'] eq 5"> class="ac" </if>>
+                                <input type="radio" value="5" name="unit_property" <if condition="$info['unit_property'] eq 5"> checked="" </if>  />
+                            </span>  个体&nbsp;&nbsp;&nbsp;
+                            <span <if condition="$info['unit_property'] eq 6"> class="ac" </if>>
+                                <input type="radio" value="6" name="unit_property" <if condition="$info['unit_property'] eq 6"> checked="" </if>  />
+                            </span>  其它
+                             
+                        </li>
+                        <div class="prompt-box"></div>   
+                        <li style="position: relative;">
+                            <input type="hidden" name="province" value="{$info['province']}">
+                            <input type="hidden" name="city" value="{$info['city']}">
+                            <input type="hidden" name="area" value="{$info['area']}">
+                            <div class="text">居住地址：</div>
+                                <input id="city-picker" class="form-control" readonly type="text"  data-toggle="city-picker" value="{$info['province']}/{$info['city']}/{$info['area']}">
+                        </li>
+                        <div class="prompt-box"></div>
+                        <li class="cb-r-xplace">
+                            <div class="text">通讯地址：</div>
+                            <input type="text" name="address" value="{$info['address']}"/>
+                            <div class="prompt-box fl"></div>
+                        </li>
+                        <div class="prompt-box"></div>
+                        <li class="cb-r-xplace">
+                            <div class="text">描述：</div>
+                            <textarea name="des" cols="70" rows="10" class="dle-c-spec">{$info['des']}</textarea >
+                        </li>
+                        <div class="prompt-box"></div>
+                        <li class="cb-r-last">
+                            <button type="submit" class="submitBtn">保 存</button>
+                        </li>
+                    </form>
+                 </div>
+<script type="text/javascript" language="javascript" src="__PUBLIC__/Home/js/birthday.js?versionId={$Think.config.WWW_VERSION}"></script>
+            <script type="text/javascript">
+                $(function(){
+                    $(".cb-r-sex span").click(function(){
+                        $(this).find('input').prop("checked", "checked");
+                    });
+                    $.ms_DatePicker({
+                            YearSelector: ".sel_year",
+                            MonthSelector: ".sel_month",
+                            DaySelector: ".sel_day"
+                    });
+                   
+                    $(".submitBtn").click(function(){
+                        if($(".city-picker-span .select-item").length>0){
+                            if($(".city-picker-span .select-item").eq(0) != undefined){
+                                $("input[name='province']").val($(".city-picker-span .select-item").eq(0).text());
+                            }
+                            if($(".city-picker-span .select-item").eq(1) != undefined){
+                                $("input[name='city']").val($(".city-picker-span .select-item").eq(1).text());
+                            }
+                            if($(".city-picker-span .select-item").eq(2) != undefined){
+                                $("input[name='area']").val($(".city-picker-span .select-item").eq(2).text());
+                            }
+                        }
+                        
+                         
+
+                    });
+                });
+            </script>         

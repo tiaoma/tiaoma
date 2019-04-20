@@ -1,0 +1,61 @@
+<nav class="breadcrumb"><i class="iconfont">&#xf012b;</i> 首页 <span class="c-gray en">&gt;</span>  友情链接 <span class="c-gray en">&gt;</span><if condition="$bdata">编辑<else/>添加</if><a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="icon-refresh"></i></a></nav>
+<div class="pd-20">
+  <form class="Huiform" action="" method="post" enctype="multipart/form-data">
+  <table class="table">
+      <input type="hidden" value="{$bdata[id]}" name="id" />
+      <tr>
+        <th width="100">名称:</th>
+        <td><input type="text" value="{$bdata[title]}" class="form-control" name="title"></td>
+      </tr>
+      <tr>
+        <th width="100">链接:</th>
+        <td><input type="text" value="{$bdata[link]}" class="form-control" name="link"></td>
+      </tr>
+       <tr >
+        <th width="100">排序:</th>
+        <td><input   value="{$bdata['sorder']}" maxlength="64" class="input-text" placeholder="填写的数字越大越靠前"  style="width:250px" name="sorder"></td>
+    </tr>
+      <tr>
+        <th width="100">状态:</th>
+        <td>
+          <label class="radio-inline" >
+            <input type="radio" id="inline-radio2" name="status" value="1" <if condition="$bdata['status'] eq 1"> checked</if>> 显示
+          </label>
+          <label class="radio-inline">
+            <input type="radio" id="inline-radio2" name="status" value="0" <if condition="$bdata['status'] eq 0"> checked</if>> 隐藏
+          </label>
+        </td>
+      </tr> 
+      <tr>
+        <th width="100">类型:</th>
+        <td>
+          <select class="select" id="friend_type" name="friend_type" onchange="SetSubID(this);">            
+            <foreach name="friendLinks" key="fid" item="vo">
+                  <option value="{$fid}" <if condition="$bdata['friend_type'] eq $fid"> selected="" </if>>{$vo}</option>               
+            </foreach>      
+          </select>
+        </td>
+      </tr> 
+  </table>
+         <div class="text-c mt-20">
+      <button type="button" class="btn btn-success radius" id="" name="" onClick="class_save();"><i class="icon-save"></i> 保存</button>
+      <a href="{:U('Friendlink/index')}"><button type="button" class="btn btn-success" id="" name="" > 返回列表</button></a>
+    </div>
+    </form>
+   
+  </div>
+ <script type="text/javascript">
+  function class_save(){
+     var title = $("input[name='title']").val().trim();
+      var link = $("input[name='link']").val().trim();
+     if(title.length<1){
+        layer.msg('名称不准为空!',1);
+        return;
+     }
+     if(link.length<1){
+        layer.msg('链接不准为空!',1);
+        return;
+     }
+     $(".Huiform").submit();
+  }
+</script>

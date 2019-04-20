@@ -1,0 +1,98 @@
+<style type="text/css">
+.page{
+   margin-left: 40%; 
+}
+.page ul li{
+  float: left !important;
+}
+</style>
+<nav class="breadcrumb"><i class="iconfont">&#xf012b;</i> 首页 <span class="c-gray en">&gt;</span> 会员管理 <span class="c-gray en">&gt;</span> 会员列表 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="icon-refresh"></i></a></nav>
+<form class="Huiform" action="" method="post" enctype="multipart/form-data">
+
+<div class="text-c"> 
+        <span class="select-box inline">
+        <select name="user_type" class="select">
+            <option value="" >类型</option>
+            <option value="0" <if condition="$user_type eq '0'">selected</if>>普通</option>
+            <option value="1" <if condition="$user_type eq '1'">selected</if>>单位</option>
+        </select>
+        </span>
+        <span class="select-box inline">
+        <select name="organization_id" class="select">
+            <option value="" <if condition="$organization_id eq ''">selected</if>>会员属性</option>
+            <option value="0" <if condition="$organization_id eq '0'">selected</if> >普通</option>
+            <foreach name="organizationlist" item="olist">
+                <option value="{$olist['id']}" <if condition="$organization_id eq $olist['id']">selected</if>>{$olist['title']}</option>
+            </foreach>
+        </select>
+        </span>
+        <span class="select-box inline">
+        <select name="islock" class="select">
+            <option value="" >锁定状态</option>
+            <option value="0" <if condition="$islock eq '0'">selected</if>>否</option>
+            <option value="1" <if condition="$islock eq '1'">selected</if>>是</option>
+        </select>
+        </span>
+        <input type="text" class="input-text" style="width:250px" placeholder="输入会员名称、电话" id="" name="keyword" value="{$keyword}">
+        <button type="submit" class="btn btn-success radius" id="" name=""><i class="icon-search"></i> 搜用户</button>
+</div>
+</form>
+<div class="pd-20 text-c">
+  <table class="table table-striped table-bordered bootstrap-datatable datatable">
+                    <thead>
+                        <tr>
+                            <th>序号</th> 
+                            <th>名称</th>
+                            <th>会员信息</th>
+                            <th>积分/余额</th>
+                            <th>类型</th>   
+                            <th>等级</th>
+                            <th>锁定</th>
+                            <th>状态</th>             
+                            <th>操作</th>
+                        </tr>
+                    </thead>   
+                    <tbody> 
+                        <if condition=" $list">
+                            <foreach name="list" item="info" >  
+                            <tr>
+                                <td>{$info[id]}</td>
+                                <td><if condition="$info['head']"><img src="__PUBLIC__/Data/{$info[head]}" alt="" width="50"></if>{$info[username]}</td>
+                                <td>{$info[mobile]}</td>
+                                <td>{$info[credit1]}/{$info[credit2]}</td>
+                                <td>{$usertypeName[intval($info[user_type])]}</td>
+                                <td>{$info[level]}</td> 
+                                <td>{$islockName[$info[islock]]}</td>
+                                <td>{$isblackName[$info[isblack]]}</td>                          
+                                <td  class="f-14">
+                                    <a  href="{:U('Memberlist/edit',array('id'=>$info[id],'rand'=>rand(1,10000)))}"  data-name="{$info[title]}" data-id="{$info[id]}">
+                                        <i class="icon-edit"></i>          
+                                    </a>
+                                    <a  onclick="class_del(this)" class="ml-5" data-url="{:U('Memberlist/del',array('id'=>$info[id],'rand'=>rand(1,10000)))}" href="###">
+                                        <i class="icon-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            </foreach>
+                            <else />
+                            <tr>
+                                <td colspan="6">暂无数据</td>
+                            </tr>  
+                        </if>                       
+                    </tbody>
+                </table>  
+                <div class="page">
+            {$page}
+            </div>  
+</div>
+<script type="text/javascript" src="__PUBLIC__/Huiadmin/lib/My97DatePicker/4.8/WdatePicker.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Huiadmin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Huiadmin/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript">
+ 
+   function class_del(obj){
+     layer.confirm('确认要删除吗？',function(index){
+           location.href = $(obj).attr('data-url');
+      });
+  }
+</script>

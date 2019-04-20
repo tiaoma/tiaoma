@@ -1,0 +1,92 @@
+ <style>
+  .rb-s-cont li{
+    margin-bottom: 20px;
+  }
+ .next-bt{
+    padding: 0 10px;
+    height: 26px;
+    line-height: 26px;
+    display: table;
+    background: #e11020;
+    color: #fff;
+    border-radius: 3px;
+    margin-left: 170px;
+ }
+</style> 
+
+                <div class="cb-r-bind">
+                    <ul class="rb-step">
+                        <li class="ac">
+                            验证身份
+                            <span>1</span>
+                        </li>
+                        <li class="ac">
+                            修改密码
+                            <span>2</span>
+                        </li>
+                        <li>
+                            完成
+                            <span>OK</span>
+                        </li>
+                    </ul>
+                    <form id="formObj" action="{:U('Account/pswfinish')}"  method="post">
+                        <ul class="rb-s-cont">
+                            <!-- <li>
+                                <div class="input-name">
+                                    登录密码：
+                                </div>
+                                <input type="password" class="input-box" name="oldpsw" />
+                            </li> -->
+                            <li>
+                                <div class="input-name">
+                                    重置密码：
+                                </div>
+                                <input type="password" class="input-box" name="newpsw"/>
+                            </li>
+                            <div class="promptBox"></div>
+                            <li>
+                                <div class="input-name">
+                                    确认密码：
+                                </div>
+                                <input type="password" class="input-box" name="agpsw"/>
+                            </li>
+                            <div class="promptBox"></div>
+                            <li >
+                                <button type="button" class="next-bt" id="submitForm">下一步</button>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+  
+<script type="text/javascript">
+                $(function(){
+                    $("#submitForm").click(function(){
+                        //var oldpsw = $("input[name='oldpsw']").val().trim();
+                        var newpsw = $("input[name='newpsw']").val().trim();
+                        var agpsw = $("input[name='agpsw']").val().trim();
+                        var username = '{$www_memberInfo["username"]}';
+                        /*if(oldpsw.length<1){
+                            $(".promptBox").eq(0).html('请输入登录密码');
+                            return;
+                        }*/
+                        var pswpatt = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$/;
+                        if(!pswpatt.test(newpsw)){                            
+                            $(".promptBox").eq(1).html('6~16位数字、字母，使用两种字符组合');
+                            return;
+                        }
+                         
+                        if(newpsw != agpsw ){
+                            $(".promptBox").eq(2).html('新密码和确认密码不一致');
+                            return;
+                        }
+
+                        if(username==newpsw){
+                            popup('用户名和密码一致,存在安全风险');
+                            return;
+                        }
+
+                        $("#formObj").submit();
+
+                    });
+                });
+                </script>

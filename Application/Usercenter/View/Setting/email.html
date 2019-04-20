@@ -1,0 +1,87 @@
+        <header class="mui-bar mui-bar-nav">
+		    <a  href="{:U('Setting/index')}" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">设置邮箱</h1>
+		</header>
+		<div class="mui-content margintop">
+
+            <form id="formObj" action=""  class="mui-input-group">
+                 <div class="mui-input-row">
+                        <label>邮箱</label>
+                        <input  autocomplete="off" type="text" class="mui-input-clear mui-input username" placeholder="请输入邮箱" value="{$www_member['email']}" name="email">
+                </div>
+                <div class="mui-input-row codeBox">
+                        <label>校验码</label>
+                        <input  autocomplete="off" type="text" class="mui-input-clear mui-input" placeholder="请输入校验码" name="code" maxlength="4">
+                        <a href="javascript:void(0);" class="obtain getCodeMsg ca" data-url="{:U('Cmodule/Email/send')}"  id="obtainNum">获取校验码</a> 
+                </div>
+            </form>
+            <div class="mui-content-padded">
+                <button  class="mui-btn mui-btn-block mui-btn-primary cbtn">保存</button>
+            </div>
+        </div>
+		<script type="text/javascript">
+        $(function(){      
+            var email = '';       
+            $(".cbtn").click(function(){
+                var email_n = $("input[name='email']").val().trim(); 
+                var code = $("input[name='code']").val().trim(); 
+                if(!isEmail(email_n)){
+                    mui.alert('邮箱不能为空或格式不正确', GlobalAppName, function() {});
+                    return;
+                 }                 
+                if(code.length!=4 || email_n!=email){
+                    mui.alert('校验码不正确', GlobalAppName, function() {});
+                    return;
+                }
+                mui(this).button('loading');  
+                var obj = this;           
+                $.ajax({
+                    url:'{:U("Setting/email")}',
+                    type:'post',
+                    dataType:'json',
+                    data:{email:email,code:code},
+                    success:function(re){
+                        mui(obj).button('reset'); 
+                        mui.alert(re.msg, GlobalAppName, function() {});
+                    }
+                });
+            });
+            //////////
+             $("#obtainNum").click(function(){ 
+             var obj = this;                             
+             var url = $(this).attr('data-url');
+             email = $("input[name='email']").val().trim(); 
+             if(!isEmail(email)){
+                mui.alert('邮箱不能为空或格式不正确', GlobalAppName, function() {});
+                return;
+             }
+              
+             $.ajax({
+                url:'{:U("Setting/checkemail")}',
+                type:'post',
+                data:{email:email,mtype:1},
+                dataType:'json',
+                success:function(re){
+                     if(re.code=='1'){
+                       mui.alert('该邮箱已经绑定', GlobalAppName, function() {});
+                        return;
+                     }else{
+                     gbGetCodeCount(obj);
+                     $.ajax({
+                        url:url,
+                        type:'post',
+                        data:{email:email,mtype:1},
+                        success:function(re){
+                             mui.alert(re, GlobalAppName, function() {});
+                        }
+                     });
+                    } 
+                }
+             });
+             
+        });
+
+        });
+    </script>
+ 
+ 

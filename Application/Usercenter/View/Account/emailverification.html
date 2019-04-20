@@ -1,0 +1,140 @@
+ <style>
+  .rb-s-cont li{
+    margin-bottom: 20px;
+  }
+ .next-bt{
+    padding: 0 10px;
+    height: 26px;
+    line-height: 26px;
+    display: table;
+    background: #f90;
+    color: #fff;
+    border-radius: 3px;
+    margin-left: 170px;
+ }
+</style> 
+
+                <div class="cb-r-bind">
+                    <ul class="rb-step">
+                        <li class="ac">
+                            验证身份
+                            <span>1</span>
+                        </li>
+                        <li class="ac">
+                           修改邮箱
+                            <span>2</span>
+                        </li>
+                        <li>
+                            完成
+                            <span>OK</span>
+                        </li>
+                    </ul>
+                    <form id="formObj" action="{:U('Account/emailfinish')}"  method="post">
+                        <ul class="rb-s-cont">
+                        <li  class="gb-mb20">
+                                <div class="input-name">
+                                    旧邮箱：
+                                </div>
+                            <if condition="$www_member['email'] neq ''">
+                               <input readonly="" class="input-box" value="{$www_member['email']}" />
+                                <else/>
+                                
+                                <input readonly="" class="input-box" value="从未设置" /> 
+                                </if>
+                                
+                            </li>
+                            <li>
+                                <div class="input-name">
+                                    新邮箱：
+                                </div>
+                                <input class="input-box" name="email"/>
+                            </li>
+                            <div class="promptBox"></div>
+                            <li class="check_code">
+                                <div class="input-name">
+                                    请填写邮件校验码：
+                                </div>
+                                <input type="text" name="code" maxlength="4" class="input-box" id="ckcode" />
+                                <div id="obtainNum" data-url="{:U('Cmodule/Email/send')}">获取验证码</div>
+                            </li>
+                            <div class="promptBox"></div>
+                            <li >
+                                <button type="button" class="next-bt" id="submitForm">下一步</button>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            
+<script type="text/javascript">
+    $(function(){
+        var email = '';
+        $("#obtainNum").click(function(){ 
+             var obj = this;                             
+             var url = $(this).attr('data-url');
+             email = $("input[name='email']").val().trim(); 
+             if(!isEmail(email)){
+                $(".promptBox").eq(0).html('邮箱不能为空或格式不正确');
+                return;
+             }
+              
+             $.ajax({
+                url:'{:U("Account/checkemail")}',
+                type:'post',
+                data:{email:email,mtype:1},
+                dataType:'json',
+                success:function(re){
+                     if(re.code=='1'){
+                       popup('该邮箱已经绑定');
+                        return;
+                     }else{
+                     gbGetCodeCount(obj);
+                     $.ajax({
+                        url:url,
+                        type:'post',
+                        data:{email:email,mtype:1},
+                        success:function(re){
+                             $(".promptBox").eq(0).html(re);
+                        }
+                     });
+                    } 
+                }
+             });
+             
+        });
+        $(document).on('click',".submitForm",function(){
+            var url = $(this).attr('data-url');
+            var ckcode = $("#ckcode").val().trim();
+            //var mobile = $("input[name='mobile']").val().trim(); 
+            $(".promptBox").html('');
+             if(!isEmail(email)){
+                $(".promptBox").eq(0).html('邮箱不能为空或格式不正确');
+                return;
+             }
+            if(ckcode.length<1){
+                $(".promptBox").eq(1).html('请输入验证码');
+                return;
+            }
+            $(this).html('操作中...');
+            $(this).removeClass('submitForm');
+            $.ajax({
+                url:url,
+                type:'post',
+                data:{code:ckcode},
+                success:function(re){
+                     if(re==''){
+                         $("input[name='email']").val(email);
+                         $("#formObj").submit();
+                     }
+                     $(".promptBox").eq(2).html(re);
+                     $(this).html('下一步'); 
+                     $(this).addClass('submitForm'); 
+                },
+                error:function(){
+                    $(".promptBox").eq(2).html('网络错误');
+                    $(this).html('下一步'); 
+                    $(this).addClass('submitForm');
+                }
+             });
+        });
+    });
+</script>

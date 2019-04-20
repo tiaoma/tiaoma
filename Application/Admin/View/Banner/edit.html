@@ -1,0 +1,119 @@
+<nav class="breadcrumb"><i class="iconfont">&#xf012b;</i> 首页 <span class="c-gray en">&gt;</span> 产品管理 <span class="c-gray en">&gt;</span> 添加产品 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="icon-refresh"></i></a></nav>
+<div class="pd-20 text-c">
+ <form class="Huiform" action="{:U('Banner/edit')}" method="post" enctype="multipart/form-data">
+ <input type='hidden' value="{$info['id']}" name='id'/>
+ <table class="table">
+   <tr>
+        <th width="100">排序:</th>
+        <td><input placeholder="填写的数字越大越靠前"  value="{$info['displayorder']}" maxlength="64" class="input-text"  style="width:250px" name="displayorder"></td>
+    </tr>
+    <tr>
+        <th width="100">图片标题:</th>
+        <td><input type="text" value="{$info['title']}" maxlength="64" class="form-control" name="title"></td>
+    </tr>
+    <tr>
+        <th width="100">位置:</th>
+        <td> 
+            <label class="radio-inline" >
+                <input type="radio" id="place-radio2" <if condition=" $info[place]==0" > checked="" </if> name="place" value="0"> 首页
+            </label>
+            <label class="radio-inline" >
+                <input type="radio" id="place-radio2" <if condition=" $info[place]==1" > checked="" </if> name="place" value="1"> 内页顶部
+            </label>
+            <label class="radio-inline" >
+                <input type="radio" id="place-radio2" <if condition=" $info[place]==2" > checked="" </if> name="place" value="2"> 报班学习
+            </label>
+            <label class="radio-inline" >
+                <input type="radio" id="place-radio2" <if condition=" $info[place]==3" > checked="" </if> name="place" value="3"> 免费试听
+            </label>
+            <label class="radio-inline" >
+                <input type="radio" id="place-radio2" <if condition=" $info[place]==4" > checked="" </if> name="place" value="4"> 师资力量
+            </label>
+             <label class="radio-inline" >
+                <input type="radio" id="place-radio2" <if condition=" $info[place]==5" > checked="" </if> name="place" value="5"> 模拟考试
+            </label>
+            <label class="radio-inline" >
+                <input type="radio" id="place-radio2" <if condition=" $info[place]==6" > checked="" </if> name="place" value="6"> 消防动态
+            </label>
+             <label class="radio-inline" >
+                <input type="radio" id="place-radio2" <if condition=" $info[place]==7" > checked="" </if> name="place" value="7"> 就业前景
+            </label>
+             <label class="radio-inline" >
+                <input type="radio" id="place-radio2" <if condition=" $info[place]==8" > checked="" </if> name="place" value="8"> 下载资料
+            </label>
+            <label class="radio-inline" >
+                <input type="radio" id="place-radio2" <if condition=" $info[place]==9" > checked="" </if> name="place" value="9"> 下载资料
+            </label>
+        </td>
+    </tr>
+    <tr>
+        <th width="100">图片(1200*360):</th>
+        <td>
+          <input type="file" value="" maxlength="64" class="form-control" name="href">
+          
+        </td>
+        
+    </tr>
+    <tr>
+       <th width="100"></th>
+       <td>
+          <div >
+             <img src="__PUBLIC__/Data/others{$info['href']}" width="600">
+        </div>
+       </td>
+    </tr>
+    <tr>
+        <th width="100">链接:</th>
+        <td><input  value="{$info['link']}"  class="form-control" name="link"></td>
+    </tr>
+    <tr>
+        <th width="100">状态:</th>
+        <td> 
+	        <label class="radio-inline">
+	            <input type="radio" id="inline-radio2" checked="" name="status" value="1" <if condition=" $info[status]==1" > checked="" </if>> 发布
+	        </label>
+	        <label class="radio-inline">
+	            <input type="radio" id="inline-radio2" name="status" value="0" <if condition=" $info[status]==0" > checked="" </if>> 不发布
+	        </label>
+        </td>
+    </tr>
+    <tr>
+        <th width="100">是否是视频:</th>
+        <td> 
+          <label class="radio-inline">
+              <input type="radio" id="inline-radio2" checked="" name="isvideo" value="1" <if condition=" $info[isvideo]==1" > checked="" </if>> 是
+          </label>
+          <label class="radio-inline">
+              <input type="radio" id="inline-radio2" name="isvideo" value="0" <if condition=" $info[isvideo]==0" > checked="" </if>> 否
+          </label>
+        </td>
+    </tr>
+    <tr>
+        <th width="100">视频源文件路径:</th>
+        <td><input  value="{$info['src']}"  class="form-control" name="src"></td>
+    </tr>
+</table>
+<div class="text-c mt-20">
+      <button type="button" class="btn btn-success radius submitNews" id="" name="" onClick="class_save();"><i class="icon-save"></i> 保存</button>
+</div>
+    </form>
+</div>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/ueditor.all.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/lang/zh-cn/zh-cn.js"></script>
+  <script type="text/javascript">
+  
+  function class_save(){
+     var title = $("input[name='title']").val().trim();
+     var coverfile = $("input[name='href']").val().trim();
+     if(title.length<1){
+        layer.msg('名称不能为空!',1);
+        return;
+     }
+     if(coverfile.length<1){
+         $("input[name='href']").remove();
+     }
+     
+     $(".Huiform").submit();
+  }
+</script>

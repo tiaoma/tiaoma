@@ -1,0 +1,17 @@
+<div class="adv-banner">         
+            <ul class="adv-b-banner">
+                <foreach name="topbannerlist"  key="vId" item="vo">
+                <li>
+                    <a href="javascript:void(0);">
+                        <img src="__PUBLIC__/Data/others{$vo[href]}" alt="{$vo[title]}" />
+                    </a>
+                </li>
+                </foreach> 
+            </ul>
+            <!-- <ul class="adv-focus">
+                <foreach name="topbannerlist"  key="vId" item="vo">
+                <li <if condition=" $vId==0" > class="ac" </if> ></li>
+                </foreach> 
+            </ul> -->
+        
+    </div> 

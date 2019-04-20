@@ -1,0 +1,92 @@
+<style type="text/css">
+ .ckb{
+  margin-left: 5px;
+ }
+</style>
+<nav class="breadcrumb"><i class="iconfont">&#xf012b;</i> 首页 <span class="c-gray en">&gt;</span> 管理员管理 <span class="c-gray en">&gt;</span> <if condition="$info">编辑<else/>添加</if>管理员 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="icon-refresh"></i></a></nav>
+<div class="pd-20 text-c">
+<form class="Huiform" action="" autocomplete="off" method="post" enctype="multipart/form-data">
+        <input type="hidden" value="{$info['uid']}" name="id">
+        <input type="hidden" value="" name="delgids" />
+        <table class="table">
+   
+    <tr>
+        <th width="100">管理员账号:</th>
+        <td><input type="text" value="{$info['username']}" maxlength="64" class="form-control" name="username"></td>
+    </tr>
+    <tr>
+        <th width="100">管理员密码:</th>
+        <td><input type="text" value="" maxlength="64" class="form-control" name="password" autocomplete="off"></td>
+    </tr>
+    <tr id="perm_select">
+      <input type="hidden" name="perm" value="{$info['perm']}">
+        <th width="100">权限:</th>
+        <td>
+        <foreach name="Permlist" item="permlist" key="key">
+           <label class="ckb">
+           <?php $kstr=strval($key); ?>
+            <input type="checkbox" value="{$key}" name="user-Character-0-0-0" class="ckbox" <if condition="strpos($info['perm'],$kstr)!==false">checked</if>>{$permlist}
+           </label>
+        </foreach>
+        
+        </td>
+    </tr>
+   <!--  <tr>
+        <th width="100">状态:</th>
+        <td>
+          <label class="radio-inline" >
+              <input type="radio" id="inline-radio2" checked=""  name="status" value="1" <if condition=" $info['status']==1" > checked="" </if>> 打开
+          </label>
+          <label class="radio-inline" >
+              <input type="radio" id="inline-radio2"  name="status" value="0" <if condition=" $info['status']==0" > checked="" </if>> 关闭
+          </label> 
+          
+        </td>
+    </tr> -->
+</table>
+<div class="text-c mt-20">
+      <button type="button" class="btn btn-success radius" id="" name="" onClick="class_save();"><i class="icon-save"></i> 保存</button>
+      <a href="{:U('Adminlist/index')}"><button type="button" class="btn btn-success" id="" name="" > 返回列表</button></a>
+</div> 
+</form>
+</div>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/ueditor.all.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/lang/zh-cn/zh-cn.js"></script>
+  <script type="text/javascript">
+  function class_save(){
+     var title = $("input[name='username']").val().trim();
+     var psw = $("input[name='password']").val().trim();
+     var info='{$info[uid]}';
+     if(title.length<1){
+        layer.msg('名称不能为空!',1);
+        return;
+     }
+     if(info==''){
+      if(psw.length<1){
+        layer.msg('密码不能为空!',1);
+        return;
+       }
+     }
+    
+    
+     
+     $(".Huiform").submit();
+  }
+  $(function(){
+    $(".ckbox").click(function(){
+      var uids='';
+    
+      $("input[name='perm']").val(uids);
+      $('#perm_select td').find(':checkbox').each(function(){
+        if ($(this).is(":checked")) {
+          uids+=$(this).val()+',';
+
+        }
+      });
+      $("input[name='perm']").val(uids);
+     
+    })
+  })
+
+</script>

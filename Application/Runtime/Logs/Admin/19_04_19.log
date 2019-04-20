@@ -1,0 +1,983 @@
+[ 2019-04-19T14:45:14+08:00 ] 127.0.0.1 /sptmcx/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001407s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004194s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004244s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.110555s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.110615s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.030186s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.030230s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.031331s ]
+INFO: [ app_end ] --END-- [ RunTime:0.031375s ]
+
+[ 2019-04-19T14:45:16+08:00 ] 127.0.0.1 /sptmcx/Admin/Index/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000716s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001230s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001273s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001325s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001384s ]
+
+[ 2019-04-19T14:49:21+08:00 ] 127.0.0.1 /sptmcx/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000859s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001270s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001322s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008558s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008615s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001005s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001037s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001289s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001324s ]
+
+[ 2019-04-19T14:49:21+08:00 ] 127.0.0.1 /sptmcx/Admin/Index/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001137s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001379s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001450s ]
+
+[ 2019-04-19T14:49:22+08:00 ] 127.0.0.1 /sptmcx/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000961s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007417s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007459s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000770s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000808s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001006s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001048s ]
+
+[ 2019-04-19T14:49:22+08:00 ] 127.0.0.1 /sptmcx/Admin/Index/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000987s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001093s ]
+
+[ 2019-04-19T14:49:46+08:00 ] 127.0.0.1 /sptmcx/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000948s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000991s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006957s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000807s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000836s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000967s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001002s ]
+
+[ 2019-04-19T14:49:46+08:00 ] 127.0.0.1 /sptmcx/Admin/Index/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001314s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001198s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001250s ]
+
+[ 2019-04-19T14:50:15+08:00 ] 127.0.0.1 /sptmcx/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000959s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007482s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007521s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000770s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000800s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000999s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001041s ]
+
+[ 2019-04-19T14:50:16+08:00 ] 127.0.0.1 /sptmcx/Admin/Index/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000987s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001039s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000998s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001054s ]
+
+[ 2019-04-19T14:50:17+08:00 ] 127.0.0.1 /sptmcx/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001054s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008374s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008416s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000978s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001004s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001046s ]
+
+[ 2019-04-19T14:50:17+08:00 ] 127.0.0.1 /sptmcx/Admin/Index/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000991s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001617s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001100s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001156s ]
+
+[ 2019-04-19T14:50:20+08:00 ] 127.0.0.1 /sptmcx/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000761s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001085s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008269s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008315s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000814s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000966s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-04-19T14:50:20+08:00 ] 127.0.0.1 /sptmcx/Admin/Index/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000938s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001224s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001282s ]
+
+[ 2019-04-19T14:50:23+08:00 ] 127.0.0.1 /sptmcx/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000736s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001102s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006687s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006728s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000756s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000785s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000971s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001007s ]
+
+[ 2019-04-19T14:50:24+08:00 ] 127.0.0.1 /sptmcx/Admin/Index/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000609s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001104s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001160s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001218s ]
+
+[ 2019-04-19T14:50:42+08:00 ] 127.0.0.1 /sptmcx/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001229s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001273s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008217s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008258s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000955s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000985s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001156s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001196s ]
+
+[ 2019-04-19T14:50:42+08:00 ] 127.0.0.1 /sptmcx/Admin/Index/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000697s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001363s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001234s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001288s ]
+
+[ 2019-04-19T14:51:44+08:00 ] 127.0.0.1 /sptmcx/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000818s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001256s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001305s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009339s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009388s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000972s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001158s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001193s ]
+
+[ 2019-04-19T14:51:44+08:00 ] 127.0.0.1 /sptmcx/Admin/Index/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000985s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001009s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001060s ]
+
+[ 2019-04-19T22:41:01+08:00 ] 127.0.0.1 /sptmcx/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-04-19T22:41:29+08:00 ] 127.0.0.1 /sptmcx/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-04-19T22:41:29+08:00 ] 127.0.0.1 /sptmcx/Admin/Index/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-04-19T22:41:45+08:00 ] 127.0.0.1 /sptmcx/Admin/Index/verify.html?0.4962579896392889
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-04-19T22:41:49+08:00 ] 127.0.0.1 /sptmcx/Admin/Index/submitlogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\phpStudy\WWW\sptmcx\Application\Admin\Controller\IndexController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `sp_auth_user` [ RunTime:0.0040s ]
+NOTIC: [8] Use of undefined constant username - assumed 'username' D:\phpStudy\WWW\sptmcx\Application\Admin\Controller\IndexController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant password - assumed 'password' D:\phpStudy\WWW\sptmcx\Application\Admin\Controller\IndexController.class.php 第 41 行.
+SQL: SELECT * FROM `sp_auth_user` WHERE ( username='admin' AND password='64d6bceb715ca185913302a07c8f1b1d' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-04-19T22:41:49+08:00 ] 127.0.0.1 /sptmcx/Admin/Home/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sp_auth_user` [ RunTime:0.0050s ]
+SQL: SELECT `perm` FROM `sp_auth_user` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-04-19T22:41:49+08:00 ] 127.0.0.1 /sptmcx/Admin/Home/desktop.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sp_auth_user` [ RunTime:0.0050s ]
+SQL: SELECT `perm` FROM `sp_auth_user` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-04-19T22:43:08+08:00 ] 127.0.0.1 /sptmcx/Admin/Home/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sp_auth_user` [ RunTime:0.0040s ]
+SQL: SELECT `perm` FROM `sp_auth_user` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-04-19T22:43:08+08:00 ] 127.0.0.1 /sptmcx/Admin/Home/desktop.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sp_auth_user` [ RunTime:0.0050s ]
+SQL: SELECT `perm` FROM `sp_auth_user` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-04-19T22:44:24+08:00 ] 127.0.0.1 /sptmcx/Admin/Msg/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sp_auth_user` [ RunTime:0.0040s ]
+SQL: SELECT `perm` FROM `sp_auth_user` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sp_msg` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sp_msg` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sp_msg` WHERE ( del=0 ) ORDER BY `sendtime` DESC LIMIT 0,20   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\64594637bdac4ffd5e4b51a1074bdbdb.php 第 74 行.
+NOTIC: [8] Use of undefined constant cont - assumed 'cont' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\64594637bdac4ffd5e4b51a1074bdbdb.php 第 76 行.
+NOTIC: [8] Use of undefined constant sendtime - assumed 'sendtime' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\64594637bdac4ffd5e4b51a1074bdbdb.php 第 77 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\64594637bdac4ffd5e4b51a1074bdbdb.php 第 80 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\64594637bdac4ffd5e4b51a1074bdbdb.php 第 80 行.
+NOTIC: [8] Undefined index: title D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\64594637bdac4ffd5e4b51a1074bdbdb.php 第 80 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\64594637bdac4ffd5e4b51a1074bdbdb.php 第 80 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\64594637bdac4ffd5e4b51a1074bdbdb.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-04-19T22:44:24+08:00 ] 127.0.0.1 /sptmcx/Admin/Msg/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `sp_auth_user` [ RunTime:0.0040s ]
+SQL: SELECT `perm` FROM `sp_auth_user` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sp_msg` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `sp_member_msg` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `sp_member` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `sp_member` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sp_member` WHERE ( del=0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 56 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 56 行.
+NOTIC: [8] Undefined variable: uids D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 62 行.
+NOTIC: [8] Undefined variable: unames D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 63 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 69 行.
+NOTIC: [8] Undefined variable: uidsarr D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 104 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 104 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 106 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 106 行.
+NOTIC: [8] Undefined index: title D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 106 行.
+NOTIC: [8] Use of undefined constant head - assumed 'head' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 106 行.
+NOTIC: [8] Use of undefined constant username - assumed 'username' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 106 行.
+NOTIC: [8] Use of undefined constant mobile - assumed 'mobile' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 106 行.
+NOTIC: [8] Use of undefined constant credit1 - assumed 'credit1' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 107 行.
+NOTIC: [8] Use of undefined constant credit2 - assumed 'credit2' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 107 行.
+NOTIC: [8] Use of undefined constant user_type - assumed 'user_type' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 108 行.
+NOTIC: [8] Use of undefined constant organization_id - assumed 'organization_id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 109 行.
+NOTIC: [8] Undefined variable: organizationName D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 109 行.
+NOTIC: [8] Use of undefined constant islock - assumed 'islock' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 110 行.
+NOTIC: [8] Use of undefined constant auth_time - assumed 'auth_time' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 111 行.
+NOTIC: [8] Use of undefined constant isblack - assumed 'isblack' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 112 行.
+NOTIC: [8] Undefined variable: uidsarr D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 104 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 104 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 106 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 106 行.
+NOTIC: [8] Undefined index: title D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 106 行.
+NOTIC: [8] Use of undefined constant head - assumed 'head' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 106 行.
+NOTIC: [8] Use of undefined constant username - assumed 'username' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 106 行.
+NOTIC: [8] Use of undefined constant mobile - assumed 'mobile' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 106 行.
+NOTIC: [8] Use of undefined constant credit1 - assumed 'credit1' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 107 行.
+NOTIC: [8] Use of undefined constant credit2 - assumed 'credit2' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 107 行.
+NOTIC: [8] Use of undefined constant user_type - assumed 'user_type' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 108 行.
+NOTIC: [8] Use of undefined constant organization_id - assumed 'organization_id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 109 行.
+NOTIC: [8] Undefined variable: organizationName D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 109 行.
+NOTIC: [8] Use of undefined constant islock - assumed 'islock' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 110 行.
+NOTIC: [8] Use of undefined constant auth_time - assumed 'auth_time' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 111 行.
+NOTIC: [8] Use of undefined constant isblack - assumed 'isblack' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 112 行.
+NOTIC: [8] Undefined variable: uidsarr D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 104 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 104 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 106 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 106 行.
+NOTIC: [8] Undefined index: title D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 106 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 106 行.
+NOTIC: [8] Use of undefined constant head - assumed 'head' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 106 行.
+NOTIC: [8] Use of undefined constant username - assumed 'username' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 106 行.
+NOTIC: [8] Use of undefined constant mobile - assumed 'mobile' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 106 行.
+NOTIC: [8] Use of undefined constant credit1 - assumed 'credit1' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 107 行.
+NOTIC: [8] Use of undefined constant credit2 - assumed 'credit2' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 107 行.
+NOTIC: [8] Use of undefined constant user_type - assumed 'user_type' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 108 行.
+NOTIC: [8] Use of undefined constant organization_id - assumed 'organization_id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 109 行.
+NOTIC: [8] Undefined variable: organizationName D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 109 行.
+NOTIC: [8] Use of undefined constant islock - assumed 'islock' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 110 行.
+NOTIC: [8] Use of undefined constant auth_time - assumed 'auth_time' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 111 行.
+NOTIC: [8] Use of undefined constant isblack - assumed 'isblack' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 112 行.
+NOTIC: [8] Undefined variable: page D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f7293cab71747300c5a5d9662291e839.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-04-19T22:44:27+08:00 ] 127.0.0.1 /sptmcx/Admin/Banner/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sp_auth_user` [ RunTime:0.0040s ]
+SQL: SELECT `perm` FROM `sp_auth_user` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-04-19T22:44:28+08:00 ] 127.0.0.1 /sptmcx/Admin/Banner/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sp_auth_user` [ RunTime:0.0040s ]
+SQL: SELECT `perm` FROM `sp_auth_user` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sp_banner` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sp_banner` WHERE ( del=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sp_banner` WHERE ( del=0 ) ORDER BY `displayorder` desc,`id` DESC LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 78 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 80 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 82 行.
+NOTIC: [8] Use of undefined constant createtime - assumed 'createtime' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 83 行.
+NOTIC: [8] Use of undefined constant isvideo - assumed 'isvideo' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 85 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 88 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 90 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 92 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 92 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 92 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 95 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 78 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 80 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 82 行.
+NOTIC: [8] Use of undefined constant createtime - assumed 'createtime' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 83 行.
+NOTIC: [8] Use of undefined constant isvideo - assumed 'isvideo' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 85 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 88 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 90 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 92 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 92 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 92 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 95 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 78 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 80 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 82 行.
+NOTIC: [8] Use of undefined constant createtime - assumed 'createtime' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 83 行.
+NOTIC: [8] Use of undefined constant isvideo - assumed 'isvideo' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 85 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 88 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 90 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 92 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 92 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 92 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 95 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 78 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 80 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 82 行.
+NOTIC: [8] Use of undefined constant createtime - assumed 'createtime' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 83 行.
+NOTIC: [8] Use of undefined constant isvideo - assumed 'isvideo' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 85 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 88 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 90 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 92 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 92 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 92 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 95 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 78 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 80 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 82 行.
+NOTIC: [8] Use of undefined constant createtime - assumed 'createtime' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 83 行.
+NOTIC: [8] Use of undefined constant isvideo - assumed 'isvideo' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 85 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 88 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 90 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 92 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 92 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 92 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 95 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 78 行.
+NOTIC: [8] Use of undefined constant href - assumed 'href' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 80 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 82 行.
+NOTIC: [8] Use of undefined constant createtime - assumed 'createtime' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 83 行.
+NOTIC: [8] Use of undefined constant isvideo - assumed 'isvideo' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 85 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 88 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 90 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 92 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 92 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 92 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\96f1079dc513765702ec3bb82f6b6e84.php 第 95 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-04-19T22:44:33+08:00 ] 127.0.0.1 /sptmcx/Admin/News/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sp_auth_user` [ RunTime:0.0040s ]
+SQL: SELECT `perm` FROM `sp_auth_user` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sp_news` [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 56 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 56 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 60 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 64 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 70 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 73 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 89 行.
+NOTIC: [8] Use of undefined constant summary - assumed 'summary' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 96 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 96 行.
+NOTIC: [8] Use of undefined constant des - assumed 'des' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 101 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 101 行.
+NOTIC: [8] Use of undefined constant des - assumed 'des' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 117 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 117 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-04-19T22:44:33+08:00 ] 127.0.0.1 /sptmcx/Admin/News/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sp_auth_user` [ RunTime:0.0040s ]
+SQL: SELECT `perm` FROM `sp_auth_user` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sp_news` [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 56 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 56 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 60 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 64 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 70 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 73 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 89 行.
+NOTIC: [8] Use of undefined constant summary - assumed 'summary' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 96 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 96 行.
+NOTIC: [8] Use of undefined constant des - assumed 'des' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 101 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 101 行.
+NOTIC: [8] Use of undefined constant des - assumed 'des' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 117 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\698b46f00850840455b7a69352143fba.php 第 117 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-04-19T22:44:35+08:00 ] 127.0.0.1 /sptmcx/Admin/Announce/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sp_auth_user` [ RunTime:0.0060s ]
+SQL: SELECT `perm` FROM `sp_auth_user` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sp_announce` [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\abf9c56de9df29b3429bc29ebbe258ef.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\abf9c56de9df29b3429bc29ebbe258ef.php 第 56 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\abf9c56de9df29b3429bc29ebbe258ef.php 第 56 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\abf9c56de9df29b3429bc29ebbe258ef.php 第 61 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\abf9c56de9df29b3429bc29ebbe258ef.php 第 65 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\abf9c56de9df29b3429bc29ebbe258ef.php 第 71 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\abf9c56de9df29b3429bc29ebbe258ef.php 第 73 行.
+NOTIC: [8] Use of undefined constant detail - assumed 'detail' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\abf9c56de9df29b3429bc29ebbe258ef.php 第 80 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\abf9c56de9df29b3429bc29ebbe258ef.php 第 80 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\abf9c56de9df29b3429bc29ebbe258ef.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\abf9c56de9df29b3429bc29ebbe258ef.php 第 88 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\abf9c56de9df29b3429bc29ebbe258ef.php 第 91 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\abf9c56de9df29b3429bc29ebbe258ef.php 第 91 行.
+NOTIC: [8] Use of undefined constant ntype - assumed 'ntype' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\abf9c56de9df29b3429bc29ebbe258ef.php 第 100 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\abf9c56de9df29b3429bc29ebbe258ef.php 第 100 行.
+NOTIC: [8] Use of undefined constant ntype - assumed 'ntype' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\abf9c56de9df29b3429bc29ebbe258ef.php 第 103 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\abf9c56de9df29b3429bc29ebbe258ef.php 第 103 行.
+NOTIC: [8] Use of undefined constant ntype - assumed 'ntype' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\abf9c56de9df29b3429bc29ebbe258ef.php 第 106 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\abf9c56de9df29b3429bc29ebbe258ef.php 第 106 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-04-19T22:44:38+08:00 ] 127.0.0.1 /sptmcx/Admin/Friendlink/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sp_auth_user` [ RunTime:0.0050s ]
+SQL: SELECT `perm` FROM `sp_auth_user` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sp_friendlink` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sp_friendlink` WHERE ( del=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sp_friendlink` WHERE ( del=0 ) ORDER BY `sorder` DESC,`id` DESC LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 91 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 91 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 91 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 91 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 91 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 91 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 91 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 91 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 91 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 91 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 91 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 91 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 91 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 91 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 91 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 91 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 91 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 91 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 91 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant gid - assumed 'gid' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Undefined variable: info D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 88 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\f4fc856ad5a525946b9e997076562402.php 第 91 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-04-19T22:44:50+08:00 ] 127.0.0.1 /sptmcx/Admin/Sysset/close.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `sp_auth_user` [ RunTime:0.0040s ]
+SQL: SELECT `perm` FROM `sp_auth_user` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sp_sysset` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `sp_sysset` WHERE ( uniacid='1' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: flag D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\2b4daf7caea913f9766f470ed46d11b3.php 第 61 行.
+NOTIC: [8] Undefined index: flag D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\2b4daf7caea913f9766f470ed46d11b3.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\2b4daf7caea913f9766f470ed46d11b3.php 第 71 行.
+NOTIC: [8] Undefined index: detail D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\2b4daf7caea913f9766f470ed46d11b3.php 第 77 行.
+NOTIC: [8] Use of undefined constant detail - assumed 'detail' D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\2b4daf7caea913f9766f470ed46d11b3.php 第 93 行.
+NOTIC: [8] Undefined index: detail D:\phpStudy\WWW\sptmcx\Application\Runtime\Cache\Admin\2b4daf7caea913f9766f470ed46d11b3.php 第 93 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
