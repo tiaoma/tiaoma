@@ -41,8 +41,8 @@
 		<div class="col-sm-6 col-sm-offset-3" >
 			<div class="panel">
 			   <div class="panel-heading  wc-login" style="background-color:none !important;margin:50px 0;">
-			      <h3 class="panel-title text-center">
-			       <!-- <img src="/sptmcx/Public/Admin/images/logo.png?r=1" class="logo"> -->  后台管理系统
+			      <h3 class="panel-title text-center">			        
+			       <?php echo (C("APP_NAME")); ?>后台管理系统
 			      </h3>
 			   </div>
 			   <div class="panel-body">
@@ -66,7 +66,7 @@
 					      </div>
 							<div class="row">
 					        <div class="formControls col-8 col-offset-2">
-					          <input name="" type="submit" class="btn btn-success  size-L r ctp-submit-login" value="&nbsp;登&nbsp;&nbsp;&nbsp;&nbsp;录&nbsp;">					           
+					          <input name="" type="submit" class="btn btn-secondary  size-L r ctp-submit-login" value="&nbsp;登&nbsp;&nbsp;&nbsp;&nbsp;录&nbsp;">					           
 					        </div>
 					      </div>
 					</form>

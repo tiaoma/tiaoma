@@ -1,0 +1,126 @@
+<style type="text/css">
+.mui-h4, h4 {
+    font-size: 18px;
+    color: #000;
+}
+</style>
+        <header class="mui-bar mui-bar-nav">
+		    <a  href="{:U('Index/index')}" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">通知公告</h1>
+		</header>
+		 {:W('Common/Public/madvbanner')}
+		<if condition=" $count" >
+		<!--下拉刷新容器-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+		   
+			<div class="mui-scroll">
+				<!--数据列表-->
+				<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed" id="listId">
+		        		         
+		        </ul>
+			</div>
+		</div>
+ 
+		<script>
+			(function($) {
+				$.init({
+					swipeBack:true //启用右滑关闭功能
+				});
+
+				mui.init({
+					pullRefresh: {
+						container: '#pullrefresh',
+						down: {
+							style:'circle',
+							callback: pulldownRefresh
+						},
+						up: {
+							auto:true,
+							contentrefresh: '正在加载...',
+							callback: pullupRefresh
+						}
+					}
+				});
+				function pullupRefresh() {
+				    mui('#pullrefresh').pullRefresh().endPullupToRefresh(currentPageNum>=totalPages);	
+				    currentPageNum++;				
+				    //发送请求
+				    ajax();				 
+			    }
+			    function pulldownRefresh() {
+				    mui('#pullrefresh').pullRefresh().endPulldownToRefresh(true);
+				 
+			    }
+
+
+				var totalPages = 2;
+				var currentPageNum = 1;
+				var network = true;
+				if(mui.os.plus){
+					mui.plusReady(function () {
+						if(plus.networkinfo.getCurrentType()==plus.networkinfo.CONNECTION_NONE){
+							network = false;
+						}
+					});
+				}				
+				 
+				var respnoseEl = document.getElementById("listId");
+				//成功响应的回调函数
+				var success = function(response) {	
+
+					totalPages = response.totalpage;
+				    var html = respnoseEl.innerHTML;				 
+					respnoseEl.innerHTML = html+response.listhtml;	
+					//console.log('complete:::' + totalPages);				 
+				};
+				//设置全局beforeSend
+				$.ajaxSettings.beforeSend = function(xhr, setting) {
+					//beforeSend演示,也可在$.ajax({beforeSend:function(){}})中设置单个Ajax的beforeSend
+					//console.log('beforeSend:::' + JSON.stringify(setting));
+				};
+				//设置全局complete
+				$.ajaxSettings.complete = function(xhr, status) {
+					//console.log('complete:::' + status);
+				}
+				var ajax = function() {
+					//利用RunJS的Echo Ajax功能测试
+					var url = '{:U("Notice/getlist")}';
+					//请求方式，默认为Get；
+					var type = "get";
+					//预期服务器范围的数据类型
+					var dataType = "json";
+					//发送数据
+					var data = {
+						p: currentPageNum-1
+					};					 
+					 
+					if (type === 'get') {
+						if (dataType === 'json') {
+							$.getJSON(url, data, success);
+						} else {
+							$.get(url, data, success, dataType);
+						}
+					} else if (type === 'post') {
+						$.post(url, data, success, dataType);
+					}
+				};
+				
+
+				//点击描述中链接时，打开对应网页介绍；
+				$('body').on('tap', 'a', function(e) {
+					var href = this.getAttribute('href');
+					if (href) {
+						if (window.plus) {
+							plus.runtime.openURL(href);
+						} else {
+							location.href = href;
+						}
+					}
+				});
+			})(mui);
+		</script>
+		<else/>
+           <div class="com-contnull">
+                <img  src="__PUBLIC__/Data/offshelf.png?versionId={$Think.config.WWW_VERSION}" />
+            </div>
+		</if>

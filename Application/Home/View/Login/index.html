@@ -1,0 +1,34 @@
+        <link rel="stylesheet" href="__PUBLIC__/Home/css/login.css?versionId={$Think.config.WWW_VERSION}">
+        <header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">登录</h1>
+		</header>
+		<div class="mui-content margintop">
+			<form id='login-form' class="mui-input-group">
+				<div class="mui-input-row">
+					<label>账号</label>
+					<input  autocomplete="off" type="text" class="mui-input-clear mui-input username" placeholder="请输入账号" name="username">
+				</div>
+				<div class="mui-input-row">
+					<label>密码</label>
+					<input  type="password" class="mui-input-clear mui-input password" placeholder="请输入密码" name="password">
+				</div>
+			</form>
+			<!-- <form class="mui-input-group">
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell">
+						自动登录
+						<div id="autoLogin" class="mui-switch">
+							<div class="mui-switch-handle"></div>
+						</div>
+					</li>
+				</ul>
+			</form> -->
+			<div class="mui-content-padded">
+			    <input type="hidden" class="loginurl" value="{:U("Login/index")}">
+				<button id='submitLoginBtn' class="mui-btn mui-btn-block mui-btn-primary">登录</button>
+				<div class="link-area"><a href="{:U('Login/register')}">注册账号</a> <span class="spliter">|</span> <a href="{:U('Forget/index')}">忘记密码</a>
+				</div>
+			</div>
+			 
+		</div>
+		<script type="text/javascript" language="javascript" src="__PUBLIC__/Mobile/js/login.js?versionId={$Think.config.WWW_VERSION}"></script>

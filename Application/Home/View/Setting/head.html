@@ -1,0 +1,107 @@
+        <link rel="stylesheet" href="__PUBLIC__/Mobile/css/head.css?versionId={$Think.config.WWW_VERSION}">
+
+        <header class="mui-bar mui-bar-nav" id="user_head">
+		    <a   class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">修改头像</h1>
+            <a id="s_dpage" href="javascript:void(0);" style="color:#f90;">
+                    <i class="icon iconfont">&#xe633;</i>
+            </a>
+		</header>
+		<div class="mui-content margintop paddingBox">             
+              
+            <div class="" style="width: 200px;margin:0 auto;">
+                <a href="javascript:void(0);" class="logoBox" id="logoBox">
+                    <img id="bgl" src="__PUBLIC__/Data/{$www_member['head']}?r={$globalRandNum}" width="100%">
+                </a>
+            </div>
+
+
+
+            <div class="htmleaf-container">
+                <div id="clipArea"></div>
+                <div id="view"></div>
+            </div>
+
+
+            <div class="btn-1">
+                <button class="mui-btn mui-btn-block mui-btn-primary saveHead cbtn">保存</button>
+            </div>
+
+            <div id="dpage" class="paddingBox">
+                <a href="javascript:void(0);">
+                    <input type="button" name="file" class="button" value="拍照或选取照片">
+                    <input id="file" type="file"  onchange="javascript:setImagePreview(this);" accept="image/*"   />
+                </a>                
+                <a href="javascript:void(0);">
+                    <input type="button" name="file" class="button" id="cancel"  value="取消">
+
+                </a> 
+                <a href="javascript:void(0);" class="qx  cbtn"><button id="clipBtn"  class="cbtn">截取图片</button></a>
+            </div>
+
+        </div>
+        <script src="__PUBLIC__/Mobile/js/iscroll-zoom.js"></script>
+        <script src="__PUBLIC__/Mobile/js/hammer.js"></script>
+        <script src="__PUBLIC__/Mobile/js/jquery.photoClip.js"></script>
+<script>
+    var obUrl = '';
+    $(".saveHead").hide();
+    $("#clipArea").photoClip({
+        width: 280,
+        height: 280,
+        file: "#file",
+        view: "#view",
+        ok: "#clipBtn",
+        loadStart: function() {
+            
+        },
+        loadComplete: function() {
+            
+        },
+        clipFinish: function(dataURL) {
+            
+        }
+    });
+ 
+    $(function(){
+        $("#logoBox,#s_dpage").click(function(){
+            $(".htmleaf-container").fadeIn(300);
+            $("#dpage").addClass("show");
+        })
+        $("#clipBtn").click(function(){
+            $("#logoBox").empty();
+            $('#logoBox').append('<img src="' + imgsource + '" align="absmiddle" style=" width:100%;">');
+            $(".htmleaf-container").hide();
+            $("#dpage").removeClass("show");
+        })
+        $("#cancel").click(function(){
+            $(".htmleaf-container").hide();
+            $("#dpage").removeClass("show");
+        });
+        $(".saveHead").click(function(){
+            var imgSrc = $("#logoBox").find('img').eq(0).attr('src');
+            var saveUrl = "{:U('Home/Ajax/savehead')}";
+            
+            $.ajax({
+                    url:saveUrl,
+                    type:'post',
+                    data:{imgsrc:imgSrc},
+                    success:function(msg){
+                        if(msg!=''){
+                    mui.alert(msg, GlobalAppName, function() {});
+                    return;
+                     }
+                location.href ="{:U('Setting/index')}";
+                    }
+                });
+            
+        });
+    });
+ 
+    function setImagePreview(obj) {
+        $(".saveHead").show();
+    }
+
+</script>
+		 
+ 

@@ -1,0 +1,234 @@
+/*
+ *这是单独为hello mui准备的个性化css，可以覆盖标准mui的css定义；
+ * 在实际项目开发时，建议为App单独写一个css文件，从而实现项目的自定义皮肤功能；
+ * 
+ * */
+.mui-plus header.mui-bar{
+	display: none;
+}
+.mui-plus .mui-bar-nav~.mui-content{
+	padding: 0;
+}
+
+/*hm开头的表示仅为 Hello MUI示例定义*/
+.hm-description{
+	margin: .5em 0;
+}
+
+.hm-description>li {
+	font-size: 14px;
+	color: #8f8f94;
+}
+.mui-bar-tab .mui-tab-item.mui-active,.mui-bar-tab .mui-tab-item{
+	color: #00b6f8;
+}
+.mui-bar .mui-btn-link{
+	color: #00b6f8;
+}
+.mui-bar{
+	border-top: 1px solid #00b6f8;
+}
+.margintop{
+    margin-top:20px; 
+}
+.contbox{
+	padding-bottom: 60px;
+}
+.backgroundcolorbg{
+	background-color: #fff !important;
+}
+a.mui-icon-left-nav {
+	color: #00b6f8;
+}
+.mui-ellipsis,.prewrap{
+	white-space:pre-wrap;
+}
+.ctBox{
+	overflow: hidden;
+}
+.ctBox img{
+	width: 100% !important;
+	height: auto !important;
+}
+.warning{
+	color: #e11020;
+}
+.homeicons .bg{
+    width: 50px;
+    height: 50px;
+    background: url(../images/iconbg.png) no-repeat ;
+    margin: 0 auto;
+}
+.homeicons span{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    text-align: center;    
+    color: #fff; 
+    font-size: 46px !important;
+    padding: 2px;
+    background-clip: padding-box;
+}
+ 
+ 
+
+.finishFont{
+				font-weight: bold;
+				font-size: 40px !important;
+				margin: 50px auto 0 auto;
+				width: 50px;
+				color: #4cd964;
+			}
+.finishFont.red{
+	color:red;
+}
+ 
+.bold{
+	font-weight: bold;
+}
+.codeBox{
+	position: relative;
+}
+.codeBox a{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+.title {
+	
+	color: #000;
+	font-size: 18px;
+	font-weight: bold;
+	/* background: url(../images/title-bg-1.png) no-repeat; */
+	background-size: 100px;
+	width:100%;
+}
+.title.bg1{
+	background-image: url(../images/title-bg-2.png);
+}
+.title.bg2{
+	background-image: url(../images/title-bg-3.png);
+}
+.title.bg3{
+	background-image: url(../images/title-bg-4.png);
+}
+.title.bg4{
+	background-image: url(../images/title-bg-5.png);
+}
+.title a{
+	 
+	color: #6d6d72;
+	font-size: 12px;
+	font-weight: normal; 
+}
+.textCenter{
+	text-align: center !important;
+}
+.paddingBox{
+	padding: 10px;
+	overflow: hidden;
+}
+.cfocust{
+	color: #00b6f8;
+}
+.cbtn{
+				background: #00b6f8;
+				border-color: #00b6f8;
+				border-radius: 0;
+}
+.ca{
+	color: #e11020 !important;
+}
+ 
+.cb{
+	color: #000;
+}
+.fr{
+	float: right;
+}
+.footer{
+	padding: 20px 0;
+	font-size: 14px;
+	color: #aaa;
+	text-align: center;
+}
+
+ 
+.com-contnull{
+   width: 100%;
+   text-align: center;
+   padding: 100px 50px 50px 50px;
+}
+.com-contnull img{
+    width: 100%;
+}
+.logo{
+    padding: 0 10px;    
+    background: #fff;
+}
+.logo img{
+    height: 50px;
+    margin-top: 5px;
+}
+.logo span{
+    font-size: 14px;
+    float: right;
+    line-height: 80px;
+    font-weight: bold;
+}
+.mui-table-view-cell>a:not(.mui-btn) {
+	white-space:normal !important;
+}
+.mui-table-view .mui-media-object {
+    line-height: 100px;
+    max-width: 120px;
+    height: auto;
+    width:120px;
+}
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.logo .usertop{
+     position: absolute;
+     right: 0px;
+     top:30px;
+}
+.logo .usertop a{
+     font-size: 16px;
+     margin-left: 10px;
+     color: #000;
+}
+.mui-h4, h4 {
+    font-size: 14px;
+}
+.adv-banner{
+	padding-top: 44px;
+	width: 100%;
+	height: 144px;
+	overflow: hidden;
+
+}
+.adv-banner .adv-b-banner{
+	width: 100%;
+	height: 100px; 
+	
+}
+.adv-banner .adv-b-banner .imgbox{
+	width: 100%;
+	display: block; 
+	
+}
+.adv-banner .adv-b-banner .imgbox img{
+	width: 100%;
+}
+.mui-scroll-wrapper{
+	top: 144px;
+}
+.mui-scroll-wrapper.normal{
+	top: 0px;
+}
+ .mui-scroll-wrapper.mui-content,.mui-content.paddtop{
+ 	padding-top: 10px;
+ }

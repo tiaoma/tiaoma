@@ -8,7 +8,7 @@ class BannerController extends BaseController {
       $showPage = $Page->show();// 分页显示输出
       $list  = $mod->where("del=0")->order("displayorder desc,id DESC")->limit($Page->firstRow.','.$Page->listRows)->select();
       $niStatusName = array(0=>'不发布',1=>'发布');
-      $placeName = array(0=>'首页',1=>'内页',2=>'报班学习',3=>'免费试听',4=>'师资力量',5=>'模拟考试',6=>'消防动态',7=>'就业前景',8=>'下载资料',9=>'在线课程');
+      $placeName = array(0=>'首页',1=>'内页');
       $this->assign('niStatusName',$niStatusName);
       $this->assign('placeName',$placeName);
     	$this->assign('list',$list);

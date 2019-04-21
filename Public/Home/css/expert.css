@@ -1,0 +1,15 @@
+.title{
+	text-align: center;
+}
+
+.imgBox{
+   max-width: 200px;
+   margin: 10px auto;
+}
+.imgBox img{
+	width: 100%;
+}
+.feature{
+	margin-bottom: 10px;
+	color: #ff0000;	
+}

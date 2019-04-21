@@ -1,0 +1,13 @@
+<foreach name="list" item="vo">
+<li class="mui-table-view-cell">
+		            <div class="mui-table">
+		                <a href="javascript:void(0);">
+			                <div class="mui-table-cell mui-col-xs-12">
+			                    <h4 class="mui-ellipsis">{$vo['cont']}</h4>			                     
+			                    <p class="mui-h6 mui-ellipsis">发送时间：{$vo[sendtime]|date='Y-m-d',###}</p>
+			                </div>
+			                
+		                </a>
+		            </div>
+</li>
+</foreach>

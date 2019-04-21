@@ -1,0 +1,20 @@
+<foreach name="list" item="vo">
+<li class="mui-table-view-cell mui-media">					 					 
+						<div class="mui-media-body">
+							<h4>{$vo['reason']}</h4>
+							<p class='mui-ellipsis'>咨询时间：{$vo[addtime]|date='Y-m-d',###}</p>	
+							<p> 
+								处理状态：
+                            <if condition="$vo['status']==1">已处理<else/>未处理</if>
+                            </p>
+                            <if condition="$vo['status']==1">
+                            	<p>
+                            		官方回复：{$vo['solution']}
+                            	</p>
+                            </if>
+
+							
+						</div>
+				 
+				</li>
+</foreach>

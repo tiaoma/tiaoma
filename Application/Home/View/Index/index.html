@@ -1,0 +1,136 @@
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/icons-extra.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/home.css?versionId={$Think.config.WWW_VERSION}">
+<div class="mui-content">
+    <div class="logo">
+	    <a href="{:U('Home/Index/index')}">{$Think.config.APP_NAME}</a>
+	   
+	    <div class="usertop">
+            <if condition=" $www_member" >   
+		           <a class="ca" href="{:U('Home/Setting/index')}">{$www_member['username']}</a>&nbsp;&nbsp;&nbsp;&nbsp;
+               <else/>   	   
+		      	   <a  class="comLogin" href="{:U('Home/Login/index')}">登录</a>&nbsp;&nbsp;&nbsp;&nbsp;  
+               </if> 
+	    </div>      
+	</div>
+</div>
+<div class="mui-content">
+    <div id="slider" class="mui-slider" >
+			<div class="mui-slider-group mui-slider-loop">
+				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="javascript:void(0);">
+						<img src="__PUBLIC__/Data/others{$bannerfirst['href_m']}?versionId={$Think.config.WWW_VERSION}">
+					</a>
+				</div>				 
+				<foreach name="bannerlist"  key="vId" item="vo">
+				<div class="mui-slider-item">
+				    <if condition="$vo['link']">
+                   		<a href="{$vo['link']}">
+	                <else/>
+	                   <a href="javascript:void(0)">
+	                </if>
+					
+						<img src="__PUBLIC__/Data/others{$vo[href_m]}?versionId={$Think.config.WWW_VERSION}" alt="{$vo[title]}" />
+					</a>
+				</div>
+				</foreach>				 
+				<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="javascript:void(0);">
+						<img src="__PUBLIC__/Data/others{$bannerfirst['href_m']}?versionId={$Think.config.WWW_VERSION}">
+					</a>
+				</div>
+			</div>
+			 
+    </div>
+</div>
+<div class="mui-content">
+    <div class="mui-card">
+    	<div class="mui-card-header">
+        	<div class="title">
+				通知公告<a href="{:U('Notice/index')}" class="mui-pull-right cfocust">查看更多  </a>
+			</div>
+    	</div>
+	    <div class="mui-card-content">
+	        <div class="mui-card-content-inner">             	       
+		    
+			<ul class="mui-table-view">
+				<foreach name="noticelist" item="vo">
+				<li class="mui-table-view-cell">
+					<a href="{:U('Notice/info',array('id'=>$vo['id']))}">
+						 <h4 class="mui-ellipsis">{$vo['title']}</h4>
+			              
+			             <p class="mui-h6 mui-ellipsis">{$vo[createtime]|date='Y-m-d',###}</p>
+					</a>
+				</li>
+				</foreach>
+			</ul>
+		    </div>
+		</div>
+	</div>
+</div>
+<div class="mui-content">
+	<div class="mui-card">
+    	<div class="mui-card-header">
+    	    <div class="themetitle">
+				<h6>政策法规</h6>
+			</div>        	 
+    	</div>
+	    <div class="mui-card-content">
+	        <div class="mui-card-content-inner">  
+		    
+			<ul class="mui-table-view">
+				<foreach name="policieslist" item="vo">
+				<li class="mui-table-view-cell mui-media">
+					<a href="{:U('Policies/info',array('id'=>$vo['id']))}">
+						<img class="mui-media-object mui-pull-left" src="__PUBLIC__/Data/{$vo['thumb']}?versionId={$Think.config.WWW_VERSION}">
+						<div class="mui-media-body">
+							<h4>{$vo['title']}</h4>
+							<p class='mui-ellipsis'>{$vo[addtime]|date='Y-m-d',###}</p>
+						</div>
+					</a>
+				</li>
+				</foreach>
+			</ul>
+			</div>
+		</div>
+	</div>
+	<div class="morebtn"><a href="{:U('Policies/index')}">更多政策 >></a></div>	
+</div>
+
+<div class="mui-content">
+	<div class="mui-card">
+    	<div class="mui-card-header">
+    	    <div class="themetitle">
+				<h6>新闻动态</h6>
+			</div>        	 
+    	</div>
+	    <div class="mui-card-content">
+	        <div class="mui-card-content-inner">  
+		    
+			<ul class="mui-table-view">
+				<foreach name="newsList" item="vo">
+				<li class="mui-table-view-cell mui-media">
+					<a href="{:U('News/info',array('id'=>$vo['id']))}">
+						<img class="mui-media-object mui-pull-left" src="__PUBLIC__/Data/{$vo['thumb']}?versionId={$Think.config.WWW_VERSION}">
+						<div class="mui-media-body">
+							<h4>{$vo['title']}</h4>
+							<p>{$newstypelist[$vo['ntype']]}资讯</p>
+							<p class='mui-ellipsis'>{$vo[addtime]|date='Y-m-d',###}</p>
+						</div>
+					</a>
+				</li>
+				</foreach>
+			</ul>
+			</div>
+		</div>
+	</div>
+	<div class="morebtn"><a href="{:U('News/index')}">更多资讯 >></a></div>	
+</div>
+
+
+			
+			
+		</div>
+
+<script type="text/javascript" language="javascript" src="__PUBLIC__/Home/js/home.js?versionId={$Think.config.WWW_VERSION}"></script>

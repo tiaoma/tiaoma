@@ -1,0 +1,31 @@
+        <header class="mui-bar mui-bar-nav">
+			<a href="{:U('News/index')}" class=" mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">新闻动态</h1>
+		</header>
+		{:W('Common/Public/madvbanner')}      
+        <div class="mui-content paddtop">
+			<div class="mui-content-padded">
+				<div class="mui-card">
+					<div class="mui-card-header">{$info['title']}</div>
+					<div class="mui-card-content">
+						<div class="mui-card-content-inner"> 
+						   <p>资讯类型：{$newstypelist[$info['ntype']]}</p>              
+	                       <p>发布时间：{$info[addtime]|date='Y-m-d',###}</p>
+
+	                       <p>浏览次数：{$info['viewnum']}</p>	                        
+						</div>
+					</div>				 
+				</div> 
+                <div class="mui-card">					 
+					<div class="mui-card-content">
+						<div class="mui-card-content-inner">							 
+	                       <div class="ctBox">
+								{$info['des']}
+							</div>	                        
+						</div>
+					</div>				 
+				</div>  
+				 
+				
+			</div>
+		</div>

@@ -1,0 +1,79 @@
+        <link rel="stylesheet" href="__PUBLIC__/Mobile/css/forget.css?versionId={$Think.config.WWW_VERSION}">
+       <header class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+            <h1 class="mui-title">找回密码</h1>
+        </header>
+        <div class="mui-content">
+            <form id="formObj" action="{:U('Forget/stepthree')}"  class="mui-input-group" method="post">                 
+                <div class="mui-input-row codeBox">
+                    <label>手机号</label>
+                    <input name="username" type="text" class="mui-input-clear mui-input" readonly="" value="{$member['mobile_show']}" placeholder="请输入注册手机号">
+                    <a href="javascript:void(0);" class="obtain getCodeMsg" data-url="{:U('Cmodule/Sms/sendcode',array('from'=>'forget'))}"  id="obtainNum">获取校验码</a> 
+                </div>                 
+                <div class="mui-input-row">
+                    <label>验证码</label>
+                    <input name="code" type="text" maxlength="4" class="mui-input-clear mui-input"  value="" placeholder="请输入注册验证码">
+                </div>
+            </form>
+            <div class="mui-content-padded">
+                <button  class="mui-btn mui-btn-block mui-btn-primary submitNext" data-url="{:U('Cmodule/Sms/check')}">下一步</button>
+            </div>
+        </div>
+		 <script type="text/javascript">
+        $(function(){
+             var mobile = '';
+                        var isGetCode = false;
+                        $(document).on('click','#obtainNum',function(){
+                            var obj = this;
+                            var sendurl = $(this).attr("data-url"); 
+                             if(isGetCode){
+                                 return ;
+                             }                            
+                             isGetCode = true;
+                             
+                                                               
+                                           $.ajax({
+                                              url:sendurl,
+                                              data:{},
+                                              success:function(re){
+                                                   gbGetCodeCount(obj); 
+                                                   isGetCode = false;
+                                                   mui.alert(re, GlobalAppName, function() {});
+                                              }
+                                           }); 
+                            
+                        }); 
+ 
+
+                $(document).on('click','.submitNext',function(){
+                    var obj = this;
+                    var code = $("input[name='code']").val().trim();
+                    if(code.length!=4){
+                        mui.alert("请输入4位验证码", GlobalAppName, function() {});
+                        return;
+                    }
+                     
+                    $(obj).html('操作中...');
+                            $(obj).removeClass('submitNext');
+                            $.ajax({
+                                url:$(this).attr("data-url"),
+                                type:'post',
+                                data:{code:code},
+                                success:function(re){
+                                     if(re==''){
+                                         $("#formObj").submit();
+                                         return;
+                                     }
+                                     mui.alert(re, GlobalAppName, function() {});
+                                     $(obj).html('下一步'); 
+                                     $(obj).addClass('submitNext'); 
+                                },
+                                error:function(){
+                                   mui.alert("网络错误", GlobalAppName, function() {});
+                                    $(obj).html('下一步'); 
+                                    $(obj).addClass('submitNext');
+                                }
+                             });
+            });
+        });
+    </script>

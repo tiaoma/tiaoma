@@ -2,7 +2,7 @@
 return array(
 //'配置项'=>'配置值'
   'DEFAULT_FILTER'  => 'inject_check,htmlspecialchars',
-  'WWW_VERSION' => 10000184,
+  'WWW_VERSION' => 10000189,
   'PAGE_ITEM_NUM' => 10,
   'AUTO_TIME_LOGIN'=>1296003,
   'AUTO_KEYWORDS' =>'qwh2017',

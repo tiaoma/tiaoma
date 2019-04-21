@@ -1,0 +1,221 @@
+<style type="text/css">
+  .re-btn{
+    float: left;
+    margin-left: 3px;
+  }
+</style>
+<nav class="breadcrumb"><i class="iconfont">&#xf012b;</i> 首页 <span class="c-gray en">&gt;</span> 企业管理 <span class="c-gray en">&gt;</span> <if condition="$info">编辑<else/>添加</if>企业 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="icon-refresh"></i></a></nav>
+<div class="pd-20 text-c">
+<form class="Huiform" action="" method="post" enctype="multipart/form-data">
+        <input type="hidden" value="{$info[id]}" name="id">
+        <table class="table">
+   
+    <tr>
+        <th width="100">单位名称:</th>
+        <td><input type="text" value="{$info['title']}" maxlength="64" class="form-control" name="data[title]" ></td>
+    </tr>
+    <tr>
+        <th width="100">单位封面:</th>
+        <td>
+          <input type="file" value=""  class="form-control" name="head">
+          <if condition="$info['head']">
+          <div>
+            <img width="100" src="__PUBLIC__/Data/others{$info['head']}">
+          </div>
+          </if>
+        </td>
+
+      </tr>
+    <tr>
+        <th width="100">是否已经提交申请:</th>
+        <td>
+        <label class="radio-inline" >
+              <input type="radio" id="inline-radio2"  name="data[isapply]" value="1" checked="" > 是
+          </label>
+          <label class="radio-inline" >
+              <input type="radio" id="inline-radio2"  name="data[isapply]" value="0" <if condition=" $info['isapply'] eq '0'" > checked="" </if>> 否
+          </label>          
+        </td>
+    </tr>
+    <tr>
+        <th width="100">申请类型:</th>
+        <td>
+            <select class="select" id="sel_Sub" name="data[apply_type]" onchange="SetSubID(this);">
+             <!--  <option value="0" <if condition="$info['uint_id'] eq 0"> selected="" </if>>无</option> -->
+              <volist name='organizationlist' id='list'>
+                
+                <option  <if condition="$info['apply_type'] eq $list['id']"> selected="" </if> value="{$list['id']}">{$list['title']}</option>
+               
+              </volist>      
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <th width="100">URL:</th>
+        <td><input type="text" value="{$info['link']}" maxlength="64" class="form-control" name="data[link]" ></td>
+    </tr>
+    <tr>
+        <th width="100">通讯地址:</th>
+        <td><input type="text" value="{$info['address']}" maxlength="64" class="form-control" name="data[address]" ></td>
+    </tr>
+    <tr>
+        <th width="100">邮编:</th>
+        <td><input type="text" value="{$info['zip_code']}" maxlength="64" class="form-control" name="data[zip_code]" ></td>
+    </tr>
+    <tr>
+        <th width="100">成立时间:</th>
+        <td><input id="datetimepicker" type="text" value="{$info['founding_time']|date='Y-m-d',###}" maxlength="64" class="form-control" name="data[founding_time]" ></td>
+    </tr>
+    <tr>
+        <th width="100">单位人数:</th>
+        <td><input type="text" value="{$info['unit_number']}" maxlength="64" class="form-control" name="data[unit_number]" ></td>
+    </tr>
+    <tr>
+        <th width="100">注册资金:</th>
+        <td><input type="text" value="{$info['registered_capital']}" maxlength="64" class="form-control" name="data[registered_capital]" placeholder="单位 万"></td>
+    </tr>   
+    <tr>
+        <th width="100">单位性质:</th>
+        <td>
+          <label class="radio-inline" >
+              <input type="radio" id="inline-radio2"  name="data[unit_property]" value="0" <if condition=" $info[unit_property]==0" > checked="" </if>> 国有
+          </label>
+          <label class="radio-inline" >
+              <input type="radio" id="inline-radio2"  name="data[unit_property]" value="1" <if condition=" $info[unit_property]==1" > checked="" </if>> 合资
+          </label> 
+          <label class="radio-inline" >
+              <input type="radio" id="inline-radio2"  name="data[unit_property]" value="2" <if condition=" $info[unit_property]==2" > checked="" </if>> 私营
+          </label>
+          <label class="radio-inline" >
+              <input type="radio" id="inline-radio2"  name="data[unit_property]" value="3" <if condition=" $info[unit_property]==3" > checked="" </if>> 外资
+          </label>
+          <label class="radio-inline" >
+              <input type="radio" id="inline-radio2"  name="data[unit_property]" value="4" <if condition=" $info[unit_property]==4" > checked="" </if>> 独资
+          </label>
+          <label class="radio-inline" >
+              <input type="radio" id="inline-radio2"  name="data[unit_property]" value="5" <if condition=" $info[unit_property]==5" > checked="" </if>> 个体
+          </label>
+          <label class="radio-inline" >
+              <input type="radio" id="inline-radio2"  name="data[unit_property]" value="6" <if condition=" $info[unit_property]==6" > checked="" </if>> 其它
+          </label>
+        </td>
+    </tr>
+    
+     
+    <tr>
+        <th width="100">号   码:</th>
+        <td><input type="text" value="{$info['unit_code']}" maxlength="64" class="form-control" name="data[unit_code]"></td>
+    </tr>
+     <tr>
+        <th width="100">企业产值:</th>
+        <td><input type="text" value="{$info['enterprise_output']}" maxlength="64" class="form-control" name="data[enterprise_output]" placeholder="单位 万"></td>
+    </tr>
+    <tr>
+        <th width="100">自有资产:</th>
+        <td><input type="text" value="{$info['own_assets']}" maxlength="64" class="form-control" name="data[own_assets]" placeholder="单位 万"></td>
+    </tr>
+    <tr>
+        <th width="100">注册商标:</th>
+        <td>
+          <input type="file" value=""  class="form-control" name="registered_trademark">
+          <if condition="$info['registered_trademark']">
+          <div >
+            <img width="100" height="50" src="__PUBLIC__/Data/others{$info['registered_trademark']}">
+          </div>
+          </if>
+        </td>
+      </tr>
+      <tr>
+        <th width="100">主管部门:</th>
+        <td><input type="text" value="{$info['competent_department']}" maxlength="64" class="form-control" name="data[competent_department]"></td>
+    </tr>
+    <tr>
+        <th width="100">企业描述:</th>
+        <td> 
+          <textarea cols="50" rows="10" style="display:none;"  name="data[des]"   class="des ">{$info[des]}</textarea>
+          <script id="editor" type="text/plain" style="width:100%;height:300px;"></script>
+        </td>
+      </tr>
+       <tr>
+        <th width="100">营业执照:</th>
+        <td>
+          <input type="file" value=""  class="form-control" name="business_license">
+          <if condition="$info['business_license']">
+          <div>
+            <img width="350" height="500" src="__PUBLIC__/Data/others{$info['business_license']}">
+          </div>
+          </if>
+        </td>
+
+      </tr>
+    <tr>
+        <th width="100">状态:</th>
+        <td>
+        <label class="radio-inline" >
+              <input type="radio" id="inline-radio2"  name="data[status]" value="1" checked="" > 正常
+          </label>
+          <label class="radio-inline" >
+              <input type="radio" id="inline-radio2"  name="data[status]" value="0" <if condition=" $info['status'] eq '0'" > checked="" </if>> 不正常
+          </label>          
+        </td>
+    </tr>
+    <tr>
+        <th width="100">是否公开:</th>
+        <td>
+        <label class="radio-inline" >
+              <input type="radio" id="inline-radio2"  name="data[ispublic]" value="1" checked="" > 是
+          </label>
+          <label class="radio-inline" >
+              <input type="radio" id="inline-radio2"  name="data[ispublic]" value="0" <if condition=" $info['ispublic'] eq '0'" > checked="" </if>> 否
+          </label>          
+        </td>
+    </tr>
+</table>
+<div class="text-c mt-20">
+      <button type="button" class="btn btn-success radius" id="" name="" onClick="class_save();"><i class="icon-save"></i> 保存</button>
+      <a href="{:U('Memberunit/index')}"><button type="button" class="btn btn-success" id="" name="" > 返回列表</button></a>
+</div> 
+</form>
+</div>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Home/js/comm.js?versionId"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/ueditor.all.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/lang/zh-cn/zh-cn.js"></script>
+  <script type="text/javascript">
+var ue = UE.getEditor('editor');
+   ue.ready(function(){
+      ue.setContent($(".des").val());
+   });
+  function class_save(){
+     var title = $("input[name='data[title]']").val().trim();
+     if(title.length<1){
+        layer.msg('名称不能为空!',1);
+        return;
+     }
+     
+     $(".des").val(ue.getContent());
+     $(".Huiform").submit();
+  }
+  $(function(){
+    $.fn.datetimepicker.dates['zh'] = {  
+                days:       ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六","星期日"],  
+                daysShort:  ["日", "一", "二", "三", "四", "五", "六","日"],  
+                daysMin:    ["日", "一", "二", "三", "四", "五", "六","日"],  
+                months:     ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月","十二月"],  
+                monthsShort:  ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二"],  
+                meridiem:    ["上午", "下午"],  
+                //suffix:      ["st", "nd", "rd", "th"],  
+                today:       "今天"  
+        };
+    var date = new Date();
+    $('#datetimepicker').datetimepicker({
+      format: "yyyy-mm-dd",
+      language:"zh", 
+      todayHighlight:true,
+      todayBtn:true,
+      autoclose:true,
+      minView: "month",
+    });
+  })
+
+</script>

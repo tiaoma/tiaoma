@@ -1,0 +1,12 @@
+<foreach name="list" item="vo">
+<li class="mui-table-view-cell mui-media">
+					<a href="{:U('News/info',array('id'=>$vo['id']))}">
+						<img class="mui-media-object mui-pull-left" src="__PUBLIC__/Data/{$vo['thumb']}?versionId={$Think.config.WWW_VERSION}">
+						<div class="mui-media-body">
+							<h4>{$vo['title']}</h4>	
+							<p>{$newstypelist[$vo['ntype']]}资讯</p>
+							<p class='mui-ellipsis'>{$vo[addtime]|date='Y-m-d',###}</p>
+						</div>
+					</a>
+				</li>
+</foreach>

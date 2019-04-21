@@ -105,16 +105,33 @@
         </ul>
       </dd>
     </dl><?php endif; ?>
-    <?php if(in_array('12',$upermarr)): ?><dl id="menu-tongji" >
-      <dt><i class="icon-paste"></i> 友情链接<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
+     <?php if(in_array('11',$upermarr)): ?><dl id="menu-product">
+      <dt><i class="icon-paste"></i> 政策法规<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
       <dd>
         <ul>
-          <li><a _href="<?php echo U('Friendlink/index');?>" href="javascript:void(0)">链接列表</a></li>
-          <li><a _href="<?php echo U('Friendlink/add');?>" href="javascript:void(0)">添加链接</a></li>                      
+          <li><a _href="<?php echo U('Policies/index');?>" href="javascript:void(0)">政策列表</a></li>
+          <li><a _href="<?php echo U('Policies/add');?>" href="javascript:void(0)">添加政策</a></li>          
         </ul>
       </dd>
     </dl><?php endif; ?>
-    
+    <?php if(in_array('12',$upermarr)): ?><dl id="menu-tongji" >
+      <dt><i class="icon-paste"></i> 企业管理<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
+      <dd>
+        <ul>
+          <li><a _href="<?php echo U('Company/index');?>" href="javascript:void(0)">企业列表</a></li>
+          <li><a _href="<?php echo U('Company/add');?>" href="javascript:void(0)">添加企业</a></li>                      
+        </ul>
+      </dd>
+    </dl><?php endif; ?>
+    <?php if(in_array('12',$upermarr)): ?><dl id="menu-tongji" >
+      <dt><i class="icon-paste"></i> 商品管理<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
+      <dd>
+        <ul>
+          <li><a _href="<?php echo U('Goods/index');?>" href="javascript:void(0)">商品列表</a></li>
+          <li><a _href="<?php echo U('Goods/add');?>" href="javascript:void(0)">添加商品</a></li>                      
+        </ul>
+      </dd>
+    </dl><?php endif; ?>
    
     <?php if(in_array('14',$upermarr)): ?><dl id="menu-tongji" >
       <dt><i class="icon-paste"></i> 设置<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>

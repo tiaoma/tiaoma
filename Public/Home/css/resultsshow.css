@@ -1,0 +1,9 @@
+.resultsshow{
+	padding:10px;
+}
+.resultsshow img{
+	width: 100%;
+	margin: 0;
+	border: none;
+	display: block;
+}

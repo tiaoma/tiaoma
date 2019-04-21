@@ -1,0 +1,15 @@
+        <header class="mui-bar mui-bar-nav">
+			<a href="{:U('Umsg/index')}" class="mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">我的消息</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-content-padded">
+				 
+				<h3>{$info['title']}</h3>				 
+				<h6>发布时间：{$info[updatetime]|date='Y-m-d',###}</h6>
+				<h6>浏览次数：{$info[viewnum]}</h6>
+				<div>
+					{$info['des']}
+				</div>
+			</div>
+		</div>

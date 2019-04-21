@@ -1,0 +1,49 @@
+<nav class="breadcrumb"><i class="iconfont">&#xf012b;</i> 首页 <span class="c-gray en">&gt;</span> 政策法规管理 <span class="c-gray en">&gt;</span> 政策列表 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="icon-refresh"></i></a></nav>
+<div class="pd-20 text-c">
+  <table class="table table-striped table-bordered bootstrap-datatable datatable">
+                    <thead>
+                        <tr>                            
+                            <th>名称</th>
+                            <th>类型</th>
+                            <th>状态</th>
+                            <th>阅读次数</th>             
+                            <th>操作</th>
+                        </tr>
+                    </thead>   
+                    <tbody> 
+                        <if condition="$list">
+                            <foreach name="list" item="vo" >  
+                            <tr>                                
+                                <td>{$vo[title]}</td>
+                                <td>{$typelist[$vo['ntype']]}</td>  
+                                <td>{$isStatus[$vo['status']]}</td>                               
+                                <td>{$vo[viewnum]}</td>
+                                <td  class="f-14">
+                                    <a  href="{:U('Policies/edit',array('id'=>$vo[id],'rand'=>rand(1,10000)))}"  data-name="{$vo[title]}" data-id="{$vo[id]}">
+                                        <i class="icon-edit"></i>          
+                                    </a>
+                                    <a  onclick="class_del(this)" class="ml-5" data-url="{:U('Policies/del',array('id'=>$vo[id],'rand'=>rand(1,10000)))}" href="###">
+                                        <i class="icon-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            </foreach>
+                            <else />
+                            <tr>
+                                <td colspan="5">暂无数据</td>
+                            </tr>  
+                        </if>                       
+                    </tbody>
+                </table>  
+                <div class="page">
+            {$page}
+            </div>  
+</div>
+<script type="text/javascript">
+ 
+   function class_del(obj){
+     layer.confirm('确认要删除吗？',function(index){
+           location.href = $(obj).attr('data-url');
+      });
+  }
+</script>

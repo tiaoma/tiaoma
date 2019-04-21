@@ -1,0 +1,59 @@
+        <header class="mui-bar mui-bar-nav">
+		    <a  href="{:U('Setting/index')}" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">设置密码</h1>
+		</header>
+		<div class="mui-content margintop">
+
+            <form id="formObj" action=""  class="mui-input-group">
+                 <div class="mui-input-row">
+                        <label>新密码</label>
+                        <input  autocomplete="off" type="password" class="mui-input-clear mui-input"  name="newpsw">
+                </div>
+                <div class="mui-input-row">
+                        <label>确认密码</label>
+                        <input  autocomplete="off" type="password" class="mui-input-clear mui-input"  name="agpsw">
+                </div>
+            </form>
+            <div class="mui-content-padded">
+                <button  class="mui-btn mui-btn-block mui-btn-primary cbtn">保存</button>
+            </div>
+        </div>
+		<script type="text/javascript">
+        $(function(){      
+                
+            $(".cbtn").click(function(){
+                var newpsw = $("input[name='newpsw']").val().trim(); 
+                var agpsw = $("input[name='agpsw']").val().trim(); 
+                if(!checkNumCodeRate(newpsw)){
+                         mui.alert('密码请使用数字加字母组合,6~16位长度', GlobalAppName, function() {});
+                        return false;
+                  }
+                  if(newpsw != agpsw){
+                        mui.alert('您两次输入的账号密码不一致', GlobalAppName, function() {});
+                        return;
+                  }
+                 
+                mui(this).button('loading');  
+                var obj = this;           
+                $.ajax({
+                    url:'{:U("Setting/psw")}',
+                    type:'post',
+                    dataType:'json',
+                    data:{newpsw:newpsw,agpsw:agpsw},
+                    success:function(re){
+                        mui(obj).button('reset'); 
+                        mui.alert(re.msg, GlobalAppName, function() {
+                            if(re.code=='1'){
+                                $("input[name='newpsw']").val('');
+                                $("input[name='agpsw']").val('')
+                            }
+                        });
+                    }
+                });
+            });
+         
+
+        });
+    </script>
+ 
+ 
