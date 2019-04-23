@@ -1,0 +1,41 @@
+<style type="text/css">
+  .re-btn{
+    float: left;
+    margin-left: 3px;
+  }
+</style>
+<nav class="breadcrumb"><i class="iconfont">&#xf012b;</i> 首页 <span class="c-gray en">&gt;</span> 会员管理 <span class="c-gray en">&gt;</span> <if condition="$info">认证失败原因 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="icon-refresh"></i></a></nav>
+<div class="pd-20 text-c">
+<form class="Huiform" action="{:U('Realauthentication/failVerify')}" method="post" enctype="multipart/form-data">
+        <input type="hidden" value="{$id}" name="id">
+        <table class="table">
+   
+    <tr>
+      <th width="100">失败原因:</th>
+      <td>
+        <textarea cols="50" rows="10"  id="fail_remark"  name="fail_remark" >{$info[fail_remark]}</textarea>
+      </td>
+    </tr>
+
+
+</table>
+<div class="text-c mt-20">
+      <button type="button" class="btn btn-success radius" id="" name="" onClick="class_save();"><i class="icon-save"></i> 保存</button>
+      
+</div> 
+</form>
+</div>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Home/js/comm.js?versionId"></script>
+  <script type="text/javascript">
+
+  function class_save(){
+     var fail_remark = $("#fail_remark").val().trim();
+     if(fail_remark.length<1){
+        layer.msg('认证失败原因不能为空!',1);
+        return;
+     }
+    
+     $(".Huiform").submit();
+  }
+
+</script>

@@ -24,6 +24,7 @@ class GinfoController extends Controller {
                        session('mobile_show',$info['mobile_show']);
                        session('www_credit1',$info['credit1']);
                        session('www_credit2',$info['credit2']);
+                       session('www_unit_id',$info['auth_id']);
                      return true;
                   }
                }

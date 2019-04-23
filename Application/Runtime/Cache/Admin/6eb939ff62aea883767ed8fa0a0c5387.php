@@ -81,7 +81,8 @@
                             <th>经营方式</th>
                             <th>号   码</th>
                             <th>状   态</th>
-                            <th>注册商标</th>            
+                            <th>注册商标</th> 
+                            <th>属下商品</th>           
                             <th>操作</th>
                         </tr>
                     </thead>   
@@ -95,7 +96,12 @@
                                 <td><?php echo ($managementmodeName[$info[management_mode]]); ?></td> 
                                 <td><?php echo ($info['unit_code']); ?></td>
                                 <td><?php echo ($statusName[$info['status']]); ?></td>
-                                <td><?php if($info['registered_trademark']): ?><img src="/sptmcx/Public/Data/others<?php echo ($info['registered_trademark']); ?>" alt="" width="50"><?php endif; ?></td>                          
+                                <td><?php if($info['registered_trademark']): ?><img src="/sptmcx/Public/Data/others<?php echo ($info['registered_trademark']); ?>" alt="" width="50"><?php endif; ?></td>
+                                <td>
+                                    <a  href="<?php echo U('Goods/index',array('unit_id'=>$info[id],'rand'=>rand(1,10000)));?>"  data-name="<?php echo ($info[title]); ?>" data-id="<?php echo ($info[id]); ?>">
+                                       点击查看          
+                                    </a>
+                                </td>                          
                                 <td  class="f-14">
                                     <a  href="<?php echo U('Company/edit',array('id'=>$info[id],'rand'=>rand(1,10000)));?>"  data-name="<?php echo ($info[title]); ?>" data-id="<?php echo ($info[id]); ?>">
                                         <i class="icon-edit"></i>          

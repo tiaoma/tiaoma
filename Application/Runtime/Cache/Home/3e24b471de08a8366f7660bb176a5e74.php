@@ -8,8 +8,7 @@
     <title><?php echo ($GBTitle); echo ($GBMenu); echo (C("APP_NAME")); ?></title>
     <link rel="stylesheet" href="/sptmcx/Public/Home/css/mui.min.css">
     <link rel="stylesheet" href="/sptmcx/Public/Home/css/app.css?versionId=<?php echo (C("WWW_VERSION")); ?>">
-    <link rel="stylesheet" href="/sptmcx/Public/Home/fonts/font_56obl7zrya9/iconfont.css"> 
-    
+    <link rel="stylesheet" href="/sptmcx/Public/Home/css/font_pg18qfwhyub/iconfont.css">     
     <meta name="keywords" content="<?php echo (C("APP_KEYWORDS")); ?>">
     <meta name="description" content="<?php echo (C("APP_DESCRIPTION")); ?>">
     <script src="/sptmcx/Public/Home/js/jquery-2.1.1.min.js"></script>
@@ -151,15 +150,15 @@
         <span class="mui-tab-label">首页</span>
     </a>
     <a href="##" class="mui-tab-item">
-        <span class="mui-icon iconfont icon-zonghe"></span>
+        <span class="mui-icon iconfont icon-fenlei"></span>
         <span class="mui-tab-label">服务大厅</span>
     </a>
     <a href="##" class="mui-tab-item">
-        <span class="mui-icon iconfont icon-fuzhi"></span>
+        <span class="mui-icon iconfont icon-chazhao"></span>
         <span class="mui-tab-label">商品查询</span>
     </a>
     <a href="<?php echo U('Setting/index');?>" class="mui-tab-item">
-        <span class="mui-icon iconfont icon-geren"></span>
+        <span class="mui-icon iconfont icon-wode"></span>
         <span class="mui-tab-label">我的</span>
     </a>
 </nav>

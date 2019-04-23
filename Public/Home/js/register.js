@@ -15,7 +15,7 @@ var c_code = '';
     var mobile = $(".mobile").val().trim();
     var password = $(".password").val().trim();
     var password_ag = $(".password_ag").val().trim();
-    var code = $(".code").val().trim();
+    /*var code = $(".code").val().trim();*/
         
    
       if(!checkUsername(username)){
@@ -45,7 +45,7 @@ var c_code = '';
             return false;
         }
 
-        if(code.length!=4){
+        /*if(code.length!=4){
             mui(this).button('reset'); 
             mui.alert('请输入验证码', GlobalAppName, function() {});
             return false;
@@ -54,7 +54,7 @@ var c_code = '';
           mui(this).button('reset'); 
           mui.alert('验证码错误', GlobalAppName, function() {});
             return false;
-        }
+        }*/
         var obj = this;
          
         $("#registerForm").ajaxSubmit({

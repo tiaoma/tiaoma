@@ -185,7 +185,7 @@
         <td>
           <input type="file" value=""  class="form-control" name="business_license">
           <?php if($info['business_license']): ?><div>
-            <img width="350" height="500" src="/sptmcx/Public/Data/others<?php echo ($info['business_license']); ?>">
+            <img width="350" height="500" src="/sptmcx/Public/Data<?php echo ($info['business_license']); ?>">
           </div><?php endif; ?>
         </td>
 

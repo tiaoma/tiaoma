@@ -50,7 +50,7 @@
 </head>
 <body>
 
-<nav class="breadcrumb"><i class="iconfont">&#xf012b;</i> 首页 <span class="c-gray en">&gt;</span> 消防动态管理 <span class="c-gray en">&gt;</span> <?php if($info): ?>编辑<?php else: ?>添加<?php endif; ?>动态 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="icon-refresh"></i></a></nav>
+<nav class="breadcrumb"><i class="iconfont">&#xf012b;</i> 首页 <span class="c-gray en">&gt;</span> 新闻动态管理 <span class="c-gray en">&gt;</span> <?php if($info): ?>编辑<?php else: ?>添加<?php endif; ?>动态 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="icon-refresh"></i></a></nav>
 <div class="pd-20 text-c">
 <form class="Huiform" action="" method="post" enctype="multipart/form-data">
         <input type="hidden" value="<?php echo ($info[id]); ?>" name="id">
@@ -73,7 +73,7 @@
             <input type="radio" id="inline-radio3" name="status" value="0" <?php if($info['status'] == 0): ?>checked<?php endif; ?>> 隐藏
           </label>
         </td>
-      </tr>  
+      </tr> <!--  
       <tr>
         <th width="100">类型:</th>
         <td>
@@ -81,7 +81,7 @@
             <?php if(is_array($typelist)): $k = 0; $__LIST__ = $typelist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$type): $mod = ($k % 2 );++$k;?><option value="<?php echo ($k); ?>" <?php if($k == $info['ntype']): ?>selected=""<?php endif; ?>><?php echo ($type); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>      
           </select>
         </td>
-      </tr>       
+      </tr>        -->
         <th width="100">封面
         :</th>
         <td>

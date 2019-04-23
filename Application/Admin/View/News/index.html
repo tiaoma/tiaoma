@@ -5,7 +5,7 @@
                         <tr>                            
                             <th>名称</th>
                             <th>新闻封面</th>
-                            <th>类型</th>
+                            <!-- <th>类型</th> -->
                             <th>状态</th>
                             <th>阅读次数</th>             
                             <th>操作</th>
@@ -17,7 +17,7 @@
                             <tr>                                
                                 <td>{$vo[title]}</td>
                                 <td> <img src="__PUBLIC__/Data/{$vo[thumb]}" alt="" width="100"> </td>
-                                <td>{$typelist[$vo['ntype']]}</td>  
+                                <!-- <td>{$typelist[$vo['ntype']]}</td>   -->
                                 <td>{$isStatus[$vo['status']]}</td>                               
                                 <td>{$vo[viewnum]}</td>
                                 <td  class="f-14">
@@ -32,7 +32,7 @@
                             </foreach>
                             <else />
                             <tr>
-                                <td colspan="6">暂无数据</td>
+                                <td colspan="5">暂无数据</td>
                             </tr>  
                         </if>                       
                     </tbody>

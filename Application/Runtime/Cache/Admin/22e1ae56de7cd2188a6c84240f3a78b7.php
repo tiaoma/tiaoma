@@ -53,7 +53,7 @@
         <ul>
           <li><a _href="<?php echo U('Memberlist/index');?>" href="javascript:void(0);">会员列表</a></li> 
           <li><a _href="<?php echo U('Memberlist/add');?>" href="javascript:void(0);">添加会员</a></li>
-         
+          <li><a _href="<?php echo U('Realauthentication/index');?>" href="javascript:void(0);">实名认证</a></li>  
         </ul>
       </dd>
     </dl><?php endif; ?> 

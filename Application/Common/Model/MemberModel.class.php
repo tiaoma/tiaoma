@@ -89,10 +89,12 @@ class MemberModel extends ComModel
       $data['createtime'] = $this->_time;
       $uid = $this->add($data);
       //注册地域
-      $ip = get_client_ip();
+      /*$ip = get_client_ip();
       $place = ip_Place_Array($ip);
       $data['province'] = $place[2] ?$place[2]:'重庆';
-      $data['city'] = $place[3] ?$place[3]:'重庆';
+      $data['city'] = $place[3] ?$place[3]:'重庆';*/
+      $data['province'] = '重庆';
+      $data['city'] = '重庆';
       
       return $uid;
   } 

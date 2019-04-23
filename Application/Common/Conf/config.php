@@ -13,10 +13,10 @@ return array(
     'SESSION_PREFIX' => 'sp_', // session 前缀              
     'SHOW_PAGE_TRACE' => false,
     'DB_TYPE' => 'mysql', // 数据库类型
-    'DB_HOST' => '127.0.0.1', // 服务器地址
-    'DB_NAME' => 'spxxbzcxpt', // 数据库名
-    'DB_USER' => 'root', // 用户名
-    'DB_PWD' => 'root', // 密码
+    'DB_HOST' => '39.100.72.24', // 服务器地址
+    'DB_NAME' => 'tiaoma', // 数据库名
+    'DB_USER' => 'tiaoma', // 用户名
+    'DB_PWD' => '123456', // 密码
     'DB_PORT' => '3306', // 端口
     'DB_PREFIX' => 'sp_', // 数据库表前缀 
     'DB_PARAMS' => array('PDO::ATTR_CASE' => 'PDO::CASE_NATURAL'), // 数据库连接参数  

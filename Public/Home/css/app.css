@@ -166,6 +166,14 @@ a.mui-icon-left-nav {
     padding: 0 10px;    
     background: #fff;
 }
+.logo a{
+	font-size: 22px;
+	color: #00b6f8;
+	height: 60px;
+	line-height: 60px;
+	display: block;
+	text-align:center; 
+}
 .logo img{
     height: 50px;
     margin-top: 5px;

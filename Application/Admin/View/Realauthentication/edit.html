@@ -1,0 +1,122 @@
+<style type="text/css">
+  .re-btn{
+    float: left;
+    margin-left: 3px;
+  }
+</style>
+<nav class="breadcrumb"><i class="iconfont">&#xf012b;</i> 首页 <span class="c-gray en">&gt;</span> 会员管理 <span class="c-gray en">&gt;</span> 实名认证 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="icon-refresh"></i></a></nav>
+<div class="pd-20 text-c">
+<form class="Huiform" action="" method="post" enctype="multipart/form-data">
+        <input type="hidden" value="{$info[id]}" name="id">
+        <table class="table">
+   
+    <tr>
+        <th width="100">会员名:</th>
+        <td>
+           <div>{$memberinfo['username']}</div>
+        </td>
+    </tr>
+    <tr>
+        <th width="100">电话号码:</th>
+        <td>
+          <div>{$memberinfo['mobile']}</div>
+        </td>
+    </tr>
+    <tr>
+        <th width="100">名称:</th>
+        <td>
+          <div><if condition="$info[auth_unit_name]">{$info[auth_unit_name]}<else/>{$info[auth_personal_name]}</if></div>
+        </td>
+    </tr>
+    <tr>
+        <th width="100">认证号码:</th>
+        <td>
+          <div><if condition="$info[auth_unit_code]">{$info[auth_unit_code]}<else/>{$info[auth_personal_code]}</if></div>
+        </td>
+    </tr>
+    <tr>
+        <th width="100">认证号码:</th>
+        <td>
+          <div ><if condition="$info[auth_images]"><img width="300" height="200" src="__PUBLIC__/Data{$info[auth_images]}"></div>
+        </td>
+    </tr>
+    <if condition="$info['fail_remark']">
+    <tr>
+        <th width="100">失败原因:</th>
+        <td><textarea cols="50" rows="10" id="fail_remark"   name="fail_remark" >{$info['fail_remark']}</textarea></td>
+    </tr>
+    </if>
+    
+
+</table>
+<div class="text-c mt-20">
+     <if condition="$info[status] eq 0">
+        <button type="button" class="btn btn-success radius" id="" name="" onclick="class_verify(this)" data-url="{:U('Realauthentication/verify',array('id'=>$info['id']))}">待审核</button>
+     </if>
+     <if condition="$info[status] eq 1">
+        <button type="button" class="btn btn-success radius" id="" name="" onclick="class_verifying(this)" data-url="{:U('Realauthentication/verifying',array('id'=>$info['id']))}" data-eurl="{:U('Realauthentication/errverifying',array('id'=>$info['id']))}">正在审核</button>
+     </if>
+     <if condition="$info[status] eq 2">
+        <button  type="button" class="btn " id="" name="" >审核成功</button>
+     </if>
+     <if condition="$info[status] eq -2">
+        <button  type="button" class="btn" id="" name="" >审核失败</button>
+        <button type="button" class="btn btn-success radius" id="" name="" onclick="editfailVerify(this)" data-url="{:U('Realauthentication/editfailVerify',array('id'=>$info['id']))}"><i class="icon-save" data-href="{:U('Realauthentication/index')}"></i> 保存</button>
+     </if>
+     <if condition="$info[status] eq -1">
+        <button type="button" class="btn btn-success radius" id="" name="" >取消审核</button>
+     </if>
+      
+      <a href="{:U('Realauthentication/index')}"><button type="button" class="btn btn-success" id="" name="" > 返回列表</button></a>
+</div> 
+</form>
+</div>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Home/js/comm.js?versionId"></script>
+  <script type="text/javascript">
+
+  function class_verify(obj){
+    layer.confirm('确认开始审核？',function(index){
+           location.href = $(obj).attr('data-url');
+      });
+  }
+   function class_verifying(obj){
+    $.layer({  
+      shade: [0],  
+      dialog: {  
+          msg: '审核结果',  
+          btns: 2,                      
+          type: 4,  
+          btn: ['成功','失败'],  
+          yes: function(){  
+              location.href = $(obj).attr('data-url');  
+          }, no: function(){  
+              location.href = $(obj).attr('data-eurl');  
+          }  
+      }  
+  }); 
+  }
+   function editfailVerify(obj){
+     var fail_remark = $("#fail_remark").val().trim();
+     var id = "{$info['id']}";
+     if(fail_remark.length<1){
+        layer.msg('认证失败原因不能为空!',1);
+        return;
+     }
+     $.ajax({
+      url:$(obj).attr('data-url'),
+      type:'post',
+      data:{fail_remark:fail_remark,id:id},
+      success:function(re){
+        if(re=="0"){
+          layer.msg("修改认证失败原因失败");
+        }
+        if(re=="1"){
+         location.href = $(obj).attr('data-href');
+        }
+      }
+     });
+     
+  }
+
+
+</script>

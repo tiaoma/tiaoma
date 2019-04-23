@@ -17,7 +17,7 @@ class IndexController extends ComController {
                 $value['link'] = C('APP_URL').'Home/'.$value['link'];
             }
 
-            $filearr = explode('.', $value['href']);
+           /* $filearr = explode('.', $value['href']);
             if(count($filearr )>1){
                 $value['href_m'] = $filearr[0].'_m'.'.'.$filearr[1];
                 if(file_exists(  $root.$value['href']) && !file_exists(  $root.$value['href_m'])){
@@ -26,7 +26,7 @@ class IndexController extends ComController {
                       $image->crop($width, $height,$x);
                       $image->save($root.$value['href_m']);
                 }
-            }
+            }*/
             
              
               

@@ -56,7 +56,7 @@
  <table class="table">
     <tr>
         <th width="100">排序:</th>
-        <td><input placeholder="填写的数字越大越靠前"  value="displayorder" maxlength="64" class="input-text"  style="width:250px" name="displayorder"></td>
+        <td><input placeholder="填写的数字越大越靠前"  value="" maxlength="64" class="input-text"  style="width:250px" name="displayorder"></td>
     </tr>
     <tr>
         <th width="100">图片标题:</th>

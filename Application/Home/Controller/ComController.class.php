@@ -4,6 +4,7 @@ use Think\Controller;
 class ComController extends Controller {
 	public $_time ;
     public $_uid ;
+    public $_unitid;
     public $_page_item_num;
     public $_username;
     public $_expire;
@@ -32,7 +33,7 @@ class ComController extends Controller {
         $ginfoObj = A('Cmodule/Ginfo');
         $ginfoObj->wwwcookieAction();
 
-        if((session('www_username')==null || session('www_id')==null) &&  in_array(CONTROLLER_NAME, array('Setting'))){           
+        if((session('www_username')==null || session('www_id')==null) &&  in_array(CONTROLLER_NAME, array('Setting'))){      
             $this->redirect("Login/index");
             die();
         }
@@ -40,6 +41,7 @@ class ComController extends Controller {
         $ginfoObj->indexAction();
         $this->_username = session('www_username');
         $this->_uid = session('www_id')?session('www_id'):0; 
+        $this->_unitid = session('www_unit_id')?session('www_unit_id'):0; 
     }
     public function checkLogin(){
         if(session('www_username')!=null && session('www_id')!=null){

@@ -71,12 +71,7 @@ class LoginController extends ComController {
         die();
         
     }
-    public function preregisteAction(){
-        $mod = M('Organization');
-        $organizationlist = $mod->where('ischoice=1')->order('displayorder desc,id desc')->select();
-        $this->assign("organizationlist",$organizationlist);
-        $this->display();
-    }
+    
     public function registerAction(){ 
     	  
        
@@ -86,13 +81,8 @@ class LoginController extends ComController {
            $code = I('code');
            $data['username'] = trim($data['username']);
            $data['mobile'] = trim($data['mobile']);
-           $data['realname'] = trim($data['realname']);
-           $data['user_type'] = trim($data['user_type']); 
-           $data['user_type'] = intval($data['user_type']);
-           if($data['user_type']){
-              $data['user_type'] -= 1;//0是普通 1是单位
-           }
-            
+           $data['realname'] = trim($data['realname']);           
+           $data['user_type'] = 0; 
             
            if($mod->checkUsername($data['username'])){
               echo json_encode(array('code'=>'该用户名已经存在'));
@@ -106,12 +96,7 @@ class LoginController extends ComController {
               echo json_encode(array('code'=>'手机号已被绑定'));
               die();
            }
-          /*  
-           if(!$data['realname']){
-              $tip = $data['user_type']?'单位名称不能为空':'会员姓名不能为空';
-              echo json_encode(array('code'=>$tip));
-              die();
-           }*/
+          
            $mid = $mod->addMember($data);
            if(!$mid){
               echo json_encode(array('code'=>'注册失败'));

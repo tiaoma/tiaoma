@@ -29,7 +29,8 @@
                             <th>经营方式</th>
                             <th>号   码</th>
                             <th>状   态</th>
-                            <th>注册商标</th>            
+                            <th>注册商标</th> 
+                            <th>属下商品</th>           
                             <th>操作</th>
                         </tr>
                     </thead>   
@@ -45,7 +46,12 @@
                                 <td>{$managementmodeName[$info[management_mode]]}</td> 
                                 <td>{$info['unit_code']}</td>
                                 <td>{$statusName[$info['status']]}</td>
-                                <td><if condition="$info['registered_trademark']"><img src="__PUBLIC__/Data/others{$info['registered_trademark']}" alt="" width="50"></if></td>                          
+                                <td><if condition="$info['registered_trademark']"><img src="__PUBLIC__/Data/others{$info['registered_trademark']}" alt="" width="50"></if></td>
+                                <td>
+                                    <a  href="{:U('Goods/index',array('unit_id'=>$info[id],'rand'=>rand(1,10000)))}"  data-name="{$info[title]}" data-id="{$info[id]}">
+                                       点击查看          
+                                    </a>
+                                </td>                          
                                 <td  class="f-14">
                                     <a  href="{:U('Company/edit',array('id'=>$info[id],'rand'=>rand(1,10000)))}"  data-name="{$info[title]}" data-id="{$info[id]}">
                                         <i class="icon-edit"></i>          

@@ -8,8 +8,7 @@
     <title><?php echo ($GBTitle); echo ($GBMenu); echo (C("APP_NAME")); ?></title>
     <link rel="stylesheet" href="/sptmcx/Public/Home/css/mui.min.css">
     <link rel="stylesheet" href="/sptmcx/Public/Home/css/app.css?versionId=<?php echo (C("WWW_VERSION")); ?>">
-    <link rel="stylesheet" href="/sptmcx/Public/Home/fonts/font_56obl7zrya9/iconfont.css"> 
-    
+    <link rel="stylesheet" href="/sptmcx/Public/Home/css/font_pg18qfwhyub/iconfont.css">     
     <meta name="keywords" content="<?php echo (C("APP_KEYWORDS")); ?>">
     <meta name="description" content="<?php echo (C("APP_DESCRIPTION")); ?>">
     <script src="/sptmcx/Public/Home/js/jquery-2.1.1.min.js"></script>
@@ -26,17 +25,16 @@
  
 <div class="contbox">
 
-<link rel="stylesheet" type="text/css" href="/sptmcx/Public/Home/css/icons-extra.css">
 <link rel="stylesheet" type="text/css" href="/sptmcx/Public/Home/css/home.css?versionId=<?php echo (C("WWW_VERSION")); ?>">
 <div class="mui-content">
     <div class="logo">
 	    <a href="<?php echo U('Home/Index/index');?>"><?php echo (C("APP_NAME")); ?></a>
 	   
-	    <div class="usertop">
+	   <!--  <div class="usertop">
             <?php if( $www_member): ?><a class="ca" href="<?php echo U('Home/Setting/index');?>"><?php echo ($www_member['username']); ?></a>&nbsp;&nbsp;&nbsp;&nbsp;
                <?php else: ?>   	   
 		      	   <a  class="comLogin" href="<?php echo U('Home/Login/index');?>">登录</a>&nbsp;&nbsp;&nbsp;&nbsp;<?php endif; ?> 
-	    </div>      
+	    </div>  -->     
 	</div>
 </div>
 <div class="mui-content">
@@ -45,7 +43,7 @@
 				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
 				<div class="mui-slider-item mui-slider-item-duplicate">
 					<a href="javascript:void(0);">
-						<img src="/sptmcx/Public/Data/others<?php echo ($bannerfirst['href_m']); ?>?versionId=<?php echo (C("WWW_VERSION")); ?>">
+						<img src="/sptmcx/Public/Data/others<?php echo ($bannerfirst['href']); ?>?versionId=<?php echo (C("WWW_VERSION")); ?>">
 					</a>
 				</div>				 
 				<?php if(is_array($bannerlist)): foreach($bannerlist as $vId=>$vo): ?><div class="mui-slider-item">
@@ -53,13 +51,13 @@
 	                <?php else: ?>
 	                   <a href="javascript:void(0)"><?php endif; ?>
 					
-						<img src="/sptmcx/Public/Data/others<?php echo ($vo[href_m]); ?>?versionId=<?php echo (C("WWW_VERSION")); ?>" alt="<?php echo ($vo[title]); ?>" />
+						<img src="/sptmcx/Public/Data/others<?php echo ($vo[href]); ?>?versionId=<?php echo (C("WWW_VERSION")); ?>" alt="<?php echo ($vo[title]); ?>" />
 					</a>
 				</div><?php endforeach; endif; ?>				 
 				<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
 				<div class="mui-slider-item mui-slider-item-duplicate">
 					<a href="javascript:void(0);">
-						<img src="/sptmcx/Public/Data/others<?php echo ($bannerfirst['href_m']); ?>?versionId=<?php echo (C("WWW_VERSION")); ?>">
+						<img src="/sptmcx/Public/Data/others<?php echo ($bannerfirst['href']); ?>?versionId=<?php echo (C("WWW_VERSION")); ?>">
 					</a>
 				</div>
 			</div>
@@ -159,16 +157,16 @@
         <span class="mui-icon iconfont icon-shouye"></span>
         <span class="mui-tab-label">首页</span>
     </a>
-    <a href="##" class="mui-tab-item">
-        <span class="mui-icon iconfont icon-zonghe"></span>
+    <a href="<?php echo U('Servicehall/index');?>" class="mui-tab-item">
+        <span class="mui-icon iconfont icon-fenlei"></span>
         <span class="mui-tab-label">服务大厅</span>
     </a>
-    <a href="##" class="mui-tab-item">
-        <span class="mui-icon iconfont icon-fuzhi"></span>
+    <a href="<?php echo U('Goods/index');?>" class="mui-tab-item">
+        <span class="mui-icon iconfont icon-chazhao"></span>
         <span class="mui-tab-label">商品查询</span>
     </a>
     <a href="<?php echo U('Setting/index');?>" class="mui-tab-item">
-        <span class="mui-icon iconfont icon-geren"></span>
+        <span class="mui-icon iconfont icon-wode"></span>
         <span class="mui-tab-label">我的</span>
     </a>
 </nav>

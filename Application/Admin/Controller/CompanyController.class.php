@@ -3,7 +3,7 @@ namespace Admin\Controller;
 use Think\Controller;
 class CompanyController extends BaseController {
 	public function indexAction(){
-		$mod = M("Company");
+		$mod = M("MemberUnit");
     $condition ="";
     $keyword = I("keyword");
     if($keyword){
@@ -133,7 +133,7 @@ class CompanyController extends BaseController {
 		$this->post();
 	}
 	public function post(){
-		$mod = D("Company");
+		$mod = D("MemberUnit");
 		$id=I("id");
 		if(IS_POST){
           $id=I("id");
@@ -189,7 +189,7 @@ class CompanyController extends BaseController {
 		$this->display('post');
 	}
 	public function delAction(){
-		$mod = M("Company");
+		$mod = M("MemberUnit");
 		$id=I("id");
 		$mod->where("id='{$id}'")->delete();
 		$this->success("删除成功");
