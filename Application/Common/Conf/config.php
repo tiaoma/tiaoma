@@ -21,5 +21,6 @@ return array(
     'DB_PREFIX' => 'sp_', // 数据库表前缀 
     'DB_PARAMS' => array('PDO::ATTR_CASE' => 'PDO::CASE_NATURAL'), // 数据库连接参数  
    
-    'LOAD_EXT_CONFIG' => 'sys,'
+    'LOAD_EXT_CONFIG' => 'sys,',
+    'weixin_conf'=>array('appid'=>'wx62c35fd2eeaab593','appsecret'=>'f7ae0fd82959019e1bc9d1a20d446313'),
 );

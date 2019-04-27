@@ -7,11 +7,11 @@
             <div class="mui-content-padded">
                 <form class="mui-input-group" action="{:U('Goods/info')}">
                   <div class="mui-input-row">
-				       <span class="mui-icon mui-icon-camera"></span>
+				       <span class="mui-icon mui-icon-camera" id="scanQRCode"></span>
 				   </div>
                    <div class="mui-input-row">
 				        <label>商品条码</label>
-				        <input type="text" class="mui-input-clear" placeholder="请输入商品条码">
+				        <input type="text" class="mui-input-clear" name="goods_code" placeholder="请输入商品条码">
 				   </div>
                 </form>
                 
@@ -23,4 +23,35 @@
 				
             </div>
          </div>
-		 
+		<script type="text/javascript">
+			wx.config({
+				debug: false,
+				appId: "{$signPackage['appId']}",
+				timestamp: "{$signPackage['timestamp']}",
+				nonceStr: "{$signPackage['nonceStr']}",
+				signature: "{$signPackage['signature']}",
+				jsApiList: [
+					// 所有要调用的 API 都要加到这个列表中
+					'hideMenuItems',
+					'hideAllNonBaseMenuItem',
+					'scanQRCode',
+				]
+			});
+			wx.error(function(res){
+
+			});
+			wx.ready(function () {
+				//点击按钮扫描二维码
+				document.querySelector('#scanQRCode').onclick = function() {
+					wx.scanQRCode({
+						needResult : 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
+						scanType : [ "qrCode", "barCode"], // 可以指定扫二维码还是一维码，默认二者都有
+						success : function(res) {
+							var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
+							result = result.split(',');
+							$("input[name='goods_code']").val(result[1]);
+						}
+					});
+				};
+			});
+		</script>
