@@ -30,6 +30,21 @@
 		    <h1 class="mui-title">商品查询</h1>
 		</header>
 		 <?php echo W('Common/Public/madvbanner');?>
+		 <div class="mui-content margintop">
+            <div class="mui-content-padded">
+                <form class="mui-input-group">
+                   <div class="mui-input-row">
+				        <label>商品条码</label>
+				        <input type="text" class="mui-input-clear" placeholder="请输入商品条码">
+				   </div>
+                </form>
+                <div class="mui-input-row mui-search">
+				    <input type="search" class="mui-input-clear" placeholder="">
+				</div>
+
+				<span class="mui-icon mui-icon-camera"></span>
+            </div>
+         </div>
 		   
 <?php echo W('Common/Public/mfooter');?> 
 </div>

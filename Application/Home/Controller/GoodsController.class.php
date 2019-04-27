@@ -7,7 +7,7 @@ class GoodsController extends ComController {
 		$this->display(); 
     }
     public function infoAction(){ 
-        $id = I('id');
+        /*$id = I('id');
         $id = trim($id);
 
         $mod = D('Goods');        
@@ -20,7 +20,7 @@ class GoodsController extends ComController {
         $info['viewnum'] += 1;
         $mod->where("del=0 AND id='{$id}'")->save(array('viewnum'=>$info['viewnum']));
         $this->assign("info",$info); 
-        $this->assign("GBTitle",$info['title'].'_');  
+        $this->assign("GBTitle",$info['title'].'_');  */
         $this->display();
      }
 

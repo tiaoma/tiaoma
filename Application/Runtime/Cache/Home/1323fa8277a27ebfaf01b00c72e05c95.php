@@ -28,7 +28,40 @@
 <header class="mui-bar mui-bar-nav">
 		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"  href="<?php echo U('Ugoods/index');?>"></a>
 		    <h1 class="mui-title">添加商品</h1>
-		</header>  
+		</header>
+		<div class="mui-content margintop">
+            <div class="mui-content-padded">
+	            <form id="formObj" action=""  class="mui-input-group">   
+                     <div class="mui-input-row">
+	                    <label>上传封面</label>
+	                   
+	                 </div>
+	                 <div class="mui-input-row">
+	                    <label>商品名称</label>
+	                    <input name="title" type="text" class="mui-input-clear mui-input" placeholder="请输入商品名称">
+	                 </div>
+	                 <div class="mui-input-row">
+	                    <label>执行标准号</label>
+	                    <input name="standardnum" type="text" class="mui-input-clear mui-input" placeholder="请输入执行标准号">
+	                 </div>
+	                 <div class="mui-input-row">
+	                    <label>物品编码</label>
+	                    <input name="barcode" type="text" class="mui-input-clear mui-input" placeholder="请输入执行标准号">
+	                 </div>
+	                 <div class="mui-input-row">
+	                    <label>企业名称</label>
+	                    <input name="unitname" type="text" value="<?php echo ($unit['title']); ?>" class="mui-input-clear mui-input" placeholder="请输入企业名称">
+	                 </div>
+	                 <div class="row">	                   
+	                    <textarea  class="mui-input-clear textareabox" placeholder="请输入商品描述" name="summary" maxlength="255" rows="10"></textarea>
+	                 </div>
+	                 
+	            </form>
+            </div>
+            <div class="mui-content-padded">
+                <button  class="mui-btn mui-btn-block mui-btn-primary cbtn">上传</button>
+            </div>
+        </div>  
 <?php echo W('Common/Public/mfooter');?> 
 </div>
 

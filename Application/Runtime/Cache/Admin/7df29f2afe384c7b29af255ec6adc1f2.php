@@ -50,34 +50,42 @@
 </head>
 <body>
 
-<nav class="breadcrumb"><i class="iconfont">&#xf012b;</i> 首页 <span class="c-gray en">&gt;</span> 管理员管理 <span class="c-gray en">&gt;</span> 管理员列表 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="icon-refresh"></i></a></nav>
+<style type="text/css">
+.page{
+   margin-left: 40%; 
+}
+.page ul li{
+  float: left !important;
+}
+</style>
+<nav class="breadcrumb"><i class="iconfont">&#xf012b;</i> 首页 <span class="c-gray en">&gt;</span> 标准管理 <span class="c-gray en">&gt;</span> 标准列表 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="icon-refresh"></i></a></nav>
 <div class="pd-20 text-c">
   <table class="table table-striped table-bordered bootstrap-datatable datatable">
                     <thead>
                         <tr>
-                            <th>编号</th>
-                            <th>管理员名</th> 
-                            <th>权限</th>
-                            <th>时间</th>   
-                           <!--  <th>状态</th>  -->            
+                            <th>标准名称</th>
+                            <th>标准类型</th> 
+                            <th>标准号</th>
+                            <th>显示状态</th>
+                            <th>标准状态</th>                                        
                             <th>操作</th>
                         </tr>
                     </thead>   
                     <tbody> 
-                        <?php if( $list): if(is_array($list)): foreach($list as $key=>$info): ?><tr>
-                                <td><?php echo ($info['uid']); ?></td>
-                                <td><?php echo ($info['username']); ?></td>
-                                <td><?php echo ($info['permname']); ?></td>
-                                <td><?php echo (date("Y-m-d H:i",$info['regtime'])); ?></td>
-                                
-                                <!-- <td><?php echo ($niStatusName[$info['status']]); ?></td>      -->                      
-                                <td  class="f-14">
-                                    <a  href="<?php echo U('Adminlist/edit',array('id'=>$info['uid'],'rand'=>rand(1,10000)));?>"  data-name="<?php echo ($info[title]); ?>" data-id="<?php echo ($info[id]); ?>">
+                        <?php if($list): if(is_array($list)): foreach($list as $key=>$vo): ?><tr>                               
+                                <td><?php echo ($vo[title]); ?></td>
+                                 <td><?php echo ($standard_type[$vo['standardtype']]); ?></td>
+                                 <td><?php echo ($vo[standardnumber]); ?></td>
+                                 <td><?php echo ($isStatus[$vo['status']]); ?></td>
+                                 <td><?php echo ($standard_status[$vo['standardstatus']]); ?></td>
+
+                                 <td  class="f-14">
+                                    <a  href="<?php echo U('Standard/edit',array('id'=>$vo[id],'rand'=>rand(1,10000)));?>"  data-name="<?php echo ($vo[title]); ?>" data-id="<?php echo ($vo[id]); ?>">
                                         <i class="icon-edit"></i>          
                                     </a>
-                                    <?php if($uadmin['isadmin'] == 1 && ($uadmin['uid'] != $info['uid'])): ?><a  onclick="class_del(this)" class="ml-5" data-url="<?php echo U('Adminlist/del',array('id'=>$info['uid'],'rand'=>rand(1,10000)));?>" href="###">
+                                    <a  onclick="class_del(this)" class="ml-5" data-url="<?php echo U('Standard/del',array('id'=>$vo[id],'rand'=>rand(1,10000)));?>" href="###">
                                         <i class="icon-trash"></i>
-                                    </a><?php endif; ?>
+                                    </a>
                                 </td>
                             </tr><?php endforeach; endif; ?>
                             <?php else: ?>

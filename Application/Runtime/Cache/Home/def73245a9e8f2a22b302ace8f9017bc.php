@@ -26,40 +26,41 @@
 <div class="contbox">
 
         <header class="mui-bar mui-bar-nav">
-		    <a  href="<?php echo U('Index/index');?>" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-		    <h1 class="mui-title">服务大厅</h1>
+		    <a  href="<?php echo U('Goods/index');?>" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">商品查询</h1>
 		</header>
 		 <?php echo W('Common/Public/madvbanner');?>
 		 <div class="mui-content margintop">
-			<div class="mui-content-padded">	
-                 <ul class="mui-table-view mui-grid-view mui-grid-9">
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4">
-		                <a href="<?php echo U('Ugoods/add');?>">
-		                    <span class="mui-icon mui-icon-upload"></span>
-		                    <div class="mui-media-body">上传产品</div>
-		                </a>
-		             </li>
-		             <li class="mui-table-view-cell mui-media mui-col-xs-4">
-		                <a href="#" >
-		                    <span class="mui-icon mui-icon-compose"></span>
-		                    <div class="mui-media-body">申请条码</div>
-		                </a>
-		             </li>
-		             <li class="mui-table-view-cell mui-media mui-col-xs-4">
-		                <a href="#">
-		                    <span class="mui-icon mui-icon-search"></span>
-		                    <div class="mui-media-body">查询标准</div>
-		                </a>
-		             </li>
-		             <li class="mui-table-view-cell mui-media mui-col-xs-4">
-		                <a href="#">
-		                    <span class="mui-icon mui-icon-spinner mui-spin"></span>
-		                    <div class="mui-media-body">自修订标准</div>
-		                </a>
-		             </li>
-		        </ul>
-			</div>
-		</div>  
+            <div class="mui-content-padded">
+                 <div class="mui-card">	
+                   <div class="mui-card-header">产品封面</div>				
+					<div class="mui-card-content">
+						<div class="mui-card-content-inner ctBox">							 
+	                       
+						</div>
+					</div>				 
+				</div> 
+				<div class="mui-card">
+					<div class="mui-card-header">基本信息</div>
+					<div class="mui-card-content">
+						<div class="mui-card-content-inner">							 
+	                       <p>产品名称</p>	                         
+	                       <p>。。。。。。</p>	                         
+						</div>
+					</div>				 
+				</div>  
+				<div class="mui-card">
+					<div class="mui-card-header">详情</div>
+					<div class="mui-card-content">
+						<div class="mui-card-content-inner ctBox">							 
+	                       详情详情详情详情详情
+						</div>
+					</div>				 
+				</div> 
+				
+            </div>
+         </div>
+		   
 <?php echo W('Common/Public/mfooter');?> 
 </div>
 

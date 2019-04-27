@@ -58,7 +58,7 @@ class RealauthenticationController extends BaseController {
 		}
 		$Realauthentication->where("id='{$id}'")->save(array("status"=>2,"finish_time"=>$this->_time));
 		$memberObj = D("member");
-		$memberObj->where("id='{$info[uid]}'")->save(array("auth_time"=>$this->_time));
+		
 
 		$memberunit = D("MemberUnit");
 		$data = array();
@@ -68,7 +68,9 @@ class RealauthenticationController extends BaseController {
         $data['management_mode'] = 0;  
         $data['unit_code'] = $info['auth_unit_code'];  
         $data['business_license'] = $info['auth_images']; 
-		$memberunit->add($data);
+		if($unit_id=$memberunit->add($data)){
+			$memberObj->where("id='{$info[uid]}'")->save(array("auth_time"=>$this->_time,'unit_id'=>$unit_id));
+		}
 		$this->success("修改成功");
 	}
 	public function errverifyingAction(){

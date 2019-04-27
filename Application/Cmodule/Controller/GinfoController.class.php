@@ -12,7 +12,7 @@ class GinfoController extends Controller {
     	if(cookie('bzjdauto') && session('www_id')==null){ 
               $bzjdauto = explode('|', $this->checkAutoLogin(cookie('bzjdauto')));
                $ip = get_client_ip();
-               if(isset($bzjdauto[2]) && $bzjdauto[2]==$ip){                   
+               if(isset($bzjdauto[2])){                   
                   $mod = M('Member');
                   $info  = $mod->where("(username='{$bzjdauto[1]}' OR email='{$bzjdauto[1]}' OR mobile='{$bzjdauto[1]}') AND id='{$bzjdauto[0]}'")->find();
                   if($info){
@@ -24,7 +24,7 @@ class GinfoController extends Controller {
                        session('mobile_show',$info['mobile_show']);
                        session('www_credit1',$info['credit1']);
                        session('www_credit2',$info['credit2']);
-                       session('www_unit_id',$info['auth_id']);
+                       session('www_unit_id',$info['unit_id']);
                      return true;
                   }
                }

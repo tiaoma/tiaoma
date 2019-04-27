@@ -42,6 +42,7 @@ class LoginController extends ComController {
            session('mobile_show',$info['mobile_show']);
            session('www_credit1',$info['credit1']);
            session('www_credit2',$info['credit2']);
+           session('www_unit_id',$info['unit_id']);
            $url = session('preurl')?session('preurl'):U('Index/index');
            
            echo json_encode(array('code'=>'','url'=>$url));

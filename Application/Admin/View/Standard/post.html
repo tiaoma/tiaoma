@@ -1,0 +1,121 @@
+<nav class="breadcrumb"><i class="iconfont">&#xf012b;</i> 首页 <span class="c-gray en">&gt;</span> 标准管理 <span class="c-gray en">&gt;</span> <if condition="$info">编辑<else/>添加</if>标准 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="icon-refresh"></i></a></nav>
+<div class="pd-20 text-c">
+<form class="Huiform" action="" method="post" enctype="multipart/form-data">
+        <input type="hidden" value="{$info[id]}" name="id">
+        <input type="hidden" value="" name="delgids" />
+        <table class="table">
+    <tr>
+        <th width="100">排序:</th>
+        <td><input placeholder="填写的数字越大越靠前"  value="{$info['displayorder']}" maxlength="64" class="input-text"  style="width:250px" name="displayorder"></td>
+    </tr>
+    <tr>
+        <th width="100">名称:</th>
+        <td><input type="text" value="{$info['title']}" maxlength="64" class="form-control" name="title"></td>
+    </tr>  
+    <tr>
+        <th width="100">英文名称:</th>
+        <td><input type="text" value="{$info['englishname']}" maxlength="64" class="form-control" name="englishname"></td>
+    </tr>   
+     <tr>
+        <th width="100">状态:</th>
+        <td>
+          <label class="radio-inline">
+            <input type="radio" id="inline-radio2" name="status" value="1" <if condition="$info['status'] eq 1"> checked</if>> 显示
+          </label>
+          <label class="radio-inline" >
+            <input type="radio" id="inline-radio2" name="status" value="0" <if condition="$info['status'] eq 0"> checked</if>> 隐藏
+          </label>
+        </td>
+      </tr>  
+      <tr>
+        <th width="100">标准号:</th>
+        <td><input type="text" value="{$info['standardnumber']}" maxlength="64" class="form-control" name="standardnumber"></td>
+      </tr>  
+      <tr>
+        <th width="100">标准类型:</th>
+        <td>
+            <label class="radio-inline">
+                <input type="radio"  name="standardtype" checked value="1"> 国家标准
+            </label>
+        </td>
+      </tr>
+      <tr>
+        <th width="100">标准状态:</th>
+        <td>
+            <label class="radio-inline">
+            <input type="radio"  name="standardstatus" value="0" <if condition="$info['standardstatus'] eq 0"> checked</if>> 未生效
+          </label>
+          <label class="radio-inline" >
+            <input type="radio"  name="standardstatus" value="1" <if condition="$info['standardstatus'] eq 1"> checked</if>> 现行
+          </label>
+           <label class="radio-inline" >
+            <input type="radio"  name="standardstatus" value="2" <if condition="$info['standardstatus'] eq 2"> checked</if>> 废止
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <th width="100">中国标准分类号:</th>
+        <td><input type="text" value="{$info['ccs']}" maxlength="64" class="form-control" name="ccs"></td>
+      </tr>
+       <tr>
+        <th width="100">国际标准分类号:</th>
+        <td><input type="text" value="{$info['ics']}" maxlength="64" class="form-control" name="ics"></td>
+      </tr>
+      <tr>
+        <th width="100">发布日期:</th>
+        <td><input type="text" value="{$info['publicationdate']}" maxlength="64" class="form-control" name="publicationdate"></td>
+      </tr>
+      <tr>
+        <th width="100">实施日期:</th>
+        <td><input type="text" value="{$info['impldate']}" maxlength="64" class="form-control" name="impldate"></td>
+      </tr>
+      <tr>
+        <th width="100">主管部门:</th>
+        <td><input type="text" value="{$info['competentdepartment']}" maxlength="64" class="form-control" name="competentdepartment"></td>
+      </tr>
+      <tr>
+        <th width="100">归口单位:</th>
+        <td><input type="text" value="{$info['technicalcommittees']}" maxlength="64" class="form-control" name="technicalcommittees"></td>
+      </tr>
+      <tr>
+        <th width="100">发布单位:</th>
+        <td><input type="text" value="{$info['publishingunit']}" maxlength="64" class="form-control" name="publishingunit"></td>
+      </tr>
+      <tr>
+        <th width="100">摘要:</th>
+        <td><textarea cols="50" rows="10"    name="summary" >{$info[summary]}</textarea>
+        </td>
+      </tr>
+      <tr>
+        <th width="100">源文件:</th>
+        <td>
+          <input type="file" value=""  class="form-control" name="fsrc"  id="fimage2">
+          <if condition="$info['fsrc']">
+          <div style="margin-top:20px;">
+             <a href="__PUBLIC__/Data{$info['fsrc']}" target="_blank">查看源文件</a>
+          </div>
+          </if>
+        </td>
+      </tr>
+       
+</table>
+<div class="text-c mt-20">
+      <button type="button" class="btn btn-success radius" id="" name="" onClick="class_save();"><i class="icon-save"></i> 保存</button>
+</div> 
+</form>
+</div>
+  <script type="text/javascript">   
+   
+  function class_save(){
+     var title = $("input[name='title']").val().trim();
+     
+     if(title.length<1){
+        layer.msg('名称不能为空!',1);
+        return;
+     }
+     
+    
+     $(".Huiform").submit();
+  }
+
+</script>

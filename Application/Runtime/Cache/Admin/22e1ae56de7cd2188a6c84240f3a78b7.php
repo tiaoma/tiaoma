@@ -58,35 +58,33 @@
       </dd>
     </dl><?php endif; ?> 
     <?php if(in_array('3',$upermarr)): ?><dl id="menu-user">
-      <dt><i class="icon-paste"></i> 资料下载管理<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
+      <dt><i class="icon-paste"></i> 标准管理<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
       <dd>
         <ul>
-          <li><a _href="<?php echo U('Downloadfile/index');?>" href="javascript:void(0);">资料列表</a></li> 
-          <li><a _href="<?php echo U('Downloadfile/add');?>" href="javascript:void(0);">添加资料</a></li>         
+          <li><a _href="<?php echo U('Standard/index');?>" href="javascript:void(0);">标准列表</a></li> 
+          <li><a _href="<?php echo U('Standard/add');?>" href="javascript:void(0);">添加标准</a></li>         
         </ul>
       </dd>
     </dl><?php endif; ?> 
-      
-   
-    <?php if(in_array('8',$upermarr)): ?><dl id="menu-user">
-      <dt><i class="icon-paste"></i> 消息管理<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
+     <?php if(in_array('4',$upermarr)): ?><dl id="menu-tongji" >
+      <dt><i class="icon-paste"></i> 企业管理<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
       <dd>
         <ul>
-          <li><a _href="<?php echo U('Msg/index');?>" href="javascript:void(0);">消息列表</a></li> 
-          <li><a _href="<?php echo U('Msg/add');?>" href="javascript:void(0);">添加消息</a></li>        
+          <li><a _href="<?php echo U('Company/index');?>" href="javascript:void(0)">企业列表</a></li>
+          <li><a _href="<?php echo U('Company/add');?>" href="javascript:void(0)">添加企业</a></li>                      
         </ul>
       </dd>
     </dl><?php endif; ?>
-    <?php if(in_array('9',$upermarr)): ?><dl id="menu-product">
-      <dt><i class="icon-paste"></i> Banner图片<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
+    <?php if(in_array('5',$upermarr)): ?><dl id="menu-tongji" >
+      <dt><i class="icon-paste"></i> 商品管理<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
       <dd>
         <ul>
-          <li><a _href="<?php echo U('Banner/index');?>" href="javascript:void(0)">Banner列表</a></li>
-          <li><a _href="<?php echo U('Banner/add');?>" href="javascript:void(0)">添加Banner图片</a></li>           
+          <li><a _href="<?php echo U('Goods/index');?>" href="javascript:void(0)">商品列表</a></li>
+          <li><a _href="<?php echo U('Goods/add');?>" href="javascript:void(0)">添加商品</a></li>                      
         </ul>
       </dd>
-    </dl><?php endif; ?>
-    <?php if(in_array('10',$upermarr)): ?><dl id="menu-product">
+    </dl><?php endif; ?>  
+    <?php if(in_array('6',$upermarr)): ?><dl id="menu-product">
       <dt><i class="icon-paste"></i> 新闻动态<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
       <dd>
         <ul>
@@ -96,7 +94,7 @@
       </dd>
     </dl><?php endif; ?>
    
-    <?php if(in_array('11',$upermarr)): ?><dl id="menu-product">
+    <?php if(in_array('7',$upermarr)): ?><dl id="menu-product">
       <dt><i class="icon-paste"></i> 公告管理<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
       <dd>
         <ul>
@@ -105,7 +103,7 @@
         </ul>
       </dd>
     </dl><?php endif; ?>
-     <?php if(in_array('11',$upermarr)): ?><dl id="menu-product">
+     <?php if(in_array('8',$upermarr)): ?><dl id="menu-product">
       <dt><i class="icon-paste"></i> 政策法规<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
       <dd>
         <ul>
@@ -114,26 +112,28 @@
         </ul>
       </dd>
     </dl><?php endif; ?>
-    <?php if(in_array('12',$upermarr)): ?><dl id="menu-tongji" >
-      <dt><i class="icon-paste"></i> 企业管理<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
+   
+    <?php if(in_array('9',$upermarr)): ?><dl id="menu-user">
+      <dt><i class="icon-paste"></i> 消息管理<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
       <dd>
         <ul>
-          <li><a _href="<?php echo U('Company/index');?>" href="javascript:void(0)">企业列表</a></li>
-          <li><a _href="<?php echo U('Company/add');?>" href="javascript:void(0)">添加企业</a></li>                      
+          <li><a _href="<?php echo U('Msg/index');?>" href="javascript:void(0);">消息列表</a></li> 
+          <li><a _href="<?php echo U('Msg/add');?>" href="javascript:void(0);">添加消息</a></li>        
         </ul>
       </dd>
     </dl><?php endif; ?>
-    <?php if(in_array('12',$upermarr)): ?><dl id="menu-tongji" >
-      <dt><i class="icon-paste"></i> 商品管理<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
+    <?php if(in_array('10',$upermarr)): ?><dl id="menu-product">
+      <dt><i class="icon-paste"></i> Banner图片<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
       <dd>
         <ul>
-          <li><a _href="<?php echo U('Goods/index');?>" href="javascript:void(0)">商品列表</a></li>
-          <li><a _href="<?php echo U('Goods/add');?>" href="javascript:void(0)">添加商品</a></li>                      
+          <li><a _href="<?php echo U('Banner/index');?>" href="javascript:void(0)">Banner列表</a></li>
+          <li><a _href="<?php echo U('Banner/add');?>" href="javascript:void(0)">添加Banner图片</a></li>           
         </ul>
       </dd>
     </dl><?php endif; ?>
    
-    <?php if(in_array('14',$upermarr)): ?><dl id="menu-tongji" >
+   
+    <?php if(in_array('11',$upermarr)): ?><dl id="menu-tongji" >
       <dt><i class="icon-paste"></i> 设置<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
       <dd>
         <ul>
@@ -142,7 +142,7 @@
       </dd>
     </dl><?php endif; ?>
    
-    <?php if(in_array('15',$upermarr)): ?><dl id="menu-tongji" >
+    <?php if(in_array('12',$upermarr)): ?><dl id="menu-tongji" >
       <dt><i class="icon-paste"></i> 数据统计<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
       <dd>
         <ul>

@@ -19,6 +19,9 @@ class UgoodsController extends ComController {
         if(!$meb['auth_time']){
             $this->redirect("Realauthentication/index");
         }
+        $mod = M("MemberUnit");
+        $unit= $mod->where("id='{$this->_unitid}'")->find();
+        $this->assign('unit',$unit);
         $this->display(); 
     }
     //获取列表

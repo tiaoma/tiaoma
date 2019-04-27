@@ -33,7 +33,7 @@ class ComController extends Controller {
         $ginfoObj = A('Cmodule/Ginfo');
         $ginfoObj->wwwcookieAction();
 
-        if((session('www_username')==null || session('www_id')==null) &&  in_array(CONTROLLER_NAME, array('Setting'))){      
+        if((session('www_username')==null || session('www_id')==null) &&  in_array(CONTROLLER_NAME, array('Setting','Ugoods','Umsg','Uask'))){      
             $this->redirect("Login/index");
             die();
         }

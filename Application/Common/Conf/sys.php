@@ -16,5 +16,20 @@ return array(
         ),  
   'dispatch_error_tmpl' => './Home/Com/dispatch_jump.tpl',
   'ERROR_PAGE'            =>  './Home/Index/index.html', 
+  //标准状态
+  'standard_status' => array(
+      0=>"未生效",
+      1=>"现行",
+      2=>"废止",      
+      ),
+  //标准类型
+   'standard_type' => array(
+      0=>"国际标准",
+      1=>"国家标准",
+      2=>"行业标准",
+      3=>"地方标准", 
+      4=>"团体标准", 
+      5=>"企业标准",       
+      ),
    
 );
