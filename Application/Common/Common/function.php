@@ -392,5 +392,11 @@ function getRandomString($num)
     
     return $authnum;      
 }
-
+function defaultVal($val, $data){
+    if(!$data){
+        return $val;
+    }else{
+        return $data;
+    }
+}
 

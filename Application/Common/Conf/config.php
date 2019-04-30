@@ -8,7 +8,7 @@ return array(
     'APP_DESCRIPTION' => '',
     'APP_URL' => 'http://127.0.0.1/',
     'MOBILE_URL' => 'http://127.0.0.1/Mobile',
-    'SESSION_OPTIONS'=>array('domain'=>'127.0.0.1'),//session配置
+    //'SESSION_OPTIONS'=>array('domain'=>'127.0.0.1'),//session配置
     'ACTION_SUFFIX' => 'Action', // 操作方法后缀  
     'SESSION_PREFIX' => 'sp_', // session 前缀              
     'SHOW_PAGE_TRACE' => false,

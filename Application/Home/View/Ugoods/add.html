@@ -1,37 +1,187 @@
 <header class="mui-bar mui-bar-nav">
-		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"  href="{:U('Ugoods/index')}"></a>
-		    <h1 class="mui-title">添加商品</h1>
-		</header>
-		<div class="mui-content margintop">
-            <div class="mui-content-padded">
-	            <form id="formObj" action=""  class="mui-input-group">   
-                     <div class="mui-input-row">
-	                    <label>上传封面</label>
-	                   
-	                 </div>
-	                 <div class="mui-input-row">
-	                    <label>商品名称</label>
-	                    <input name="title" type="text" class="mui-input-clear mui-input" placeholder="请输入商品名称">
-	                 </div>
-	                 <div class="mui-input-row">
-	                    <label>执行标准号</label>
-	                    <input name="standardnum" type="text" class="mui-input-clear mui-input" placeholder="请输入执行标准号">
-	                 </div>
-	                 <div class="mui-input-row">
-	                    <label>物品编码</label>
-	                    <input name="barcode" type="text" class="mui-input-clear mui-input" placeholder="请输入执行标准号">
-	                 </div>
-	                 <div class="mui-input-row">
-	                    <label>企业名称</label>
-	                    <input name="unitname" type="text" value="{$unit['title']}" class="mui-input-clear mui-input" placeholder="请输入企业名称">
-	                 </div>
-	                 <div class="row">	                   
-	                    <textarea  class="mui-input-clear textareabox" placeholder="请输入商品描述" name="summary" maxlength="255" rows="10"></textarea>
-	                 </div>
-	                 
-	            </form>
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="{:U('Ugoods/index')}"></a>
+
+    <h1 class="mui-title">添加商品</h1>
+</header>
+<div class="mui-content margintop">
+    <div class="mui-content-padded">
+        <form id="formObj" action="{:U('addPost')}" class="mui-input-group">
+            <div class="mui-input-row">
+                <label>物品编码</label>
+                <input name="barcode" type="text" placeholder="请输入物品编码">
+                <span class="mui-icon mui-icon-camera" id="scanQRCode" style="position: absolute;left: 75%;top:7px;"></span>
+                <button type="button" class="mui-btn mui-btn-primary" id="queryGoods" style="position: absolute;left: 85%;top: 2px;">查询</button>
             </div>
-            <div class="mui-content-padded">
-                <button  class="mui-btn mui-btn-block mui-btn-primary cbtn">上传</button>
+            <div class="mui-input-row">
+                <label>企业名称</label>
+                <input name="unitname" type="text" value="{$unit['title']}" class="mui-input-clear mui-input"
+                       placeholder="请输入企业名称">
             </div>
-        </div>
+            <div class="mui-input-row">
+                <label>执行标准号</label>
+                <input name="standardnum" type="text" class="mui-input-clear mui-input" placeholder="请输入执行标准号">
+            </div>
+            <div class="mui-input-row">
+                <label>商品名称</label>
+                <input name="title" type="text" class="mui-input-clear mui-input" placeholder="请输入商品名称">
+            </div>
+            <div class="mui-input-row">
+                <label>商品规格</label>
+                <input name="spec" type="text" class="mui-input-clear mui-input" placeholder="请输入商品规格">
+            </div>
+            <div class="mui-input-row">
+                <label>商标</label>
+                <input name="trademark" type="text" class="mui-input-clear mui-input" placeholder="请输入商品商标">
+            </div>
+            <div class="mui-input-row" style="height: auto">
+                <textarea class="mui-input-clear textareabox" placeholder="请输入商品描述" name="summary" maxlength="255"
+                          rows="10"></textarea>
+            </div>
+            <div class="mui-input-row" style="height: auto">
+                <label style="width: 80%">商品图片</label>
+                <img src="/Public/Home/images/add_img.png" id="add_img" style="padding: 0 15px;"/>
+                <input type="file" id="file_input" style="display: none;">
+                <input type="hidden" name="thumb">
+            </div>
+
+        </form>
+    </div>
+    <div class="mui-content-padded">
+        <button class="mui-btn mui-btn-block mui-btn-primary cbtn" id="subBtn">上传</button>
+    </div>
+</div>
+<script type="text/javascript">
+    wx.config({
+        debug: false,
+        appId: "{$signPackage['appId']}",
+        timestamp: "{$signPackage['timestamp']}",
+        nonceStr: "{$signPackage['nonceStr']}",
+        signature: "{$signPackage['signature']}",
+        jsApiList: [
+            // 所有要调用的 API 都要加到这个列表中
+            'hideMenuItems',
+            'hideAllNonBaseMenuItem',
+            'scanQRCode',
+        ]
+    });
+    wx.error(function(res){
+
+    });
+    wx.ready(function () {
+        //点击按钮扫描二维码
+        document.querySelector('#scanQRCode').onclick = function() {
+            wx.scanQRCode({
+                needResult : 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
+                scanType : [ "qrCode", "barCode"], // 可以指定扫二维码还是一维码，默认二者都有
+                success : function(res) {
+                    var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
+                    result = result.split(',');
+                    $("input[name='barcode']").val(result[1]);
+                }
+            });
+        };
+    });
+    $(function(){
+        $('#queryGoods').click(function(){
+            var code = $("input[name='barcode']").val();
+            if(code == ''){
+                mui.alert('物品编码不能为空',GlobalAppName);
+            }
+            $.ajax({
+                url:"{:U('queryGoods')}",
+                data:{code:code},
+                dataType:'json',
+                success:function(res){
+                    if(res == 0){
+                        mui.alert('该商品已存在，请勿重复上传',GlobalAppName);
+                        return false;
+                    }
+                    if(res.status == '200'){
+                        var result = res.result;
+                        $("input[name='title']").val(result.goodsName);
+                        $("input[name='spec']").val(result.spec);
+                        $("input[name='trademark']").val(result.trademark);
+                        $("textarea[name='summary']").val(result.remark);
+                        $('#add_img').attr('src', result.img).attr('width', '80%');
+                        $("input[name='thumb']").val(result.img);
+                    }else{
+                        mui.alert(res.msg,GlobalAppName);
+                    }
+                }
+            })
+        })
+        $('#add_img').click(function(){
+            $('#file_input').click();
+        })
+        $('#file_input').change(function(){
+            var file = document.getElementById('file_input').files[0];
+            var data = new FormData();
+            var reader = new FileReader(); // 新建一个FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function (e) {
+                var filestring = e.target.result;   //base64编码的图片数据
+                data.append("file", filestring);
+                layer.load(2,{shade: 0.1});
+                $.ajax({
+                    type: 'POST',
+                    url: "{:U('upload_goods_img')}",
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    dataType: 'json',
+                    success: function (data) {
+                        layer.closeAll('loading');
+                        console.log(data);
+                        if (data.status == 1) {
+                            $('#add_img').attr('src', data.data).attr('width', '80%');
+                            $("input[name='thumb']").val(data.data);
+                        } else {
+                            mui.alert(data.msg,GlobalAppName);
+                        }
+                    },
+                    error: function (e) {
+                        layer.closeAll('loading');
+                        mui.alert("上传失败，请联系管理员！",GlobalAppName);
+                    }
+                });
+            }
+        })
+        $('#subBtn').click(function(){
+            var barcode = $("input[name='barcode']").val().trim();
+            var standardnum = $("input[name='standardnum']").val().trim();
+            var title = $("input[name='title']").val().trim();
+            var reg = /^\d{13,14}$/;
+            if(!reg.test(barcode)){
+                mui.alert('请输入13或14位的条形码',GlobalAppName);
+                return false;
+            }
+            if(standardnum == ''){
+                mui.alert('执行标准号不能为空',GlobalAppName);
+                return false;
+            }
+            if(title == ''){
+                mui.alert('商品名称不能为空',GlobalAppName);
+                return false;
+            }
+            var data = $('#formObj').serialize();
+            $.ajax({
+                type:'post',
+                url:"{:U('add')}",
+                data:data,
+                dataType:'json',
+                success:function(res){console.log(res)
+                    if(res.status == 1){
+                        layer.msg('添加商品成功',function(){
+                           window.location.reload();
+                        })
+                    }else{
+                        mui.alert(res.msg,GlobalAppName);
+                    }
+                },
+                error:function(){
+                    mui.alert('网络连接错误，请联系管理员',GlobalAppName);
+                }
+            })
+        })
+    })
+</script>

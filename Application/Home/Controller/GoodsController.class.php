@@ -3,29 +3,24 @@ namespace Home\Controller;
 //商品查询
 class GoodsController extends ComController {
     public function indexAction(){
-        $weixin_config = C('weixin_conf'); //获取微信配置
-        // 微信Jssdk 操作类 用分享朋友圈 JS
-        require_once "./Jssdk/jssdk.php";
-        $jssdk = new \JSSDK($weixin_config['appid'], $weixin_config['appsecret']);
-        $signPackage = $jssdk->GetSignPackage();
-        $this->assign('signPackage', $signPackage);
+        $this->useJssdk();//调用jssdk
 		$this->display(); 
     }
     public function infoAction(){ 
-        /*$id = I('id');
-        $id = trim($id);
+        $barcode = I('barcode');
+        $barcode = trim($barcode);
 
         $mod = D('Goods');        
-        $info = $mod->where("del=0 AND id='{$id}'")->find(); 
-        
+        $info = $mod->where("del=0 and status=1 AND barcode='{$barcode}'")->find();
+
         if(!$info){
-            $this->error('该内容不存在',U('Goods/index'));
-            die();
+            $this->error('该商品不存在',U('Goods/index'));
         }
-        $info['viewnum'] += 1;
-        $mod->where("del=0 AND id='{$id}'")->save(array('viewnum'=>$info['viewnum']));
+        $mod->where("del=0 AND barcode='{$barcode}'")->setInc('viewnum');
+        $standard = M('standard')->where(['standardnumber'=>$info['standardnum']])->find();
         $this->assign("info",$info); 
-        $this->assign("GBTitle",$info['title'].'_');  */
+        $this->assign("standard",$standard);
+        $this->assign("GBTitle",$info['title'].'_');
         $this->display();
      }
 
