@@ -7,7 +7,7 @@ class AnnounceController extends BaseController {
     $count = $announceObj->count();// 查询满足要求的总记录数            
     $Page = new \Think\Page($count,$this->_page_item_num);// 实例化分页类 传入总记录数和每页显示的记录数(25)
     $showPage = $Page->show();// 分页显示输出
-    $list  = $announceObj->order("displayorder DESC,id DESC")->limit($Page->firstRow.','.$Page->listRows)->select();
+    $list  = $announceObj->order("displayorder DESC,createtime DESC")->limit($Page->firstRow.','.$Page->listRows)->select();
 
 		$niStatusName = array(0=>'不发布',1=>'发布');
 		$niTypeName = array(0=>'公告',1=>'规则',2=>'活动');
@@ -29,9 +29,9 @@ class AnnounceController extends BaseController {
 		$id=I("id");
 		if(IS_POST){
           $data = $announceObj->create();
-
+          $data['displayorder'] = $data['displayorder']?0:intval($data['displayorder']);
           $data['detail'] = I('detail','','htmlspecialchars_decode');
-          $data['createtime'] = time();
+          
 
           
           ////////////
@@ -63,16 +63,17 @@ class AnnounceController extends BaseController {
                 } 
             }
           if(!$id){
-           $bid = $announceObj->add($data);
-           $announceObj->updateCatchData();
-           $this->fulltextSearch('announce',$bid,array('title'=>$data['title'],'status'=>$data['status']));
+            $data['id'] = guid();
+            $data['createtime'] = time();
+            $announceObj->add($data);
+         
+           
            $this->success('添加成功',U('Announce/index'));
            die;
           }
           
           $announceObj->save($data);
-          $announceObj->updateCatchData();
-          $this->fulltextSearch('announce',$data['id'],array('title'=>$data['title'],'status'=>$data['status']));
+          
           $this->success('修改成功',U('Announce/index'));
           die;
 		}
@@ -85,9 +86,7 @@ class AnnounceController extends BaseController {
 	public function delAction(){
 		$announceObj = D("Announce");
 		$id=I("id");
-		$announceObj->where("id='{$id}'")->delete();
-    $announceObj->updateCatchData();
-    $this->fulltextSearch('announce',$id,'',1);
+		$announceObj->where("id='{$id}'")->delete();    
 		$this->success("删除成功");
 		die;
 	}

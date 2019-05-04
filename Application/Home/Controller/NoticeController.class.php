@@ -28,7 +28,7 @@ class NoticeController extends ComController {
      }
      public function infoAction(){ 
     	$id = I('id');
-    	$id = intval($id);
+    	$id = trim($id);
 
     	$mod = D('Announce');        
         $info = $mod->where("del=0 and status=1 and id='{$id}'")->find(); 
