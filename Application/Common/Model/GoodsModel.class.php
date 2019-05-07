@@ -7,7 +7,7 @@ class GoodsModel extends ComModel
     protected $_validate        =   array(
         array('barcode','/^\d{13,14}$/','请输入13或14位的条形码',1),
         array('title','require','商品名称不能为空',1),
-        array('standardnum','require','执行标准号不能为空',1)
+        //array('standardnum','require','执行标准号不能为空',1)
     );  // 自动验证定义
 
     //检测商品条码是否已经存在

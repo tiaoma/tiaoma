@@ -20,7 +20,7 @@
                 <div class="mui-card-content-inner">
                     <p>商品名称：{$info.title}</p>
                     <p>物品编码：{$info.barcode}</p>
-                    <p>执行标准：{$info.standardnum}</p>
+                    <p>执行标准：{$info.standardnum|defaultVal='无',###}</p>
                     <p>商品规格：{$info.spec|defaultVal='无',###}</p>
                     <p>商标：{$info.trademark|defaultVal='无',###}</p>
                 </div>
