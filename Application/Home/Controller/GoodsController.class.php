@@ -15,7 +15,7 @@ class GoodsController extends ComController
         $barcode = trim($barcode);
 
         $mod = D('Goods');
-        $info = $mod->where("del=0 and status=1 AND barcode='{$barcode}'")->find();
+        $info = $mod->relation('Att')->where("del=0 and status=1 AND barcode='{$barcode}'")->find();
         if (!$info) {//如果不存在，则通过接口查询商品基本信息
             $result = json_decode(queryGoods($barcode), true);
             if ($result['status'] != '200') {

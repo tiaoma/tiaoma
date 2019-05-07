@@ -3,11 +3,11 @@ namespace Admin\Model;
 
 class AttachmentModel extends ComModel
 {
-    public function addAttachment($imgdata,$bid=0,$ftype=0)
+    public function addAttachment($imgdata,$bid=0,$ftype=0,$full_src = '')
     {
         $idata['savename'] = $imgdata['savename'];
         $idata['savepath'] = $imgdata['savepath'];
-        $idata['src'] = $imgdata['savepath'].$imgdata['savename'];
+        $idata['src'] = $full_src.$imgdata['savepath'].$imgdata['savename'];
         $idata['size'] =  $imgdata['size'];
         $idata['type'] =  $imgdata['type'];
         $idata['ftype'] =  $ftype;

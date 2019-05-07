@@ -43,6 +43,32 @@
           </if>
         </td>
       </tr>
+            <tr>
+                <th width="100">新闻图片:</th>
+                <td>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="upload_box">
+                                <div class="upload_main">
+                                    <div class="upload_choose btn btn-success ">
+                                        <input id="fileImage" type="file" size="30" name="fileselect[]" multiple />
+                                        选择图片
+                                    </div>
+                                    <div class="upload_preview">
+                                        <?php foreach($news['Att'] as $att){ ?>
+                                        <p>
+                                            <a href="javascript:void(0);" class="upload_delete_com" title="删除" data-index="0" data-id="{$att['aid']}">删除</a><br>
+                                            <img  class="upload_image" src="__PUBLIC__/Data/others{$att['src']}">
+                                        </p>
+                                        <?php } ?>
+                                    </div>
+                                </div>
+                                <div id="uploadInf" class="upload_inf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
       <tr>
         <th width="100">摘要:</th>
         <td><textarea cols="50" rows="10"    name="summary" >{$info[summary]}</textarea>

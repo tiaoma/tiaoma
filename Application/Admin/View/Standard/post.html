@@ -11,11 +11,11 @@
     <tr>
         <th width="100">名称:</th>
         <td><input type="text" value="{$info['title']}" maxlength="64" class="form-control" name="title"></td>
-    </tr>  
+    </tr>
     <tr>
         <th width="100">英文名称:</th>
         <td><input type="text" value="{$info['englishname']}" maxlength="64" class="form-control" name="englishname"></td>
-    </tr>   
+    </tr>
      <tr>
         <th width="100">状态:</th>
         <td>
@@ -26,11 +26,11 @@
             <input type="radio" id="inline-radio2" name="status" value="0" <if condition="$info['status'] eq 0"> checked</if>> 隐藏
           </label>
         </td>
-      </tr>  
+      </tr>
       <tr>
         <th width="100">标准号:</th>
         <td><input type="text" value="{$info['standardnumber']}" maxlength="64" class="form-control" name="standardnumber"></td>
-      </tr>  
+      </tr>
       <tr>
         <th width="100">标准类型:</th>
         <td>
@@ -83,7 +83,9 @@
       </tr>
       <tr>
         <th width="100">摘要:</th>
-        <td><textarea cols="50" rows="10"    name="summary" >{$info[summary]}</textarea>
+        <td>
+            <textarea cols="50" rows="10" style="display:none;"   name="summary"   class="widgEditor ">{$info[summary]}</textarea>
+            <script id="editor" type="text/plain" style="width:100%;height:300px;"></script>
         </td>
       </tr>
       <tr>
@@ -97,24 +99,30 @@
           </if>
         </td>
       </tr>
-       
+
 </table>
 <div class="text-c mt-20">
       <button type="button" class="btn btn-success radius" id="" name="" onClick="class_save();"><i class="icon-save"></i> 保存</button>
-</div> 
+</div>
 </form>
 </div>
-  <script type="text/javascript">   
-   
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/lang/zh-cn/zh-cn.js"></script>
+  <script type="text/javascript">
+      var ue = UE.getEditor('editor');
+      ue.ready(function(){
+          ue.setContent(`{$info[summary]}`);
+      });
   function class_save(){
      var title = $("input[name='title']").val().trim();
-     
+
      if(title.length<1){
         layer.msg('名称不能为空!',1);
         return;
      }
-     
-    
+      $(".widgEditor").val(ue.getContent());
+
      $(".Huiform").submit();
   }
 

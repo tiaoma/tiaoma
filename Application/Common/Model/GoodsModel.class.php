@@ -9,7 +9,16 @@ class GoodsModel extends ComModel
         array('title','require','商品名称不能为空',1),
         //array('standardnum','require','执行标准号不能为空',1)
     );  // 自动验证定义
-
+    protected $_link = array(
+        'Att'=>array(
+            'condition'=> 'ftype=0  AND del=0',
+            'mapping_type'      => self::HAS_MANY,
+            //'mapping_name'      => 'Attachment',
+            'foreign_key'       =>  'bid',
+            'relation_foreign_key'  =>  'id',
+            'class_name'        =>  'Attachment',
+        )
+    );
     //检测商品条码是否已经存在
     public function checkBarcode($barcode,$id=0){
         $condition = "barcode='{$barcode}'";

@@ -20,7 +20,7 @@
 					<a href="javascript:void(0);">
 						<img src="__PUBLIC__/Data/others{$bannerfirst['href']}?versionId={$Think.config.WWW_VERSION}">
 					</a>
-				</div>				 
+				</div>
 				<foreach name="bannerlist"  key="vId" item="vo">
 				<div class="mui-slider-item">
 				    <if condition="$vo['link']">
@@ -28,11 +28,11 @@
 	                <else/>
 	                   <a href="javascript:void(0)">
 	                </if>
-					
+
 						<img src="__PUBLIC__/Data/others{$vo[href]}?versionId={$Think.config.WWW_VERSION}" alt="{$vo[title]}" />
 					</a>
 				</div>
-				</foreach>				 
+				</foreach>
 				<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
 				<div class="mui-slider-item mui-slider-item-duplicate">
 					<a href="javascript:void(0);">

@@ -16,7 +16,7 @@
                             <foreach name="list" item="vo" >  
                             <tr>                                
                                 <td>{$vo[title]}</td>
-                                <td> <img src="__PUBLIC__/Data/{$vo[thumb]}" alt="" width="100"> </td>
+                                <td> <img src="{$vo[thumb]}" alt="" width="100"> </td>
                                 <td>{$unitInfoArr[$vo['unit_id']]}</td> 
                                 <td>{$isStatus[$vo['status']]}</td>                               
                                 <td>{$vo[viewnum]}</td>

@@ -1,19 +1,51 @@
+<style>
+    td,th{
+        padding: 5px 10px;
+        border: 1px solid #DDD;
+    }
+</style>
 <header class="mui-bar mui-bar-nav">
     <a href="{:U('Goods/index')}" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 
     <h1 class="mui-title">商品查询</h1>
 </header>
-{:W('Common/Public/madvbanner')}
+<div class="mui-content">
+    <div id="slider" class="mui-slider" >
+        <div class="mui-slider-group mui-slider-loop">
+            <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="javascript:void(0);">
+                    <img src="{$info['thumb']}?versionId={$Think.config.WWW_VERSION}">
+                </a>
+            </div>
+            <div class="mui-slider-item">
+                <img src="{$info['thumb']}?versionId={$Think.config.WWW_VERSION}" alt="{$vo[title]}" />
+            </div>
+            <foreach name="info.Att"  key="vId" item="vo">
+                <div class="mui-slider-item">
+                    <img src="{$vo['src']}?versionId={$Think.config.WWW_VERSION}" alt="{$vo[title]}" />
+                </div>
+            </foreach>
+            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="javascript:void(0);">
+                    <img src="{$info['thumb']}?versionId={$Think.config.WWW_VERSION}">
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
 <div class="mui-content margintop">
     <div class="mui-content-padded">
-        <div class="mui-card">
+        <!--<div class="mui-card">
             <div class="mui-card-header">商品封面</div>
             <div class="mui-card-content">
                 <div class="mui-card-content-inner ctBox">
                     <img src="{$info.thumb}" />
                 </div>
             </div>
-        </div>
+        </div>-->
         <div class="mui-card">
             <div class="mui-card-header">基本信息</div>
             <div class="mui-card-content">
@@ -26,18 +58,18 @@
                 </div>
             </div>
         </div>
-        <div class="mui-card">
+        <!--<div class="mui-card">
             <div class="mui-card-header">详情</div>
             <div class="mui-card-content">
                 <div class="mui-card-content-inner ctBox">
                     {$info.summary|defaultVal='无',###}
                 </div>
             </div>
-        </div>
+        </div>-->
         <div class="mui-card">
             <div class="mui-card-header">标准详情</div>
             <div class="mui-card-content">
-                <div class="mui-card-content-inner ctBox">
+                <div class="mui-card-content-inner ctBox" style="overflow: scroll">
                     {$standard.summary|defaultVal='暂无',###}
                 </div>
             </div>

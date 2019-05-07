@@ -29,18 +29,47 @@
             <input type="radio" id="inline-radio3" name="status" value="0" <if condition="$info['status'] eq 0"> checked</if>> 隐藏
           </label>
         </td>
-      </tr> 
+      </tr>
+      <tr>
         <th width="100">封面
         :</th>
         <td>
           <input type="file" value=""  class="form-control" name="thumb"  id="fimage1">
           <if condition="$info['thumb']">
           <div>
-            <img src="__PUBLIC__/Data/{$info['thumb']}">
+            <img src="{$info['thumb']}" width="200">
           </div>
           </if>
         </td>
       </tr>
+    <tr>
+        <th width="100">商品图片:</th>
+        <td>
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="upload_box">
+                        <div class="upload_main">
+                            <div class="upload_choose btn btn-success ">
+                                <input id="fileImage" type="file" size="30" name="fileselect[]" multiple />
+                                选择图片
+                            </div>
+                            <div id="preview" class="upload_preview">
+                            </div>
+                            <div class="upload_preview">
+                                <?php foreach($info['Att'] as $att){ ?>
+                                <p>
+                                    <a href="javascript:void(0);" class="upload_delete_com" title="删除" data-index="0" data-id="{$att['aid']}">删除</a><br>
+                                    <img  class="upload_image" src="{$att['src']}">
+                                </p>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <div id="uploadInf" class="upload_inf"></div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
       <tr>
         <th width="100">摘要:</th>
         <td><textarea cols="50" rows="10"    name="summary" >{$info[summary]}</textarea>

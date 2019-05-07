@@ -33,9 +33,9 @@ class StandardController extends BaseController {
 
         if(IS_POST){
           $data = $mod->create();
-          $data['des'] = I('des','','htmlspecialchars_decode');
+          $data['summary'] = I('summary','','htmlspecialchars_decode');
 
-          $data['des'] = stripcslashes($data['des']);
+          $data['summary'] = stripcslashes($data['summary']);
           ////////////
             $upload = new \Think\Upload();// 实例化上传类   
             $upload->maxSize   =     3145728 ;// 设置附件上传大小    
@@ -58,7 +58,7 @@ class StandardController extends BaseController {
            
           if(!$id){
           	if(!$data['fsrc'] && !$data['fpath']){
-                 $this->error('源文件不能为空');    
+                 //$this->error('源文件不能为空');
           	}
            $data['id'] = guid();
            $data['thumb'] =  $data['thumb']? $data['thumb']:'file_thumd.ico';
