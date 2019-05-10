@@ -78,7 +78,7 @@ class GoodsController extends BaseController
             unset($data['thumb']);
             if (isset($_FILES['thumb']) && $_FILES['thumb'] && !empty($_FILES['thumb']['tmp_name'])) {
                 $coverfileinfo = $upload->uploadOne($_FILES['thumb']);
-                $data['thumb'] = '/Public/Data'.$coverfileinfo['savepath'] . $coverfileinfo['savename'];
+                $data['thumb'] = '/Public/Data' . $coverfileinfo['savepath'] . $coverfileinfo['savename'];
                 unset($_FILES['thumb']);
             }
             $gid = $data['id'] ? $data['id'] : guid();
@@ -87,16 +87,17 @@ class GoodsController extends BaseController
                 $attachment = D('Attachment');
 
                 foreach ($imginfolist as $imginfo) {
-                    $attachment->addAttachment($imginfo, $gid, 0,'/Public/Data');
+                    $attachment->addAttachment($imginfo, $gid, 0, '/Public/Data');
                 }
             }
+            build_qr_code($this->get_url() . '/Home/Goods/info.html?barcode=' . $data['barcode'], $data['barcode']);//生成二维码
             if (!$id) {
                 $data['addtime'] = time();
                 $data['id'] = $gid;
                 $data['thumb'] = $data['thumb'] ? $data['thumb'] : 's_def.png';
                 $gid = $mod->add($data);
                 if (!$gid) {
-                    $this->error('提交失败',U('Goods/add'));
+                    $this->error('提交失败', U('Goods/add'));
                 }
                 $this->success('添加成功', U('Goods/index'));
                 die;
@@ -127,6 +128,23 @@ class GoodsController extends BaseController
         $mod->where("id= '{$id}' ")->save(array('del' => 1));
 
         $this->success('删除成功', U('Goods/index'));
+    }
+
+    public function download_qrcodeAction()
+    {
+        $barcode = I('barcode');
+        $filename = 'Public/QR_code/'.$barcode.'.png';
+        //设置头信息
+        header('Content-Disposition:attachment;filename=' . basename($filename));
+        header('Content-Length:' . filesize($filename));
+        //读取文件并写入到输出缓冲
+        readfile($filename);
+    }
+
+    private function get_url()
+    {
+        $sys_protocal = isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == '443' ? 'https://' : 'http://';
+        return $sys_protocal . (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '');
     }
 
 }

@@ -5,6 +5,7 @@
                         <tr>                            
                             <th>名称</th>
                             <th>商品封面</th>
+                            <th>二维码</th>
                             <th>所属企业</th>
                             <th>状态</th>
                             <th>阅读次数</th>             
@@ -17,7 +18,10 @@
                             <tr>                                
                                 <td>{$vo[title]}</td>
                                 <td> <img src="{$vo[thumb]}" alt="" width="100"> </td>
-                                <td>{$unitInfoArr[$vo['unit_id']]}</td> 
+                                <td>
+                                    <a href="{:U('download_qrcode',array('barcode'=>$vo['barcode']))}"><img src="/Public/QR_code/{$vo[barcode]}.png" alt="" width="100"></a>
+                                </td>
+                                <td>{$unitInfoArr[$vo['unit_id']]}</td>
                                 <td>{$isStatus[$vo['status']]}</td>                               
                                 <td>{$vo[viewnum]}</td>
                                 <td  class="f-14">

@@ -47,14 +47,15 @@
             </div>
         </div>-->
         <div class="mui-card">
-            <div class="mui-card-header">基本信息</div>
+            <div class="mui-card-header">商品信息</div>
             <div class="mui-card-content">
                 <div class="mui-card-content-inner">
                     <p>商品名称：{$info.title}</p>
-                    <p>物品编码：{$info.barcode}</p>
-                    <p>执行标准：{$info.standardnum|defaultVal='无',###}</p>
-                    <p>商品规格：{$info.spec|defaultVal='无',###}</p>
-                    <p>商标：{$info.trademark|defaultVal='无',###}</p>
+                    <p>商品条码：{$info.barcode}</p>
+                    <!--<p>执行标准：{$info.standardnum|defaultVal='无',###}</p>-->
+                    <p>净含量：{$info.spec|defaultVal='无',###}</p>
+                    <!--<p>商标：{$info.trademark|defaultVal='无',###}</p>-->
+                        {$info.des|defaultVal='',###}
                 </div>
             </div>
         </div>
@@ -62,14 +63,14 @@
             <div class="mui-card-header">详情</div>
             <div class="mui-card-content">
                 <div class="mui-card-content-inner ctBox">
-                    {$info.summary|defaultVal='无',###}
+                    {$info.des|defaultVal='无',###}
                 </div>
             </div>
         </div>-->
         <div class="mui-card">
-            <div class="mui-card-header">标准详情</div>
+            <div class="mui-card-header" style="font-size: 14px;">执行标准：{$info.standardnum|defaultVal='暂无',###}<button type="button" id="openBtn" class="mui-btn mui-btn-primary">展开详情</button></div>
             <div class="mui-card-content">
-                <div class="mui-card-content-inner ctBox" style="overflow: scroll">
+                <div class="mui-card-content-inner ctBox" id="standard_info" style="overflow: scroll;display: none">
                     {$standard.summary|defaultVal='暂无',###}
                 </div>
             </div>
@@ -77,4 +78,12 @@
 
     </div>
 </div>
+<script>
+    $(function(){
+        $('#openBtn').click(function(){
+            $(this).text($("#standard_info").is(":hidden") ? "收起详情" : "展开详情");
+            $('#standard_info').slideToggle();
+        })
+    })
+</script>
 		 

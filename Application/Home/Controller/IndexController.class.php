@@ -51,7 +51,7 @@ class IndexController extends ComController {
         //政策法规
         $policiesObj = D("Policies");
         $condition = 'del=0 AND status=1';
-        $policieslist = $policiesObj->where($condition)->order("id DESC")->limit('0,3')->select();
+        $policieslist = $policiesObj->where($condition)->order("displayorder DESC")->limit('0,3')->select();
        
         $this->assign("newsList",$newsList);
         $this->assign("noticelist",$noticelist);
