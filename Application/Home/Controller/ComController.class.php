@@ -18,7 +18,7 @@ class ComController extends Controller {
         $this->_code_expire = 10;//验证码的有效时间
         $this->_dbprefix = C('DB_PREFIX'); 
          
-        $gBTitles =  array('News' => '消防动态','Policies' => '政策法规','Notice' => '通知公告');
+        $gBTitles =  array('News' => '新闻动态','Policies' => '政策法规','Notice' => '通知公告');
         if(isset($gBTitles[CONTROLLER_NAME])){
             $this->assign("GBMenu",$gBTitles[CONTROLLER_NAME].'_'); 
         } 

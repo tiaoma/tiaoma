@@ -10,6 +10,10 @@ class GoodsController extends BaseController
         $unit_id = I('unit_id');
 
         $mod = M('Goods');
+        /*$goods = $mod->select();
+        foreach($goods as $v){
+            build_qr_code($this->get_url() . '/Home/Goods/info.html?barcode=' . $v['barcode'], $v['barcode']);//生成二维码
+        }*/
         $condition['del'] = 0;
         if ($unit_id) {
             $unit_id = intval($unit_id);
